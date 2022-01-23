@@ -1,0 +1,20 @@
+{"0": {
+    "doc": "Home",
+    "title": "Home",
+    "content": ". | Welcome to the myCPU One project | . ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  },"1": {
+    "doc": "myCPU",
+    "title": "myCPU",
+    "content": " ",
+    "url": "http://localhost:4000/docs/myCPU/mycpu/",
+    "relUrl": "/docs/myCPU/mycpu/"
+  },"2": {
+    "doc": "The Kit",
+    "title": "The Kit",
+    "content": " ",
+    "url": "http://localhost:4000/docs/myCPU/the_kit/",
+    "relUrl": "/docs/myCPU/the_kit/"
+  }
+}
