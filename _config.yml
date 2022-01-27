@@ -2,7 +2,7 @@
 lang: en
 title: Bulma Clean Theme
 tagline: Bulma Clean Theme
-email: your-email@domain.com
+email: mylabpcb@gmail.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
 baseurl: "/bulma-clean-theme"
@@ -13,7 +13,7 @@ gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
-
+remote-theme: bulma-clean-theme
 paginate: 5
 paginate_path: "/blog/page:num"
 
