@@ -12,6 +12,8 @@ $modal-content-width: 800px;
 $navbar-height: 6rem !default;
 $navbar-item-img-max-height: 6rem;
 
+$container-max-width: 960px;
+
 @import "../node_modules/bulma/bulma.sass";
 $hero-darken: $dark !default;
 $hero-light: #fafaef;
