@@ -1,7 +1,7 @@
 # Site Settings
 lang: en
-title: myCPU Project
-tagline: A TTL 8 bit Computer/CPU working at microinstruction level
+title: myLabPCB
+tagline: The house of The myCPU Project
 email: mylabpcb@gmail.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
@@ -9,7 +9,7 @@ baseurl: ""
 url: "https://www.mycpuone.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
+#gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top

@@ -8,9 +8,12 @@ $tabs-link-active-color: $primary;
 $tabs-link-active-border-bottom-color: $primary;
 
 $modal-content-width: 800px;
+$navbar-height: 4rem !default;
+$navbar-item-img-max-height: 4rem;
 
 @import "../node_modules/bulma/bulma.sass";
 $hero-darken: $dark !default;
+
 
 @import "layout";
 @import "syntax";

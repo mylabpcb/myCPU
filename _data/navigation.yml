@@ -1,4 +1,4 @@
-- name: myCPU Project
+- name: The myCPU Project
   link: #
   dropdown:
     - name: Introduction
