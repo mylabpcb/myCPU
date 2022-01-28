@@ -1,13 +1,6 @@
 - name: The myCPU Project
-  link: #
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/introduction
 - name: Modules
-  link: #
 - name: Downloads
-  link: #
-- name: Sponsors
-  link: /pages/sponsors/
-- name: Blog
-  link: /blog/
