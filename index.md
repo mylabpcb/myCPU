@@ -7,7 +7,6 @@ hide_footer: true
 hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
-hero_logo: true
 ---
 
 # Welcome to the myCPU Project

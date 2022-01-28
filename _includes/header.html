@@ -3,7 +3,7 @@
         <div class="navbar-brand">
             <a href="{{ site.baseurl }}/" class="navbar-item">               
                 <img src="{{ site.baseurl }}/img/logo_transdark.png" height="80px" />&nbsp;&nbsp;
-                {{ site.title }}
+                <!--{{ site.title }}-->
             </a>
             
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
@@ -14,7 +14,7 @@
         </div>
         <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
             <div class="navbar-start">
-                <a href="{{ site.baseurl }}/" class="navbar-item {% if page.url == "/" %}is-active{% endif %}">Home</a>
+                <!--<a href="{{ site.baseurl }}/" class="navbar-item {% if page.url == "/" %}is-active{% endif %}">Home</a>-->
                 {% if site.data.navigation %}
                 {% for item in site.data.navigation %}
                     {% if item.dropdown %}
