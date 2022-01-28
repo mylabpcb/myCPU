@@ -1,6 +1,9 @@
-- name: The myCPU Project
+- name: myCPU
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/introduction
 - name: Modules
+- name: Extra Modules
 - name: Downloads
+- name: Blog
+- name: About
