@@ -4,6 +4,7 @@
 $family-sans-serif: 'Montserrat', sans-serif;
 $primary: #188eac !default;
 
+
 $tabs-link-active-color: $primary;
 $tabs-link-active-border-bottom-color: $primary;
 
@@ -13,6 +14,7 @@ $navbar-item-img-max-height: 4rem;
 
 @import "../node_modules/bulma/bulma.sass";
 $hero-darken: $dark !default;
+$hero-light: #fafaef;
 
 
 @import "layout";

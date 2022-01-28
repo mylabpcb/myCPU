@@ -59,6 +59,7 @@ defaults:
     values:
       show_sidebar: false
       hide_footer: true
+      hide_hero: true
   -
     scope:
       path: ""
