@@ -1,7 +1,7 @@
 # Site Settings
 lang: en
-title: The myCPU project
-tagline: A TTL 8 bit computer/CPU
+title: myCPU Project
+tagline: A TTL 8 bit Computer/CPU working at microinstruction level
 email: mylabpcb@gmail.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
@@ -57,7 +57,8 @@ defaults:
       path: ""
       type: "pages"
     values:
-      show_sidebar: true
+      show_sidebar: false
+      hide_footer: true
   -
     scope:
       path: ""

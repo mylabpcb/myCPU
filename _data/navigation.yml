@@ -1,37 +1,13 @@
-- name: Pages
-  link: /#
+- name: myCPU Project
+  link: #
   dropdown:
-    - name: Page With Sidebar
-      link: /pages/page-1/
-    - name: Page No Sidebar
-      link: /pages/page-2/
-    - name: Page With Menubar
-      link: /pages/page-3/
-    - name: Page With Tabs
-      link: /pages/page-4/
-    - name: Page Without Footer
-      link: /pages/page-5/
-    - name: Page Without Hero
-      link: /pages/page-without-hero/
-    - name: Page With Contents
-      link: /pages/page-with-contents/
-    - name: Page With Video
-      link: /pages/page-with-video/
-    - name: Page With Image Modal
-      link: /pages/page-with-image-modal/
-    - name: Page With Notifications
-      link: /pages/page-with-notification/
-    - name: Landing Page With Callouts
-      link: /pages/landing/
-    - name: Sponsors Page
-      link: /pages/sponsors/
-    - name: Image Gallery
-      link: /pages/gallery/
-    - name: Recipe Page
-      link: /pages/example-recipe/
-- name: Products
-  link: /pages/products/
-- name: Showcase
-  link: /pages/showcase/
+    - name: Introduction
+      link: /pages/en/mycpu/introduction
+- name: Modules
+  link: #
+- name: Downloads
+  link: #
+- name: Sponsors
+  link: /pages/sponsors/
 - name: Blog
   link: /blog/
