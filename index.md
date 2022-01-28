@@ -10,6 +10,7 @@ hero_darken: false
 ---
 
 # Welcome to the myCPU Project
+
 This project is an entire modular PCB design of a basic TTL 8-bit computer/CPU which can work at a microinstruction level using only the most common logic TTL ICs and following the original [Ben Eater's breadboard 8 bit computer design](https://eater.net/8bit/){:target="_blank"}.
 {: style="text-align: justify"}
 
