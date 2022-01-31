@@ -7,7 +7,7 @@
     - name: BUS module
       link: /pages/en/mycpu/modules/bus
     - name: Power Supply
-      link: /pages/en/mycpu/modules/powersupply
+      link: /pages/en/mycpu/modules/power_supply
     - name: Clock
       link: /pages/en/mycpu/modules/clock
     - name: Control Signals Manager
