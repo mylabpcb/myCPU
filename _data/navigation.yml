@@ -3,7 +3,34 @@
     - name: Introduction
       link: /pages/en/mycpu/introduction
 - name: Modules
+  dropdown:
+    - name: BUS module
+      link: /pages/en/mycpu/modules/bus
+    - name: Power Supply
+      link: /pages/en/mycpu/modules/powersupply
+    - name: Clock
+      link: /pages/en/mycpu/modules/clock
+    - name: Control Signals Manager
+      link: /pages/en/mycpu/modules/csm
+    - name: Program Counter 8 bit
+      link: /pages/en/mycpu/modules/program-counter
+    - name: register ABC 8 bit
+      link: /pages/en/mycpu/modules/register-abc-8b
+
 - name: Extra Modules
 - name: Downloads
+  dropdown:
+    - name: Technical
+      link: /pages/en/mycpu/downloads/technical-docs
+    - name: Datasheets
+      link: /pages/en/mycpu/downloads/datasheets
+    - name: Code
+      link: /pages/en/mycpu/downloads/code
+    - name: Component Libraries
+      link: /pages/en/mycpu/downloads/comp-libraries
+    - name: Usefull templates
+      link: /pages/en/mycpu/downloads/templates
+    - name: CAD files
+      link: /pages/en/mycpu/downloads/cad-files
 - name: Blog
 - name: About
