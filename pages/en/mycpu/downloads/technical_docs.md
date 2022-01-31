@@ -9,5 +9,3 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-List of download types.
-{: style="text-align: justify"}

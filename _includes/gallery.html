@@ -9,7 +9,12 @@
         <div class="column is-4-desktop is-6-tablet">
             <div class="card">
                 <div class="card-image">
-                    {% include image-modal.html ratio=image.ratio link=image.link alt=image.alt large_link=image.large_link %}
+                    {% include download.html 
+                               ratio=image.ratio 
+                               link=image.link 
+                               alt=image.alt 
+                               large_link=image.large_link 
+                               file=image.file %}
                 </div>
                 <div class="card-content">
                     <div class="content">
