@@ -1,0 +1,14 @@
+- title: Technical documentation downloads
+  images:
+    - link: /img/mycpu/thumbnails/clock_assembled_thumbnail.png
+      alt: Clock module thumbnail
+      description: Clock module
+      ratio: is-1.4by1
+    - link: /img/mycpu/thumbnails/power_assembled_thumbnail.png
+      alt: Power Supply module
+      description: Power Supply module
+      ratio: is-1.4by1
+    - link: /img/mycpu/thumbnails/controlsignals_assembled_thumbnail.png
+      alt: Control Signals module
+      description: Clock module
+      ratio: is-1.4by1

@@ -1,0 +1,28 @@
+---
+title: "myCPU: The Register ABC module"
+subtitle: A 8 bit general purpose register module
+layout: page
+show_sidebar: false
+hide_footer: true
+hide_hero: false
+hero_height: hero-minHeigth
+hero_darken: false
+---
+A 8 bit general purpose register module. The content is under development.
+{: style="text-align: justify"}
+
+{:.center}
+![3D view]({{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_3d.png "3D view of the printed board"){:width="500px"}
+<figure>3D view of the printed board</figure>
+
+{:.center}
+![Assembled view]({{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_assembled.png "Assembled view of the printed board"){:width="500px"}
+<figure>Assembled view of the printed board</figure>
+
+{:.center}
+![Front view of PCB]({{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_clear_front.png "Front view of the printed board"){:width="500px"}
+<figure>Front view of the printed board</figure>
+
+{:.center}
+![Back view of PCB]({{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_clear_back.png "Back of the printed board"){:width="500px"}
+<figure>Back view of the printed board</figure>

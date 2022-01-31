@@ -13,24 +13,26 @@
     - name: Control Signals Manager
       link: /pages/en/mycpu/modules/csm
     - name: Program Counter 8 bit
-      link: /pages/en/mycpu/modules/program-counter
-    - name: register ABC 8 bit
-      link: /pages/en/mycpu/modules/register-abc-8b
+      link: /pages/en/mycpu/modules/program_counter
+    - name: register ABC 8 bit (Right)
+      link: /pages/en/mycpu/modules/register_abc_right
+    - name: register ABC 8 bit (Left)
+      link: /pages/en/mycpu/modules/register_abc_left
 
 - name: Extra Modules
 - name: Downloads
   dropdown:
     - name: Technical
-      link: /pages/en/mycpu/downloads/technical-docs
+      link: /pages/en/mycpu/downloads/technical_docs
     - name: Datasheets
       link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
     - name: Component Libraries
-      link: /pages/en/mycpu/downloads/comp-libraries
+      link: /pages/en/mycpu/downloads/comp_libraries
     - name: Usefull templates
       link: /pages/en/mycpu/downloads/templates
     - name: CAD files
-      link: /pages/en/mycpu/downloads/cad-files
+      link: /pages/en/mycpu/downloads/cad_files
 - name: Blog
 - name: About
