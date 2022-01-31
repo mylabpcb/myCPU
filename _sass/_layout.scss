@@ -36,9 +36,15 @@ div.highlight {
     }
 }
 
+// Customize blockqoute
 blockquote{
     font-weight: bold;
     color: #800e0e;
+}
+
+// Used on image center in kramdown
+.center {
+    text-align: center;
 }
 
 .callout {

@@ -14,12 +14,16 @@ hero_darken: false
 This project is an entire modular PCB design of a basic TTL 8-bit computer/CPU which can work at a microinstruction level using only the most common logic TTL ICs and following the original [**Ben Eater's breadboard 8 bit computer design**](https://eater.net/8bit/){:target="_blank"}.
 {: style="text-align: justify"}
 
-![myCPU Layout]({{ site.baseurl }}/img/mycpu/mycpu_horizontal_layout_2_1024_min.png)
+{:.center}
+![myCPU Layout]({{ site.baseurl }}/img/mycpu/mycpu_horizontal_layout_2_1024_min.png#center){:width="800px"}
 
 ### The origin of the myCPU project, the Ben Eater's project
 
 I decided to tackle this project because, after discover the Ben Eater's breadboard computer 2 years ago,  I built my own 8-bit breadboard computer. And as beginner, sometimes I felt very frustrate with the difficult of building this highly complex circuit on breadboards.
 {: style="text-align: justify"}
+
+{:.center}
+![8-bit breadboard cpu]({{ site.baseurl }}/img/8_bit_breadboard_computer_min.png){:width="600px"}
 
 Working with this kind of complex project on breadboards was a very hard work, a hell of wirings, a hard fight with leds, TTL IC behaviors, databus issues and with its unstable electrical behavior and performance. But also, it was an unbelievable and grateful learning experience.
 {: style="text-align: justify"}
