@@ -1,17 +1,32 @@
 - title: Technical documentation downloads
   images:
-    - link: /img/mycpu/thumbnails/clock_assembled_thumbnail_300.png
+    - link: /img/mycpu/thumbnails/300/clock_assembled_thumbnail_300.png
       alt: Clock module thumbnail
       description: Clock module
       ratio: is-3by2
       file: /downloads/technical/myCPU_Clock_module_full.pdf
-    - link: /img/mycpu/thumbnails/power_assembled_thumbnail_300.png
+    - link: /img/mycpu/thumbnails/300/power_assembled_thumbnail_300.png
       alt: Power Supply module
       description: Power Supply module
       ratio: is-1.4by1
       file: /downloads/technical/myCPU_Power_module_full.pdf
-    - link: /img/mycpu/thumbnails/control_signal_assembled_thumbnail_300.png
+    - link: /img/mycpu/thumbnails/300/control_signal_assembled_thumbnail_300.png
+      alt: Control Signals module
+      description: Control Signals Manager module
+      ratio: is-1.4by1
+      file: /downloads/technical/myCPU_ControlSignalsManager_module_full.pdf
+    - link: /img/mycpu/thumbnails/300/programCounter_assembled_thumbnail_300.png
+      alt: Program Counter module thumbnail
+      description: Program Counter module
+      ratio: is-3by2
+      file: /downloads/technical/myCPU_Program_Counter_module_full.pdf
+    - link: /img/mycpu/thumbnails/300/register_abc_8b_right_assembled_300.png
+      alt: Power Supply module
+      description: Power Supply module
+      ratio: is-1.4by1
+      file: /downloads/technical/myCPU_register_8b_R_module_full.pdf
+    - link: /img/mycpu/thumbnails/300/register_abc_8b_left_assembled_300.png
       alt: Control Signals module
       description: Clock module
       ratio: is-1.4by1
-      file: /downloads/technical/myCPU_ControlSignalsManager_module_full.pdf
+      file: /downloads/technical/myCPU_register_8b_L_module_full.pdf
