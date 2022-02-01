@@ -2,6 +2,18 @@
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/introduction
+    - name: The Kit
+      link: /pages/en/mycpu/introduction
+    - name: The Components
+      link: /pages/en/mycpu/introduction
+    - name: The Tools
+      link: /pages/en/mycpu/introduction
+    - name: The Build Process
+      link: /pages/en/mycpu/introduction
+    - name: The Code
+      link: /pages/en/mycpu/introduction
+    - name: Testing and Debugging
+      link: /pages/en/mycpu/introduction
 - name: Modules
   dropdown:
     - name: BUS module
@@ -12,14 +24,36 @@
       link: /pages/en/mycpu/modules/clock
     - name: Control Signals Manager
       link: /pages/en/mycpu/modules/csm
-    - name: Program Counter 8 bit
+    - name: Program Counter
       link: /pages/en/mycpu/modules/program_counter
-    - name: register ABC 8 bit (Right)
+    - name: register ABC (Right)
       link: /pages/en/mycpu/modules/register_abc_right
-    - name: register ABC 8 bit (Left)
+    - name: register ABC (Left)
       link: /pages/en/mycpu/modules/register_abc_left
-
+    - name: ALU
+      link: /pages/en/mycpu/modules/alu
+    - name: Output Register
+      link: /pages/en/mycpu/modules/output_register
+    - name: MAR 4 bit (Memory Address Register)
+      link: /pages/en/mycpu/modules/mar4b
+    - name: SRAM 74LS219
+      link: /pages/en/mycpu/modules/sram219
+    - name: Instruction Register
+      link: /pages/en/mycpu/modules/instruction_register
+    - name: Sequencer and Flags Register
+      link: /pages/en/mycpu/modules/flags_reg_sequencer
+    - name: Instruction Decoder
+      link: /pages/en/mycpu/modules/instruction_decoder
+    - name: Decimal Display 4 digits
+      link: /pages/en/mycpu/modules/decimal_display
+    - name: Display LED 8 bit
+      link: /pages/en/mycpu/modules/display_led
 - name: Extra Modules
+  dropdown:
+    - name: EEProm Programmer AT28C64
+      link: /pages/en/mycpu/downloads/technical_docs
+    - name: Protoboard
+      link: /pages/en/mycpu/downloads/technical_docs
 - name: Downloads
   dropdown:
     - name: Technical
