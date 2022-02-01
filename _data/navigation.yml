@@ -51,9 +51,9 @@
 - name: Extra Modules
   dropdown:
     - name: EEProm Programmer AT28C64
-      link: /pages/en/mycpu/downloads/technical_docs
+      link: /pages/en/mycpu/extra_modules/eeprom_programmer
     - name: Protoboard
-      link: /pages/en/mycpu/downloads/technical_docs
+      link: /pages/en/mycpu/extra_modules/protoboard
 - name: Downloads
   dropdown:
     - name: Technical
