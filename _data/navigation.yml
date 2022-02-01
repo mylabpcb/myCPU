@@ -5,17 +5,21 @@
     - name: The Kit
       link: /pages/en/mycpu/kit
     - name: The Components
-      link: /pages/en/mycpu/introduction
+      link: /pages/en/mycpu/components
     - name: The Tools
-      link: /pages/en/mycpu/introduction
+      link: /pages/en/mycpu/tools
     - name: The Build Process
-      link: /pages/en/mycpu/introduction
+      link: /pages/en/mycpu/build
     - name: The Code
-      link: /pages/en/mycpu/introduction
+      link: /pages/en/mycpu/code
     - name: Testing and Debugging
-      link: /pages/en/mycpu/introduction
+      link: /pages/en/mycpu/test_debug
+    - name: Sample Programs
+      link: /pages/en/mycpu/sample_programs
 - name: Modules
   dropdown:
+    - name: Introduction
+      link: /pages/en/mycpu/modules
     - name: BUS module
       link: /pages/en/mycpu/modules/bus
     - name: Power Supply

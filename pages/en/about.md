@@ -16,7 +16,7 @@ My name is **Rafa Hernández** and I'm a senior .NET software developer and elec
     <figcaption>Yes, this guy is me!</figcaption>
 </figure>
 
-myLabPcb is my own and personal initiative to share electronic designs projects under MIT Licence. At this moment, I’ve finished my first project, the myCPU design, which is a redesign on PCBs of the Ben Eater’s 8- bit breadboards computer. After that I’m working in the design of the myCPU Plus with a new set of modules having support for 16 bits, more memory and a bigger instruction set.
+**myLabPcb** is my own and personal initiative to share electronic designs projects under MIT Licence. At this moment, I’ve finished my first project, the **myCPU** design, which is a redesign on PCBs of the Ben Eater’s 8- bit breadboards computer. After that I’m working in the design of the myCPU Plus with a new set of modules having support for 16 bits, more memory and a bigger instruction set.
 {: style="text-align: justify"}
 
 Also I’m planning the design of myEnigma, a digital replica of the Enigma Machine without programming, and supporting to exchangeable digital rotors.
@@ -34,5 +34,5 @@ I love digital electronics and microcomputers, more interested in the early days
 
 ![Logo Uned]({{ site.baseurl }}/img/logo_uned.gif)
 
-I’m a Computer Engineering degree student at UNED, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I will try. At the moment of writing this, January 19 of 2022, I’m in my first year.
+I’m a Computer Engineering degree student at **UNED**, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I will try. At the moment of writing this, January 19 of 2022, I’m in my first year.
 {: style="text-align: justify"}
