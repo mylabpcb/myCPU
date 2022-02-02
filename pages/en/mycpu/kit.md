@@ -3,7 +3,7 @@ title: "myCPU: The Kit"
 subtitle: A full set of 40+ PCBs
 layout: page
 gallery: the_kit_gallery
-galleryType: Image
+galleryType: image
 show_sidebar: false
 hide_footer: true
 hide_hero: false

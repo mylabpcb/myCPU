@@ -12,14 +12,14 @@
         <div class="column is-4-desktop is-6-tablet">
             <div class="card">
                 <div class="card-image">
-                    {% if page.galleryType == "Download" %}
+                    {% if page.galleryType == "download" %}
                         {% include download.html 
                                 ratio=image.ratio 
                                 link=image.link 
                                 alt=image.alt 
                                 large_link=image.large_link 
                                 file=image.file %}
-                    {% elsif page.galleryType == "Image" %}
+                    {% elsif page.galleryType == "image" %}
                         {% include image.html 
                             ratio=image.ratio 
                             link=image.link 
