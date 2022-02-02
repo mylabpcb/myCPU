@@ -3,108 +3,107 @@
     # BUS
     - link: /img/mycpu/thumbnails/300/bus_module_thumbnail_300.png
       alt: BUS module thumbnail
-      description: BUS module
-      ratio: is-6by2
+      description: |-
+        **BUS module**
       file: /downloads/technical/myCPU_BUS_module_full.pdf
 - title:
   images:
     # Clock
     - link: /img/mycpu/thumbnails/300/clock_assembled_thumbnail_300.png
       alt: Clock module thumbnail
-      description: Clock module
-      ratio: is-3by2
+      description: |-
+        **Clock module**
       file: /downloads/technical/myCPU_Clock_module_full.pdf
     # Power
     - link: /img/mycpu/thumbnails/300/power_assembled_thumbnail_300.png
       alt: Power Supply module
-      description: Power Supply module
-      ratio: is-1.4by1
+      description: |-
+        **Power Supply module**
       file: /downloads/technical/myCPU_Power_module_full.pdf
     # CSM
     - link: /img/mycpu/thumbnails/300/control_signal_assembled_thumbnail_300.png
       alt: Control Signals module
       description: Control Signals Manager module
-      ratio: is-1.4by1
       file: /downloads/technical/myCPU_ControlSignalsManager_module_full.pdf
     # Program Counter
     - link: /img/mycpu/thumbnails/300/programCounter_assembled_thumbnail_300.png
       alt: Program Counter module thumbnail
-      description: Program Counter module
-      ratio: is-3by2
+      description: |-
+        **Program Counter module**
       file: /downloads/technical/myCPU_Program_Counter_module_full.pdf
     # Register ABC right
     - link: /img/mycpu/thumbnails/300/register_abc_8b_right_assembled_300.png
       alt: Register ABC module thumbnail
-      description: Register ABC 8 bit (Right) module
-      ratio: is-1.4by1
+      description: |-
+        **Register ABC 8 bit (Right) module**
       file: /downloads/technical/myCPU_register_8b_R_module_full.pdf
     # Register ABC left
     - link: /img/mycpu/thumbnails/300/register_abc_8b_left_assembled_300.png
       alt: Register ABC module thumbnail
-      description: Register ABC 8 bit (LEFT) module
-      ratio: is-1.4by1
+      description: |-
+        **Register ABC 8 bit (LEFT) module**
       file: /downloads/technical/myCPU_register_8b_L_module_full.pdf
     # ALU
     - link: /img/mycpu/thumbnails/300/alu_assembled_300.png
       alt: ALU module thumbnail
-      description: ALU module
-      ratio: is-3by2
+      description: |-
+        **ALU module**
       file: /downloads/technical/myCPU_ALU_module_full.pdf
     # Output register
     - link: /img/mycpu/thumbnails/300/output_register_8b_assembled_300.png
       alt: Output Register module thumbnail
-      description: Output Register module
-      ratio: is-3by2
+      description: |-
+        **Output Register module**
       file: /downloads/technical/myCPU_Output_Register_8b_module_full.pdf
     # MAR
     - link: /img/mycpu/thumbnails/300/mar_4b_assembled_300.png
       alt: MAR module thumbnail
-      description: MAR - Memory Address Register module
-      ratio: is-1.4by1
+      description: |-
+        **MAR - Memory Address Register module**
       file: /downloads/technical/myCPU_MAR_4b_module_full.pdf
     # SRAM 219
     - link: /img/mycpu/thumbnails/300/ram219_assembled_300.png
       alt: SRAM 219 module thumbnail
-      description: SRAM 219 module
-      ratio: is-1.4by1
+      description: |-
+        **SRAM 219 module**
       file: /downloads/technical/myCPU_RAM219_module_full.pdf
     # FlagsRegister_Seq
     - link: /img/mycpu/thumbnails/300/flag_register_sequencer_assembled_300.png
       alt: Flags Register module thumbnail
-      description: Flags Register + Sequencer module
-      ratio: is-3by2
+      description: |-
+        **Sequencer + Flags Register module**
       file: /downloads/technical/myCPU_FlagsRegister_Seq_module_full.pdf
     # Instruction Register
     - link: /img/mycpu/thumbnails/300/instruction_register_8b_right_assembled_300.png
       alt: Instruction Register module thumbnail
-      description: Instruction Register module 
-      ratio: is-1.4by1
+      description: |-
+        **Instruction Register module**
       file: /downloads/technical/myCPU_InstructionRegister_8b_R_module_full.pdf
     # Instruction Decoder
     - link: /img/mycpu/thumbnails/300/logic_control_AT28C64_assembled_300.png
       alt: Instruction Decoder module thumbnail
-      description: Instruction Decoder module
-      ratio: is-1.4by1
+      description: |-
+        **Instruction Decoder module**
       file: /downloads/technical/myCPU_InstructionDecoder_module_full.pdf
 - title:
   images:
     # Display 4 digits AT28C64
     - link: /img/mycpu/thumbnails/300/displayAT28C64_assembled_300.png
       alt: Display AT28C64 module thumbnail
-      description: Decimal Display 4 Digits AT28C64 module
-      ratio: is-3by2
+      description: |-
+        **Decimal Display 4 Digits AT28C64 module**
       file: /downloads/technical/myCPU_Display4Digits_8b_module_full.pdf
     # Display LED 8 bits
     - link: /img/mycpu/thumbnails/300/displayLED_assembled_300.png
       alt: Display LED 8 bits module thumbnail
-      description: Display LED 8 bits module
-      ratio: is-1.4by1
+      description: |- 
+        **Display LED 8 bits module**
       file: /downloads/technical/myCPU_DisplayLED_module_full.pdf
 - title:
   images:
     # EEProm Programmer AT28C64
     - link: /img/mycpu/thumbnails/300/eeprom_programmer_assembled_300.png
       alt: EEProm programmer module thumbnail
-      description: EEProm programmer AT28C64 module
-      ratio: is-1.4by1
+      description: |-
+        **EEProm programmer AT28C64 module**
       file: /downloads/technical/myCPU_EEProm Programmer_AT28C64_module_full.pdf

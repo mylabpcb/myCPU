@@ -67,7 +67,7 @@
     - name: Code
       link: /pages/en/mycpu/downloads/code
     - name: Component Libraries
-      link: /pages/en/mycpu/downloads/comp_libraries
+      link: /pages/en/mycpu/downloads/libraries
     - name: Usefull templates
       link: /pages/en/mycpu/downloads/templates
     - name: CAD files

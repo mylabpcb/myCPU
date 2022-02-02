@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Kit" 
-subtitle: A full set of 43 PCBs
+subtitle: A full set of 40+ PCBs
 layout: page
 gallery: the_kit_gallery
 galleryType: Image
@@ -16,12 +16,12 @@ hero_darken: false
 Because I’m an individual and I have not an online store, the only way I have to afford the manufacturing process is through a crowdfunding campaign, but before that I need to know how many people could be interested in get the myCPU One kit. You can find below detailed information about the kit.
 {: style="text-align: justify"}
 
-All people interested, please submit the form below to let me know your interest in getting the kit, so I can analyze the creation of a crowdfunding campaign like Kickstarter or so, to afford the manufacturing and give the opportunity to all people interested to build his own myCPU One.
+All people interested, please submit the form below to let me know your interest in getting the kit, so I can analyze the creation of a crowdfunding campaign like Kickstarter or so, to afford the manufacturing and give the opportunity to all people interested to build his own myCPU.
 {: style="text-align: justify"}
 
 ### The Kit: A full set of printer boards
 
-The myCPU One Kit is composed by a set of 43 printed boards of 6 different board types.
+The myCPU One Kit is composed by a set of 40+ printed boards of 6 different board types.
 
 > No components will be supplied with the Kit, mainly because is not affordable for me and I would recommend you do this job by yourself.
 {: style="text-align: justify"}
