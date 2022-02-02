@@ -40,7 +40,7 @@
       link: /pages/en/mycpu/modules/output_register
     - name: MAR 4 bit (Memory Address Register)
       link: /pages/en/mycpu/modules/mar4b
-    - name: SRAM 74LS219
+    - name: SRAM module
       link: /pages/en/mycpu/modules/sram219
     - name: Instruction Register
       link: /pages/en/mycpu/modules/instruction_register

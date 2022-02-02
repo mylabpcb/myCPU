@@ -12,12 +12,20 @@
         <div class="column is-4-desktop is-6-tablet">
             <div class="card">
                 <div class="card-image">
-                    {% include download.html 
-                               ratio=image.ratio 
-                               link=image.link 
-                               alt=image.alt 
-                               large_link=image.large_link 
-                               file=image.file %}
+                    {% if page.galleryType == "Download" %}
+                        {% include download.html 
+                                ratio=image.ratio 
+                                link=image.link 
+                                alt=image.alt 
+                                large_link=image.large_link 
+                                file=image.file %}
+                    {% elsif page.galleryType == "Image" %}
+                        {% include image.html 
+                            ratio=image.ratio 
+                            link=image.link 
+                            alt=image.alt 
+                            large_link=image.large_link %}
+                    {% endif %}
                 </div>
                 <div class="card-content">
                     <div class="content">
