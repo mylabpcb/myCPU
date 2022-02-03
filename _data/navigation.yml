@@ -62,13 +62,15 @@
   dropdown:
     - name: Technical
       link: /pages/en/mycpu/downloads/technical_docs
+    - name: Bill of Materials
+      link: /pages/en/mycpu/downloads/bom
     - name: Datasheets
       link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
     - name: Component Libraries
       link: /pages/en/mycpu/downloads/libraries
-    - name: Usefull templates
+    - name: Useful templates
       link: /pages/en/mycpu/downloads/templates
     - name: CAD files
       link: /pages/en/mycpu/downloads/cad_files
