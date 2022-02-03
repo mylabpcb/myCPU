@@ -16,7 +16,7 @@ The BUS module is the main board of the myCPU architecture. The content in under
     <figcaption>3D view of the BUS module</figcaption>
 </figure>
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_assembled.png" alt="BUS module assembled view" title="Assembled view of the BUS module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_assembled_2_min.png" alt="BUS module assembled view" title="Assembled view of the BUS module" width="500px">
     <figcaption>Assembled view of the BUS module</figcaption>
 </figure>
 <figure class="center">
