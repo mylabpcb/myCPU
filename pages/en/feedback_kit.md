@@ -1,6 +1,6 @@
 ---
 title: The Kit Feedback
-subtitle: Feedback form for the insterest in the myCPU Kit
+subtitle: Feedback form on getting the myCPU Boards Kit
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -8,43 +8,12 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-<form type="POST" action="mailto:mylabpcb@gmail.com">
-<div class="field">
-  <label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email input" value="hello@">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-  </div>
-</div>
-<div class="field">
-  <label class="label">Message</label>
-  <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-  </div>
-</div>
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      I would be interested in get the myCPU PCB Kit through a crowdfunding campaign.
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-    I'm interested in get the myCPU PCB Kit only through an online store.
-    </label>
-  </div>
-</div>
-<div class="field is-grouped">
-  <div class="control">
-    <button class="button is-link">Submit</button>
-  </div>
-</div>
-</form>
+
+At this moment, the only way, affordable for me, to provide the myCPU full boards Kit is through a crowdfunding campaign. Also your support would let me to continue with the development
+of the next projects: **myCPU+** and **myEnigma**.
+{: style="text-align: justify"}
+
+Please send me the feedback form below and let me know if you would be comfortable getting the myCPU Kit through a crowdfunding campaign.
+{: style="text-align: justify"}
+
+<a class="button is-primary is-light" href="https://forms.gle/4VwE5mrbV5YzRwvZ9" target="_blank">Feedback myCPU Kit form</a> 
