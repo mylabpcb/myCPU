@@ -25,10 +25,38 @@ Navigate to [Modules Introduction page](/pages/en/mycpu/modules) for more inform
 
 ### The myCPU architecture
 
+
+
 An 8-bit and 22 control signals length. A 24-bit microinstruction length. Content under development.
 {: style="text-align: justify"}
 
+Printable PDF version of the diagram: [**myCPU Modules Diagram**](/downloads/diagrams/myCPU_modules_draw.pdf){: target="_blank"}
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_draw.png" alt="PCB back view" title="myCPU block diagram" width="100%">
-    <figcaption>myCPU block diagram</figcaption>
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_draw.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
+    <figcaption>myCPU block modules diagram</figcaption>
 </figure>
+
+Printable PDF version of the diagram: [**myCPU functional blocks Diagram**](/downloads/diagrams/myCPU_functional_blocks_draw.pdf){: target="_blank"}
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_functional_blocks_draw.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="80%">
+    <figcaption>myCPU functional blocks diagram</figcaption>
+</figure>
+
+### Features
+Digital features of my CPU
+
++ **16 bit data BUS** (used 8-bit in current version)
++ **32 bit control BUS**
++ Microinstruction length up to 22 control signals
++ Instruction cycle from 5 up to 8 cycles
++ RISC architecture
++ Von Neumann architecture
++ Two state flags
++ Debug at single clock cycle including High and Low edges
++ BUS test switches
++ Control Signal test switches
++ Microprogrammed instruction decode
++ Clock speed from 5-10 Hz to 3 kHz
+
+
+### Built-In Modules

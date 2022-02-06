@@ -1,10 +1,17 @@
 - title: 
   images:
-    # BUS
+    # Modules Diagram
     - link: /img/mycpu/thumbnails/diagrams/myCPU_modules_draw_200.png
       alt: myCPU modules diagram
       description: |-
         **myCPU Modules Diagram**
       file: /downloads/diagrams/myCPU_modules_draw.pdf
+      ratio: is-2by2
+    # Blocks Diagram
+    - link: /img/mycpu/thumbnails/diagrams/myCPU_functional_blocks_draw_300.png
+      alt: myCPU blocks diagram
+      description: |-
+        **myCPU Functional Blocks Diagram**
+      file: /downloads/diagrams/myCPU_functional_blocks_draw.pdf
       ratio: is-2by2 
 
