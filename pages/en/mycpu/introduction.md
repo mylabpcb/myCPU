@@ -22,3 +22,13 @@ You can design your own module boards, the only thing to keep in mind is place t
 {: style="text-align: justify"}
 
 Navigate to [Modules Introduction page](/pages/en/mycpu/modules) for more information related to the module design in the open architecture.
+
+### The myCPU architecture
+
+An 8-bit and 22 control signals length. A 24-bit microinstruction length. Content under development.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_draw.png" alt="PCB back view" title="myCPU block diagram" width="100%">
+    <figcaption>myCPU block diagram</figcaption>
+</figure>
