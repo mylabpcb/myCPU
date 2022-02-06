@@ -1,0 +1,10 @@
+- title: 
+  images:
+    # BUS
+    - link: /img/mycpu/thumbnails/diagrams/myCPU_modules_draw_200.png
+      alt: myCPU modules diagram
+      description: |-
+        **myCPU Modules Diagram**
+      file: /downloads/diagrams/myCPU_modules_draw.pdf
+      ratio: is-2by2 
+

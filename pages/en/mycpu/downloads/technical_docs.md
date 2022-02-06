@@ -10,7 +10,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-On this page you find the downloads for all related technical documentation to the myCPU One project.
+On this page you find the downloads for all related technical documentation to the myCPU project.
 
 ### Organization
 
