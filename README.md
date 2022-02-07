@@ -20,12 +20,12 @@ An 8-bit and 22 control signals length. A 24-bit microinstruction length. Conten
 
 
 <figure class="center">
-    <img src="{{ site.baseurl }}//images/diagrams/myCPU_modules_draw.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
+    <img src="/images/diagrams/myCPU_modules_draw.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
     <figcaption>myCPU block modules diagram</figcaption>
 </figure>
 
 <figure class="center">
-    <img src="{{ site.baseurl }}//images/diagrams/myCPU_functional_blocks_draw.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="80%">
+    <img src="/images/diagrams/myCPU_functional_blocks_draw.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="80%">
     <figcaption>myCPU functional blocks diagram</figcaption>
 </figure>
 
