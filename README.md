@@ -13,21 +13,13 @@ Navigate to [Modules Introduction page](http://www.mycpuone.com/pages/en/mycpu/m
 
 ### The myCPU architecture
 
-
-
 An 8-bit and 22 control signals length. A 24-bit microinstruction length. Content under development.
 {: style="text-align: justify"}
 
 
-<figure class="center">
-    <img src="/images/diagrams/myCPU_modules_draw.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
-    <figcaption>myCPU block modules diagram</figcaption>
-</figure>
+![myCPU modules diagram](https://github.com/mylabpcb/myCPU/blob/master/Images/Diagrams/myCPU_modules_draw.png)
 
-<figure class="center">
-    <img src="/images/diagrams/myCPU_functional_blocks_draw.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="80%">
-    <figcaption>myCPU functional blocks diagram</figcaption>
-</figure>
+![myCPU functional blocks diagram](https://github.com/mylabpcb/myCPU/blob/master/Images/Diagrams/myCPU_functional_blocks_draw.png)
 
 ### Features
 Digital features of my CPU
