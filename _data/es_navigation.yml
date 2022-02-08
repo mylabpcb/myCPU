@@ -1,0 +1,82 @@
+- name: myCPU
+  dropdown:
+    - name: Introduction
+      link: /pages/en/mycpu/introduction
+    - name: The Kit
+      link: /pages/en/mycpu/kit
+    - name: The Components
+      link: /pages/en/mycpu/components
+    - name: The Tools
+      link: /pages/en/mycpu/tools
+    - name: The Build Process
+      link: /pages/en/mycpu/build
+    - name: The Code
+      link: /pages/en/mycpu/code
+    - name: Testing and Debugging
+      link: /pages/en/mycpu/test_debug
+    - name: Sample Programs
+      link: /pages/en/mycpu/sample_programs
+- name: Modules
+  dropdown:
+    - name: Introduction
+      link: /pages/en/mycpu/modules
+    - name: BUS module
+      link: /pages/en/mycpu/modules/bus
+    - name: Power Supply
+      link: /pages/en/mycpu/modules/power_supply
+    - name: Clock
+      link: /pages/en/mycpu/modules/clock
+    - name: Control Signals Manager
+      link: /pages/en/mycpu/modules/csm
+    - name: Program Counter
+      link: /pages/en/mycpu/modules/program_counter
+    - name: register ABC (Right)
+      link: /pages/en/mycpu/modules/register_abc_right
+    - name: register ABC (Left)
+      link: /pages/en/mycpu/modules/register_abc_left
+    - name: ALU
+      link: /pages/en/mycpu/modules/alu
+    - name: Output Register
+      link: /pages/en/mycpu/modules/output_register
+    - name: MAR 4 bit (Memory Address Register)
+      link: /pages/en/mycpu/modules/mar4b
+    - name: SRAM module
+      link: /pages/en/mycpu/modules/sram219
+    - name: Instruction Register
+      link: /pages/en/mycpu/modules/instruction_register
+    - name: Sequencer and Flags Register
+      link: /pages/en/mycpu/modules/flags_reg_sequencer
+    - name: Instruction Decoder
+      link: /pages/en/mycpu/modules/instruction_decoder
+    - name: Decimal Display 4 digits
+      link: /pages/en/mycpu/modules/decimal_display
+    - name: Display LED 8 bit
+      link: /pages/en/mycpu/modules/display_led
+- name: Extra Modules
+  dropdown:
+    - name: EEProm Programmer AT28C64
+      link: /pages/en/mycpu/extra_modules/eeprom_programmer
+    - name: Protoboard
+      link: /pages/en/mycpu/extra_modules/protoboard
+- name: Downloads
+  dropdown:
+    - name: Technical
+      link: /pages/en/mycpu/downloads/technical_docs
+    - name: Diagrams
+      link: /pages/en/mycpu/downloads/diagrams
+    - name: Bill of Materials
+      link: /pages/en/mycpu/downloads/bom
+    - name: Datasheets
+      link: /pages/en/mycpu/downloads/datasheets
+    - name: Code
+      link: /pages/en/mycpu/downloads/code
+    - name: Component Libraries
+      link: /pages/en/mycpu/downloads/libraries
+    - name: Useful templates
+      link: /pages/en/mycpu/downloads/templates
+    - name: CAD files
+      link: /pages/en/mycpu/downloads/cad_files
+- name: Blog
+  link: /blog/en/
+- name: About
+  link: /pages/en/about
