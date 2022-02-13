@@ -107,3 +107,15 @@
       description: |-
         **EEProm programmer AT28C64 module**
       file: /downloads/technical/myCPU_EEProm Programmer_AT28C64_module_full.pdf
+    # Protoboard
+    - link: /img/mycpu/thumbnails/boards/md/protoboard_right_clear_front_300_min.png
+      alt: Protoboard module thumbnail
+      description: |-
+        **Protoboard module (Right)**
+      file: /downloads/technical/myCPU_Protoboard_R.pdf
+    # Protoboard
+    - link: /img/mycpu/thumbnails/boards/md/protoboard_left_3dview_front_300_min.png
+      alt: Protoboard module thumbnail
+      description: |-
+        **Protoboard module (Left)**
+      file: /downloads/technical/myCPU_Protoboard_L.pdf
