@@ -36,13 +36,13 @@
       alt: Register ABC module thumbnail
       description: |-
         **Register ABC 8 bit (Right) module**
-      file: /downloads/technical/myCPU_register_8b_R_module_full.pdf
+      file: /downloads/technical/myCPU_Register_8b_R_module_full.pdf
     # Register ABC left
     - link: /img/mycpu/thumbnails/300/register_abc_8b_left_assembled_300.png
       alt: Register ABC module thumbnail
       description: |-
         **Register ABC 8 bit (LEFT) module**
-      file: /downloads/technical/myCPU_register_8b_L_module_full.pdf
+      file: /downloads/technical/myCPU_Register_8b_L_module_full.pdf
     # ALU
     - link: /img/mycpu/thumbnails/300/alu_assembled_300.png
       alt: ALU module thumbnail
