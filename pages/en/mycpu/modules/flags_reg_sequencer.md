@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Sequencer and Flags Register module"
-subtitle: The heart beat of the CPU
+subtitle: The Heart beat of the CPU
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -8,7 +8,9 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The Sequencer is like the heart beat of the CPU, all things happens at its step rate. The content is under development.
+> The content is under development, the final version will be as soon as possible.
+
+The Sequencer is like the heart beat of the CPU, all things happens at its step rate.
 {: style="text-align: justify"}
 
 <figure class="center">

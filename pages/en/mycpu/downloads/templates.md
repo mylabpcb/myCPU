@@ -8,6 +8,6 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-This content is under development.
+> The content is under development, the final version will be as soon as possible.
 
 <a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/templates/mycpu_templates.zip">Download Templates ZIP file</a>

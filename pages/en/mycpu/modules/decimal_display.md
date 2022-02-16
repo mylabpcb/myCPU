@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayAT28C64_3dview.png" alt="Decimal Display module 3D view" title="3D view of the Decimal Display module" width="500px">

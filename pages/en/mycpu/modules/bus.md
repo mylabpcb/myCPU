@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The BUS module is the main board of the myCPU architecture. The content in under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_3d.png" alt="BUS module 3D view" title="3D view of the BUS module" width="500px">

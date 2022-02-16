@@ -8,7 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The full content is under development.
+> The content is under development, the final version will be as soon as possible.
 
 According to the open architecture of myCPU, you can be built using the provided module boards with the kit or you can design your own modules and build yours modules in the way that you want.
 {: style="text-align: justify"}

@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Program Counter module"
-subtitle: Control the flow of the execution
+subtitle: An 8-bit program counter
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -8,7 +8,9 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-Control the flow of the execution... The content is under development.
+> The content is under development, the final version will be as soon as possible.
+
+Control the flow of the execution.
 {: style="text-align: justify"}
 
 <figure class="center">

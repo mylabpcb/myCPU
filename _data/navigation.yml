@@ -60,7 +60,7 @@
       link: /pages/en/mycpu/extra_modules/protoboard
 - name: Downloads
   dropdown:
-    - name: Technical
+    - name: Technical Documentation
       link: /pages/en/mycpu/downloads/technical_docs
     - name: Diagrams
       link: /pages/en/mycpu/downloads/diagrams

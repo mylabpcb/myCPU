@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/mar4b/mar_4b_3dview.png" alt="MAR module 3D view" title="3D view of the MAR module" width="500px">

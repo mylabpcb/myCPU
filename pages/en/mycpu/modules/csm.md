@@ -8,7 +8,9 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The control signals manager is like the main nervous system of the myCPU, sending control signals to the other parts of the CPU. The content is under development.
+> The content is under development, the final version will be as soon as possible.
+
+The control signals manager is like the main nervous system of the myCPU, sending control signals to the other parts of the CPU.
 {: style="text-align: justify"}
 
 <figure class="center">

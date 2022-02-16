@@ -1,6 +1,6 @@
 ---
 title: About
-subtitle: Me and myLabPCB
+subtitle: Sobre mi y myLabPCB
 layout: page
 show_sidebar: false
 hide_footer: true

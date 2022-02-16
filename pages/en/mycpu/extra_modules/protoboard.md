@@ -1,6 +1,6 @@
 ---
 title: "myCPU: Protoboard"
-subtitle: A special prototype board for custom modules
+subtitle: A compatible prototype board for custom modules
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/protoboard/protoboard_right_3dview.png" alt="Right protoboard module 3D view" title="3D view of the right module protoboard" width="500px">

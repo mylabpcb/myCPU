@@ -8,7 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
+> The content is under development, the final version will be as soon as possible.
 
 Welcome to the presentation page of myCPU, a modular 8 bit computer/CPU working at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
 {: style="text-align: justify"}

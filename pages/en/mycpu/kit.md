@@ -11,7 +11,7 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 
-> This content is under development.
+> The content is under development, the final version will be as soon as possible.
 
 Because I’m an individual and I have not an online store, the only way I have to afford the manufacturing process is through a crowdfunding campaign, but before that I need to know how many people could be interested in get the myCPU One kit. You can find below detailed information about the kit.
 {: style="text-align: justify"}

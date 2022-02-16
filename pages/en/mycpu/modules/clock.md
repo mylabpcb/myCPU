@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Clock module"
-subtitle: A 555 timer based clock
+subtitle: A 555 timer based clock module
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_3d.png" alt="Clock module 3D view" title="3D view of the Clock module" width="500px">

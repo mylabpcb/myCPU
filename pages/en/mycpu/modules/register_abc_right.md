@@ -8,7 +8,9 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-A 8 bit general purpose register module. The content is under development.
+> The content is under development, the final version will be as soon as possible.
+
+A 8 bit general purpose register module.
 {: style="text-align: justify"}
 
 <figure class="center">

@@ -1,6 +1,6 @@
 ---
 title: The Kit Feedback
-subtitle: Feedback form on getting the myCPU Boards Kit
+subtitle: Formulario de Feedback sobre conseguir el kit de myCPU
 layout: page
 show_sidebar: false
 hide_footer: true

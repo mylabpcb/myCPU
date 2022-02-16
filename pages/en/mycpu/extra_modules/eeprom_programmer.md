@@ -8,8 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-The content is under development.
-{: style="text-align: justify"}
+> The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_3dview.png" alt="EEProm Programmer module 3D view" title="3D view of the EEProm Programmer module" width="500px">
