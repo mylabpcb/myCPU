@@ -2,9 +2,9 @@
   images:
     # BUS
     - link: /img/mycpu/thumbnails/300/bus_module_thumbnail_300.png
-      alt: BUS module thumbnail
+      alt: BUS_Power Supply module thumbnail
       description: |-
-        **BUS module**
+        **BUS/Power Supply module**
       file: /downloads/technical/myCPU_BUS_PWR_module_full.pdf
 - title:
   images:
@@ -14,12 +14,12 @@
       description: |-
         **Clock module**
       file: /downloads/technical/myCPU_Clock_module_full.pdf
-    # Power
+    # BUS Manager
     - link: /img/mycpu/thumbnails/300/power_assembled_thumbnail_300.png
-      alt: Power Supply module
+      alt: BUS Manager module
       description: |-
-        **Power Supply module**
-      file: /downloads/technical/myCPU_Power_module_full.pdf
+        **BUS Manager module**
+      file: /downloads/technical/myCPU_BUS_Manager_full.pdf
     # CSM
     - link: /img/mycpu/thumbnails/300/control_signal_assembled_thumbnail_300.png
       alt: Control Signals module
