@@ -1,6 +1,6 @@
 ---
 title: "myCPU: Introduction"
-subtitle: A detailed introduction to myCPU design
+subtitle: A detailed introduction to the myCPU design
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -275,11 +275,48 @@ Digital features of my CPU
 The myCPU uses two buses to share data and connectivity between modules and logical blocks: a Control BUS and a Data BUS. It uses a Von Neumann BUS architecture approach because data and memory addresses share the same BUS: the Data BUS. Really, some of these features are due to the very basic nature of the myCPU design but it very interesting, to students and learners pay attention to this point. Exist another approach, the Harvard architecture which use a dedicated BUS for data and memory addresses.
 {: style="text-align: justify"}
 
-###### The Instruction cycle
+###### The Instruction Cycle
+The myCPU instruction execution is based in one unique Instruction cycle composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states or steps. Each state or step involve one clock cycle and executes one microinstruction.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instruction_cycle.png" alt="Instruction_Cycle example" title="Example of ADD Instruction Cycle" width="900">
+    <figcaption>ADD Instruction Cycle sample diagram</figcaption>
+</figure>
+
+>The myCPU support a microinstruction length up to 24 bits, involving 22 control signals.
+{: style="text-align: justify"}
+
+More advanced CPUs could support more than one instruction cycle and variable length with dozens of states or steps. The myCPU is based in a fixed length instruction cycle, so an instruction could have an execution cycle with empty states, and it means wasted timings. I’m planning to implement a variable length instruction cycle in the next release of the project or provide an improved instruction processor block.
+{: style="text-align: justify"}
+
+Because the instruction decoder uses the current state of step number to decode the corresponding microinstruction for an instruction, the increment of the possible number of states affects to the complexity of the instruction decode process. So, increment the number of the states and implementing a variable instruction cycle length is not an easy upgrade but is planned for the next version.
+{: style="text-align: justify"}
+
+Because of the simplicity of this instruction cycle, the instruction architecture of myCPU could be described as RISC. Each instruction consumes 1 to 3 execution cycles, so they are very reduced. But because it has a limitation of the size of the instruction set, probably when the best approach to the instruction architecture would be CISC.
+{: style="text-align: justify"}
+
 ###### The Flags
-###### Signed integer mode
+The myCPU design include a control BUS support up to 4 status flags, but only two of them are used. Mainly for the limitations on the ALU, which is a simple adder. Only flags for “overflow” which correspond with the last carry bit of the adders, and one flag for “zero” which is calculated by a set of logic gates.
+{: style="text-align: justify"}
+
+###### Signed Integer support
+The myCPU support a signed mode of execution, its affects basically only to the mode on how the displays show numbers. Not affects to the execution itself. There’s a control signal “UN” which tell displays in which mode must display numbers.
+{: style="text-align: justify"}
+
+When “UN” is low, displays can show numbers from 0 to 255, and when “UN” is high displays show numbers from -127 to +127. This behavior was added in this way to keep the same functionality with the Ben Eater’s project and take advantage of his awesome video lectures.
+{: style="text-align: justify"}
+
 ###### Testing using built-in switches
+The myCPU design provide test switches for the BUS current values and to set control signals. With the control signals switches, locates at the CSM module, you can build a real microinstruction and debug the behavior of your myCPU.
+{: style="text-align: justify"}
+
+These test switches will be essentials during the building process of your myCPU to test the logic elements individually without the need to have assembled the rest of the modules. Almost all modules could be tested using the test switches but the instruction decoder and the sequencer which does not depend on the BUS content and it not controlled by any control signal but controlled by other modules.            
+{: style="text-align: justify"}
+
 ###### Debugging each clock cycle
+The myCPU Clock module provide a mechanism to run the myCPU at one clock cycle at a time using a push button. So, you can debug what is happen during each clock cycle. The Clock module is based in the 555 time and is basically the original design of Ben Eater from his 8-bit breadboard computer, which is an awesome approach to a square wave generator with support to running a clock cycle at a time. Even it has support to see what happens during the high and low states of the clock signal. This is very interesting because myCPU is a synchronized system, where the microinstructions are executed during the low state of the clock signal and the changes of the myCPU status occur during the next high state or the high edge of the signal.
+{: style="text-align: justify"}
 
 #### Limitations
 The myCPU is a very limited CPU. As a learning and experimental platform, performance and advanced functionality was not a main objective, so it has very strong limitations which could be improved in the next release myCPU+. Also, the fact to build the myCPU using discrete logic and basic TTL integrated circuits cause several drawbacks in the design and electrical issues due to the to the TTL implementation.
