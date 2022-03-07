@@ -83,8 +83,13 @@ The myCPU physical architecture is based on 3 hardware layers:
 2.	**Module layer**
 3.	**Display layer**
 
-The idea behind this hardware architecture is to separate the BUS support from the logic devices, so, the buses could be shared between the module boards in a chained fashion through the BUS module board over a main BUS layer, to implement the logic devices separately over a module layer and connect them through the BUS layer and isolate the display functionality from modules through a display layer.
+The idea behind this hardware architecture is to separate the BUS support from the logic devices, so, the buses could be shared between the module boards in a chained fashion through the BUS module board over a **main BUS layer**, to implement the logic devices separately over a **module layer** and connect them through the BUS layer and isolate the display functionality from modules through a **display layer**.
 {: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_hard_layers_crop_min.png" alt="myCPU hardware layers" title="myCPU hardware layers" width="80%">
+    <figcaption>myCPU hardware layers example 3D view</figcaption>
+</figure>
 
 The main BUS layer, allow to upgrade the features of the myCPU to a new release, simply by changing the old modules by the new ones, without the need to replace the main BUS module structure.
 {: style="text-align: justify"}
