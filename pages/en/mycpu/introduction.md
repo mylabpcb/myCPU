@@ -8,9 +8,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-> The content is under development, the final version will be as soon as possible.
-
-Welcome to the presentation page of the myCPU design.
+Welcome to the presentation page of the myCPU project.
 
 myCPU is an entire modular 8-bit TTL computer/CPU with support to working and debugging at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
 {: style="text-align: justify"}
@@ -290,7 +288,7 @@ Digital features of my CPU
 The myCPU uses two buses to share data and connectivity between modules and logical blocks: a **Control BUS** and a **Data BUS**. It uses a **Von Neumann BUS architecture** approach because data and memory addresses share the same BUS: the Data BUS. Really, some of these features are due to the very basic nature of the myCPU design but it very interesting, to students and learners pay attention to this point. Exist another approach, the Harvard architecture which use a dedicated BUS for data and memory addresses.
 {: style="text-align: justify"}
 
->The myCPU has a shared Data BUS, up to 16 bits, for data and addresses, but only 8-bit are used, in this first release, because all logic devices included support to only 8-bits.
+>The myCPU has a shared Data BUS, up to 16 bits, for data and addresses, but only 8-bit are used, in this first release, because all logic devices included, in the myCPU design, support just up to 8-bits.
 {: style="text-align: justify"}
 
 All the myCPU control signals goes through the Control BUS. The Control BUS has support to 32 lines length over a 32-pin connector, but not all of them are used by control signals. The voltage regulators placed in each BUS module uses pins GND, and +5v of the control BUS to supply power to modules. Clock, Reset signals, also, goes through the control BUS and the Status Flags signals as well.
@@ -358,7 +356,7 @@ The myCPU design provide **BUS switches** located at the BUS Manager module, to 
 These test switches will be essentials during the building process of your myCPU, testing modules and logic elements individually, without the need to have assembled the rest of the modules, or to test an entire functional block. Almost all modules or functional blocks could be tested using the test switches except, probably, the instruction decoder and the sequencer which are independents of BUS content and control signals.         
 {: style="text-align: justify"}
 
-###### Debugging each clock cycle
+###### Debugging over each single clock cycle including high and low states
 The myCPU Clock module provide a mechanism to run the myCPU at one clock cycle at a time using a push button. Letting you to debug what is happen during each clock cycle.
 {: style="text-align: justify"}
 
