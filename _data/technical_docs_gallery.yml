@@ -15,7 +15,7 @@
         **Clock module**
       file: /downloads/technical/myCPU_Clock_module_full.pdf
     # BUS Manager
-    - link: /img/mycpu/thumbnails/300/power_assembled_thumbnail_300.png
+    - link: /img/mycpu/thumbnails/300/bus_manager_assembled_300.png
       alt: BUS Manager module
       description: |-
         **BUS Manager module**
@@ -23,7 +23,8 @@
     # CSM
     - link: /img/mycpu/thumbnails/300/control_signal_assembled_thumbnail_300.png
       alt: Control Signals module
-      description: Control Signals Manager module
+      description: |-
+        **Control Signals Manager module**
       file: /downloads/technical/myCPU_ControlSignalsManager_module_full.pdf
     # Program Counter
     - link: /img/mycpu/thumbnails/300/programCounter_assembled_thumbnail_300.png

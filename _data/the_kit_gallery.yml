@@ -15,10 +15,10 @@
         **Clock module**
         ## x 1
     # Power
-    - link: /img/mycpu/thumbnails/boards/md/power_clear_front_300_min.png
-      alt: Power Supply module
+    - link: /img/mycpu/thumbnails/boards/md/bus_manager_clear_front_300_min.png
+      alt: BUS Manager module
       description: |- 
-        **Power Supply module**
+        **BUS Manager module**
         ## x 1
     # CSM
     - link: /img/mycpu/thumbnails/boards/md/control_signal_clear_front_300_min.png

@@ -22,8 +22,8 @@
       link: /pages/en/mycpu/modules
     - name: BUS module
       link: /pages/en/mycpu/modules/bus
-    - name: Power Supply
-      link: /pages/en/mycpu/modules/power_supply
+    - name: BUS Manager
+      link: /pages/en/mycpu/modules/bus_manager
     - name: Clock
       link: /pages/en/mycpu/modules/clock
     - name: Control Signals Manager
