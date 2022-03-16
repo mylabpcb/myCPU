@@ -6,7 +6,7 @@ email: mylabpcb@gmail.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
 baseurl: ""
-url: "https://www.mycpuone.com"
+url: "https://mycpuone.com"
 permalink: pretty
 favicon: /img/logo_icon.png
 #gh_sponsor: chrisrhymes
