@@ -1,6 +1,6 @@
 ---
-title: "myCPU: The BUS module"
-subtitle: The main board of myCPU
+title: "myCPU: The BUS/Power Supply module"
+subtitle: A chain capable board which provide BUS support and power supply to modules
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -14,6 +14,8 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_3d.png" alt="BUS module 3D view" title="3D view of the BUS module" width="500px">
     <figcaption>3D view of the BUS module</figcaption>
 </figure>
+> Only one board of the chained structure must to have the power source connector and switch. Should be the first at the top of the chain. The rest of the boards don't need them and you can leave their places empty with no electrical issues.
+{: style="text-align: justify"}
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_assembled_2_min.png" alt="BUS module assembled view" title="Assembled view of the BUS module" width="500px">
     <figcaption>Assembled view of the BUS module</figcaption>

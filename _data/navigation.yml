@@ -20,7 +20,7 @@
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/modules
-    - name: BUS module
+    - name: BUS/Power Supply module
       link: /pages/en/mycpu/modules/bus
     - name: BUS Manager
       link: /pages/en/mycpu/modules/bus_manager
