@@ -306,6 +306,33 @@ The lines included on the control BUS are distributed as indicated below:
 The 22 control signals are handled by the **CSM module (control signal manager)** which set the right digital state for each one when connected to each logical element of the myCPU.
 {: style="text-align: justify"}
 
+###### The Control Signals of myCPU
+The myCPU support up to 22 control signals which control the logic devices of myCPU. Control signals are described deeper at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
+
+{: style="text-align: justify"}
+
+The next list show the function of each control signal and the corresponding logic device:
+{: style="text-align: justify"}
+
+1.	**CLK, /CLK**: clock signals
+2.	**RST, /RST**: reset signals, myCPU need both signals High and Low. 
+3.	**HLT**: Pause signal, used by the clock module to block the clock signal.
+4.	**UN**: Signed/Unsigned control of the view mode of 4 digits decimal display.
+5.	**AI, AO**: Accumulator register load and output.
+6.	**BI, BO**: Operand register load and output.
+7.	**CI, CO**: General purpose register C load and output.
+8.	**II, IO**: Instruction register load and output.
+9.	**FI**: Flags register load.
+10.	**MI**: MAR (Memory address register) register load.
+11.	**RI, RO**: SRAM load and output.
+12.	**PE**: Program counter increment signal.
+13.	**PI, PO**: Program counter load and output.
+14.	**SI, SO**: Stack pointer control signals or to other purposes.
+15.	**OI**: Output register load.
+16.	**EO**: ALU output.
+17.	**SU**: ALU Substract mode enable.
+18.	**FC, FV, FN, FZ**: Flags. Carry, Overflow, Negative and Zero flags.
+
 
 ###### The Instruction Cycle
 The myCPU instruction execution is based in one unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
