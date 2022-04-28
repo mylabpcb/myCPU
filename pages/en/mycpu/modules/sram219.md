@@ -26,3 +26,11 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/ram219/ram219_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
     <figcaption>Back view of the printed board</figcaption>
 </figure>
+
+### The Assembly
+Tips and tricks of the assembly process. Follow steps for a easy mount and soldering.
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/ram219/asm/ram219_asm_min.png" alt="SRAM Assembly steps" title="Components and Assembly steps view" width="800px">
+    <figcaption>Components and Assembly steps view</figcaption>
+</figure>
