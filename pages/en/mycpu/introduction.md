@@ -271,10 +271,10 @@ Below you can find the digital features and limitations of my CPU, some features
 Digital features of my CPU
 
 +	**16-bit data BUS**
-+	**32-lines control BUS, including power supply connections, status flags and clock, reset signals**
++	**32-lines control BUS, including power supply connections, status flags and clock, reset signCISals**
 +	**Microinstruction length up to 22 control signals**
 +	**Instruction cycle from 5 up to 8 cycles**
-+	**RISC instruction set type approach**
++	**CISC instruction set type approach**
 +	**Von Neumann BUS architecture approach**
 +	**Two state flags**
 +	**Single clock cycle debugging support, including HIGH and LOW edges**
@@ -311,7 +311,7 @@ The myCPU support up to 22 control signals which control the logic devices of my
 
 {: style="text-align: justify"}
 
-The next list show the function of each control signal and the corresponding logic device:
+The next list shows the function of each control signal and the corresponding logic device:
 {: style="text-align: justify"}
 
 1.	**CLK, /CLK**: clock signals
@@ -335,7 +335,7 @@ The next list show the function of each control signal and the corresponding log
 
 
 ###### The Instruction Cycle
-The myCPU instruction execution is based in one unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
+The myCPU instruction execution is based on unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
 {: style="text-align: justify"}
 
 Next image shows an example of the instruction cycle for the ADD instruction:
@@ -351,10 +351,10 @@ Next image shows an example of the instruction cycle for the ADD instruction:
 More advanced and modern CPUs, support more than one instruction cycle per instruction and variable instruction cycle length with dozens of states or steps. The myCPU is based, in its first release, on a fixed length instruction cycle, so an instruction could have an execution cycle with empty states, and it means wasted timings. I’ve planned to implement a variable length instruction cycle, in the next release of the project, by providing an improved set of modules for the instruction processor block.
 {: style="text-align: justify"}
 
-Because the instruction decoder uses the current state number to decode the corresponding microinstruction for an instruction, the increment of the possible number of states affects to the complexity of the instruction decode process. So, increment the number of the states and implementing a variable instruction cycle length is not an simple upgrade but I think it’s mandatory to approach to a more real CPU and is planned for the next version.
+Because the instruction decoder uses the current state number to decode the corresponding microinstruction for an instruction, the increment of the possible number of states affects to the complexity of the instruction decode process. So, incrementing the number of the states and implementing a variable instruction cycle length is not an simple upgrade but I think it’s mandatory to approach to a more real CPU and is planned for the next version.
 {: style="text-align: justify"}
 
-Due to the simplicity of this instruction cycle of myCPU, the instruction architecture of myCPU could be described as **RISC (Reduced Instruction Set Computer)**. Each instruction consumes from 1 to 3 execution cycles as maximum, so they are very reduced. But because it has a limitation of the length of the instruction set, probably the best approach to the instruction architecture would be **CISC (Complex Instruction Set Computer)**. 
+Due to the microinstruction based nature of the myCPU, the instruction architecture of myCPU could be described as **CISC (Complex Instruction Set Computer)** instead of a **RISC (Reduced Instruction Set Computer)**. Each instruction could consumes from 1 to 8 execution state cycles, and probably, it will be upgraded up to 16 state cycles in next release.
 {: style="text-align: justify"}
 
 ###### The Flags
