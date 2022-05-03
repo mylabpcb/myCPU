@@ -472,7 +472,7 @@ The Sequencer determine the microinstruction execution and the main Clock signal
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_InstructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
     <figcaption>Instruction Processor block</figcaption>
 </figure>
 
