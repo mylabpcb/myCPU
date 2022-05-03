@@ -13,7 +13,7 @@ Welcome to the presentation page of the myCPU project.
 myCPU is an entire modular 8-bit TTL computer/CPU with support to working and debugging at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
 {: style="text-align: justify"}
 
-### Learning Platform
+### A learning Platform
 The myCPU is a learning platform, it means that the entire project has been designed to provide the best learning experience on how a CPU works, what kind of logic devices are involved in a basic CPU architecture and how work together some digital logic devices. The architecture, the module concerns separation, the components, and their distribution on the board was thought with the objective to give a good understanding of a CPU system to all people, including beginners, and the affordability to buy the components by yourself wherever you want even on Chinese stores if you want. 
 {: style="text-align: justify"}
 
@@ -196,8 +196,6 @@ And below you will find some examples of layouts according to the block modules 
 The horizontal layout needs two flat wires to connect the control bus and data bus between the first two adjacent BUS modules and assembly male connectors instead the female connectors on the sides connected by the wires.
 {: style="text-align: justify"}
 
-image of the wire connection
-
 #### The modules
 The myCPU architecture design include 16 functional modules, in this first release, provided through 15 physical module boards in the Kit because the sequencer and the flags register were designed on the same physical module board.
 {: style="text-align: justify"}
@@ -223,7 +221,7 @@ Below you can see the list of physical modules:
 >Navigate to [Introduction page of modules](/pages/en/mycpu/modules) for more information related to the myCPU modules and the module design in the open architecture.
 {: style="text-align: justify"}
 
-##### Display Modules
+#### Display Modules
 The myCPU design include, in the first release, two display modules: one for display 8-bit binary values over common leds, and the other one to display a decimal number value over 7 segments digits.
 {: style="text-align: justify"}
 
@@ -234,7 +232,7 @@ The myCPU design include, in the first release, two display modules: one for dis
 >[Decimal number display 4 Digits](/pages/en/mycpu/modules/decimal_display) and
 >[8-bit LED binary display](/pages/en/mycpu/modules/display_led)
 
-##### Extra Modules
+#### Extra Modules
 The myCPU design include two additional modules: An **EEProm programmer module for the AT28C64 EEProm memory** and a **Protoboard module** for your custom module prototypes. The protoboard will be provided in the two side versions in the myCPU Kit.
 {: style="text-align: justify"}
 
@@ -242,7 +240,7 @@ The myCPU design include two additional modules: An **EEProm programmer module f
 >[EEProm programmer module](/pages/en/mycpu/extra_modules/eeprom_programmer) and
 >[Protoboard](/pages/en/mycpu/extra_modules/protoboard)
 
-##### Planned Modules
+#### Planned Modules
 The next release of myCPU project, which could be the myCPU+ involved a new set of modules to provide 16 bits data support, 16 bits addressing capabilities which give a more bigger SRAM support , up to 64 Kb, support of an instruction set with a length up to 64 instructions, support of CISC instruction type mode with a sequencer length up to 16 steps, support of variable instruction cycle  length, more state flags, SRAM program loader, more output ports, input ports support, and many more…
 {: style="text-align: justify"}
 
@@ -284,7 +282,7 @@ Digital features of my CPU
 +	**Clock speed from 5-10 Hz to 3 kHz**
 +	**+- 127 programmable integer display mode by a control signal**
 
-###### The Buses
+##### The Buses
 The myCPU uses two buses to share data and connectivity between modules and logical blocks: a **Control BUS** and a **Data BUS**. It uses a **Von Neumann BUS architecture** approach because data and memory addresses share the same BUS: the Data BUS. Really, some of these features are due to the very basic nature of the myCPU design but it very interesting, to students and learners pay attention to this point. Exist another approach, the Harvard architecture which use a dedicated BUS for data and memory addresses.
 {: style="text-align: justify"}
 
@@ -306,7 +304,7 @@ The lines included on the control BUS are distributed as indicated below:
 The 22 control signals are handled by the **CSM module (control signal manager)** which set the right digital state for each one when connected to each logical element of the myCPU.
 {: style="text-align: justify"}
 
-###### The Control Signals of myCPU
+##### The Control Signals of myCPU
 The myCPU support up to 22 control signals which control the logic devices of myCPU. Control signals are described deeper at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
 
 {: style="text-align: justify"}
@@ -329,12 +327,12 @@ The next list shows the function of each control signal and the corresponding lo
 13.	**PI, PO**: Program counter load and output.
 14.	**SI, SO**: Stack pointer control signals or to other purposes.
 15.	**OI**: Output register load.
-16.	**EO**: ALU output.
-17.	**SU**: ALU Substract mode enable.
+16.	**EO**: ALU Output.
+17.	**SU**: ALU Subtract mode enable.
 18.	**FC, FV, FN, FZ**: Flags. Carry, Overflow, Negative and Zero flags.
 
 
-###### The Instruction Cycle
+##### The Instruction Cycle
 The myCPU instruction execution is based on unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
 {: style="text-align: justify"}
 
@@ -357,7 +355,7 @@ Because the instruction decoder uses the current state number to decode the corr
 Due to the microinstruction based nature of the myCPU, the instruction architecture of myCPU could be described as **CISC (Complex Instruction Set Computer)** instead of a **RISC (Reduced Instruction Set Computer)**. Each instruction could consumes from 1 to 8 execution state cycles, and probably, it will be upgraded up to 16 state cycles in next release.
 {: style="text-align: justify"}
 
-###### The Flags
+##### The Flags
 The myCPU design include up to **4 status flags**, but only two of them are used. Mainly for the limitations on the ALU, which is based on simple adders. The first release includes only: a flag for “**Overflow**”, which correspond with the last carry bit of the adders, and a flag for “**Zero**” which is calculated by a set of logic gates.
 {: style="text-align: justify"}
 
@@ -367,23 +365,23 @@ The corresponding control signals are listed below:
 2.	**FV: Overflow flag**
 
 
-###### Signed Integer display support
+##### Signed Integer display support
 The myCPU support a signed mode of execution, its affects basically only to the mode on how the decimal number display shows numbers. Not affects to the execution itself. There’s a control signal “UN” which tell displays in which mode must display numbers.
 {: style="text-align: justify"}
 
->This mode does not affect on how ALU perform calculations, only how numbers are displayed. 
+>This mode has not effect on how ALU perform calculations, only how numbers are displayed. 
 
 When **UN is low**, displays can show numbers from **0 to 255**, and when **UN is high** displays show numbers from **-127 to +127** including sign symbol. This behavior was added in this way to keep the same functionality from the Ben Eater’s project and take advantage of his awesome video lectures.
 {: style="text-align: justify"}
 
-###### Testing using the built-in test switches
+##### Testing using the built-in test switches
 The myCPU design provide **BUS switches** located at the BUS Manager module, to setup the BUS current values. And the **Control Signals switches** located at the CSM module, to setup the microinstruction control signals. Using the CSM switches, you can build a real microinstruction and debug the behavior of your myCPU.
 {: style="text-align: justify"}
 
 These test switches will be essentials during the building process of your myCPU, testing modules and logic elements individually, without the need to have assembled the rest of the modules, or to test an entire functional block. Almost all modules or functional blocks could be tested using the test switches except, probably, the instruction decoder and the sequencer which are independents of BUS content and control signals.         
 {: style="text-align: justify"}
 
-###### Debugging over each single clock cycle including high and low states
+##### Debugging over each single clock cycle including high and low states
 The myCPU Clock module provide a mechanism to run the myCPU at one clock cycle at a time using a push button. Letting you to debug what is happen during each clock cycle.
 {: style="text-align: justify"}
 
@@ -401,10 +399,10 @@ The limitations of the myCPU design are due two reasons: the first one is to kee
 The myCPU is a very limited CPU. As a learning and experimental platform, performance and advanced functionality was not a main objective, so it has very strong limitations which could be improved in the next release myCPU+. The fact to build the myCPU using discrete logic and basic TTL integrated circuits cause several drawbacks in the design, and electrical issues due to the TTL implementation.
 {: style="text-align: justify"}
 
-The ALU was designed using just 4-bit adders with the consequent limitation to adding operations and **substracting using the 2´s complement** approach.
+The ALU was designed using just 4-bit adders with the consequent limitation to adding operations and **subtracting using the 2´s complement** approach.
 {: style="text-align: justify"}
 
-The SRAM module is based on the 74SL219 which is a very limited SRAM chip of 16 x 4 bits. The limited available memory, to 16 bytes, restricted others features like the length of the instruction set and the support to write more complex or large programs because of the limit to 16 instructions. I understand that the SRAM limit is a hard inconvenient but remember that myCPU is a learning platform and you can learn the basics using just 12 to 14 instructions.
+The SRAM module is based on the 74SL219 which is a very limited SRAM chip of 16 x 4 bits. The limited available memory, to 16 bytes, restrict other features like the length of the instruction set or the posibility to write more complex or large programs because of the limit to 16 instructions. I understand that the SRAM limit is a hard inconvenient but remember that myCPU is a learning platform and you can learn the basics using just 12 to 14 instructions.
 {: style="text-align: justify"}
 
 Due to the limitation of SRAM, the memory address register (MAR) has a limit to 4-bit address. Does not make sense make it bigger.
@@ -418,7 +416,7 @@ There’s no input ports built-in module and no dedicated control signals for in
 
 Some of the limitations, in this release, are listed below:
 
-+	**Very basic ALU supporting only add and substract operations**
++	**Basic ALU supporting only add and subtract operations**
 +	**SRAM 16 bytes**
 +	**Memory Address length 4-bit**
 +	**4-bit instruction Opcode, supporting up to 16 instructions**
@@ -449,3 +447,50 @@ You can review some of these improvements below:
 +	**A filter capacitor in each module**
 
 
+### The Instruction Processor
+
+The myCPU design in based on a microprogramming instruction decode, it means that the decoding process to convert an instruction into its equivalent set of microinstructions is done by the code programmed in a EEProm memory instead using combinational logic.
+{: style="text-align: justify"}
+
+The instruction processor is a logic block responsible of process and execute an instruction and involves several logic elements:
+{: style="text-align: justify"}
+
+1.	**Instruction Register**
+2.	**Sequencer**
+3.	**Flags Register**
+4.	**Instruction Decoder**
+5.	**CSM (Control Signals Manager)**
+
+#### Microinstruction decoding
+In the myCPU design, a CPU native instruction (machine code) is decoded to a set of microinstructions which are a single sequence of bits representing a set of control signals which can change the status of the myCPU logic elements in a synchronized way. 
+{: style="text-align: justify"}
+
+Each instruction is composed by **two or more microinstructions**, and each microinstruction is executed during an individual **sequencer clock cycle** or **step**, which is another clock signal but dependent of the main clock signal. In the myCPU design the sequencer clock signal is inverted regard to the main clock signal to avoid issues with the response time of the TTL ICs. 
+{: style="text-align: justify"}
+
+The Sequencer determine the microinstruction execution and the main Clock signal determine de myCPU logic status change.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
+    <figcaption>Instruction Processor block</figcaption>
+</figure>
+
+The **Instruction Register** holds the current **Opcode** of the instruction, and the address or value of an optional argument if it was defined in the program.
+{: style="text-align: justify"}
+
+Another piece in the instruction decode process is the **Flags Register**, which provide the cpu state flags activated on the myCPU to the decoding process. The myCPU has only two flags in this release: **Overflow (FV)** and **Zero (FZ)**
+{: style="text-align: justify"}
+
+So, the decoded microinstruction to execute will be determined by:
+
+1.	**Opcode (4 bits)**
+2.	**Sequencer step (3 bits)**
+3.	**Flags (2 bits)**
+4.	**Memory Selection (2 bits)**
+
+The memory selection bits are used to set from which memory unit will be write (during programming) or read (during decoding) each microinstruction byte. In the myCPU design each microinstruction is composed by 3 bytes handled by 3 memory units. Review the Instruction decoder schematic and the programmer code to understand the memory selection when programming the memory.
+{: style="text-align: justify"}
+
+These binary values compose an **address of 11 bits**, the address determine the location of the memory where is the microinstruction to execute correponding to a sequencer state. The decoded microinstuction word is passed to the CSM (control signals manager) which send the right control signals to the logic devices of the CPU.
+{: style="text-align: justify"}
