@@ -10,7 +10,7 @@ hero_darken: false
 ---
 Welcome to the presentation page of the myCPU project.
 
-myCPU is an entire modular 8-bit TTL computer/CPU with support to working and debugging at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
+myCPU is a fully modular 8-bit TTL computer/CPU with support to working and debugging at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
 {: style="text-align: justify"}
 
 ### A learning Platform
