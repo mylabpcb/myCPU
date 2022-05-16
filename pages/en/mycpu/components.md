@@ -11,14 +11,23 @@ hero_darken: false
 > The content is under development, the final version will be as soon as possible.
 
 The myCPU design is based on through hole components instead SMD because of its ease of assembly and soldering, they are easier to buy and manipulate, especially for beginners, and makes replacement easy in case of an assembly error or malfunction.
+{: style="text-align: justify"}
+
+
 No components will be provided with the kit because the difficult to handle a component catalog and storage for a particular who don’t have a dedicated store for the project. You can buy all the components at Chinese stores, assuming the risk for the lack of quality, or at the official components stores which are more expensive stores.
+{: style="text-align: justify"}
+
+>The risk of lack of quality of Chinese components is real and could cause some issues difficult to debug and check, keep it in mind when you take your decision where to buy.
 {: style="text-align: justify"}
 
 All my prototypes were built using Chinese components and the final version works fine. Really, I had several problems with some of the IC provided, but in general it has enough quality for a DIY project, and it has a lower price to buy replacements. Keep in mind, if you are beginner or even you don’t, is easy make a mistake with the orientation of the IC and burn some of them, is preferably having to buy cheap replacements on Chinese stores.
 {: style="text-align: justify"}
 
 In case you are experienced hobbyist or engineer you can buy all the components in official stores if you want but think that some TTL families could be hard to find at those stores because of the obsolete nature of the TTL technology.
-{: style="text-align: justify"} 
+{: style="text-align: justify"}
+
+>TTL ICs are mostly obsolete now days and some of them are difficult to find on official stores, so, Chinese stores are the only place to buy them.
+{: style="text-align: justify"}
 
 The next list includes the common types of components you can find in the myCPU design:
 {: style="text-align: justify"} 
