@@ -55,26 +55,41 @@ The next list includes the common types of components you can find in the myCPU 
 {: style="text-align: justify"} 
 
 ### Resistors
-Most common values of 1/4W resistors are used in the myCPU design: 220Ω, 330Ω, or 1K are the most used values. Chosen the 1/4W not for its dissipation but for its most manageable size.
-{: style="text-align: justify"} 
+Common values of resistors are used in the myCPU design: 220Ω, 330Ω, or 1K are the most used values. The 1/4W size resistor was chosen not for its dissipation capability but for its most manageable size.
+{: style="text-align: justify"}
+
+{:.center}
+![Resistor size samples](/img/mycpu/components/resistors_min.png){:width="400px"}
 
 ### Resistor Arrays
-For limited or pull-down resistors, a resistor array is used to save space and avoid to soldering a lot of resistors.
-{: style="text-align: justify"} 
+A resistor array is used for limited or pull-down resistors, to save space and avoid the need to solder a lot of identical resistors.
+{: style="text-align: justify"}
+
+{:.center}
+![Resistor arrays samples](/img/mycpu/components/resistor_arrays_min.png){:width="400px"}
 
 ### TTL ICs
-The myCPU design is based mostly on TTL logic ICs, is an old technology and probably does not have the best electrical behavior but is more friendly and electrical tolerant for beginners. Were the most common digital components on its time and probably are the best choice to build an experimental device for learning. Although could be more difficult to find and buy. CMOS technology could be a better choice but it break the learning path compatibility with the Ben’s Eater video lectures.
+The myCPU design is based mostly on TTL logic ICs, is an obsolete technology and probably does not have the best electrical behaviour but is more friendly and electrical tolerant for beginners, students, and hobbyists.
 {: style="text-align: justify"}
+
+TTL family were the most common digital components on its time and probably are the best choice to build an experimental device for learning. Although could be more difficult to find and buy. CMOS technology could be a better choice, but it breaks the compatibility with the learning path of the Ben’s Eater video lectures. In the other hand those TTL ICs are easy to find in Chinese components stores at a cheap price.
+{: style="text-align: justify"}
+
+{:.center}
+![TTL ICs samples](/img/mycpu/components/TTL_ICs_min.png){:width="800px"}
 
 ### CMOS components
-Are used basically for memories of special components like the 4094 shift register on the EEProm programmer.
+Are used basically for memories or special components like the **CD4094** shift register on the EEProm programmer.
 {: style="text-align: justify"}
 
-In the myCPU design you can find CMOS **AT28C64** EEProm memories mainly for decoders, replacing the combinational decoding. To avoid the need to use and but a bunch of different sizes of EEProm memories, I decided to use the same size model for all purposes which need an EEProm and chose the 64K version.
+In the myCPU design you can find the **AT28C64** EEProm memories mainly for decoders, replacing the combinational decoding logic. To avoid the need to use a bunch of different capacity sizes of EEProm memories, I decided to use the same type of EEProm memory for all purposes which need an EEProm and chose the 64K version.
 {: style="text-align: justify"}
 
-As an alternative to the SRAM module based on TTL **74LS219 SRAM** IC, I’ve planned to design a SRAM module based on CMOS **HM-6116 2K x 8 bit SRAM** memory or in the future a bigger SRAM module based on the CMOS **HM-62256A 32K x 8 bit** or the CMOS **W24129A 16K x 8 bit**.
+As an alternative to the SRAM module based on TTL **74LS219** SRAM IC, I’ve planned to design a SRAM module based on **HM-6116** (2K x 8) SRAM memory or in the future a bigger SRAM module based on the **HM-62256A** (32K x 8) or the **W24129A** (16K x 8).
 {: style="text-align: justify"}
+
+{:.center}
+![CMOS ICs samples](/img/mycpu/components/cmos_min.png){:width="400px"}
 
 ### Ceramic or Tantalum capacitors
 Preferably try to use tantalum capacitors for its better electrically features. The most common use is as decoupling capacitors for the TTL ICs, which is mandatory when use TTL and recommended by the manufacturer. 10nF and 100nF are the most common values, especially the last one for decoupling. Other values are used mainly on the Clock module.
