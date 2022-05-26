@@ -72,7 +72,10 @@ A resistor array is used for limited or pull-down resistors, to save space and a
 The myCPU design is based mostly on TTL logic ICs, is an obsolete technology and probably does not have the best electrical behaviour but is more friendly and electrical tolerant for beginners, students, and hobbyists.
 {: style="text-align: justify"}
 
-TTL family were the most common digital components on its time and probably are the best choice to build an experimental device for learning. Although could be more difficult to find and buy. CMOS technology could be a better choice, but it breaks the compatibility with the learning path of the Ben’s Eater video lectures. In the other hand those TTL ICs are easy to find in Chinese components stores at a cheap price.
+TTL family were the most common digital components on its time and probably are the best choice to build an experimental device for learning. Although could be more difficult to find and buy. CMOS technology could be a better choice, but it breaks the compatibility with the learning path of the Ben’s Eater video lectures. In the other hand those TTL ICs are easy to find in Chinese components stores at a cheap price. 
+{: style="text-align: justify"}
+
+Up to 15 types of TTL ICs are used in the myCPU design, you can find all references in the [BOM list](/pages/en/mycpu/downloads/bom/) and their corresponding datasheets at the [downloads](/pages/en/mycpu/downloads/datasheets/) page.
 {: style="text-align: justify"}
 
 {:.center}
@@ -88,31 +91,56 @@ In the myCPU design you can find the **AT28C64** EEProm memories mainly for deco
 As an alternative to the SRAM module based on TTL **74LS219** SRAM IC, I’ve planned to design a SRAM module based on **HM-6116** (2K x 8) SRAM memory or in the future a bigger SRAM module based on the **HM-62256A** (32K x 8) or the **W24129A** (16K x 8).
 {: style="text-align: justify"}
 
+You can find all related datasheets at the [downloads](/pages/en/mycpu/downloads/datasheets/) page.
+
 {:.center}
 ![CMOS ICs samples](/img/mycpu/components/cmos_min.png){:width="400px"}
 
-### Ceramic or Tantalum capacitors
-Preferably try to use tantalum capacitors for its better electrically features. The most common use is as decoupling capacitors for the TTL ICs, which is mandatory when use TTL and recommended by the manufacturer. 10nF and 100nF are the most common values, especially the last one for decoupling. Other values are used mainly on the Clock module.
-{: style="text-align: justify"} 
+### Capacitors
+Ceramic capacitors are used mostly for decoupling. Preferably try to use tantalum capacitors for its better electrically behaviour. The most common use is as decoupling capacitors for the TTL ICs, which is mandatory when use TTL and recommended by the manufacturer. 10nF and 100nF are the most common values, especially the last one for decoupling. Other values are used mainly on the Clock module to avoid noise and signal ripple.
+{: style="text-align: justify"}
 
-### Electrolytic capacitors
-Used mainly for power supply filtering purposes. You can find one 10µF capacitor on each module and a 220µF in each voltage regulator on the BUS module. Feel free to change those values if you consider other values better.
+Electrolytic capacitors are used mainly for power supply filtering purposes. You can find one 10µF capacitor on each module and a 0.47 µF or 220 µF, depending of your preferences, in each voltage regulator on the BUS module. Feel free to change these values if you consider other values better.
 {: style="text-align: justify"}
 
 Other electrolytic capacitors are used to setup 555 timers in the Clock and Display modules.
 {: style="text-align: justify"}
 
 ### Switches, Buttons and Potentiometers
-Mainly I used DIP switches to provide testing capabilities. 4, 8 or 12 positions are used. The 12 positions are used only in the CSM (Controller) module.
+DIP switches are used, mainly to provide setup or testing capabilities. DIP switches of 4, 8 and 12 positions are used. The 12 positions switch are used only in the CSM (Control Signal Manager) module.
 {: style="text-align: justify"}
 
-For on/off functions, a common 3 pins mini switch are used.
+For on/off behavior, a common 3 pins mini slide switches are used.
 {: style="text-align: justify"}
 
-Basic PCB mount push buttons are used of 6 mm and 12 mm sizes.
+Push buttons are used with 6 mm and 12 mm sizes.
 {: style="text-align: justify"}
 
-### LED bar displays
+{:.center}
+![Switches samples](/img/mycpu/components/switches_min.png){:width="400px"}
+
+### LEDs and LED bar displays
+Mostly 3 mm LED are used on display modules, by its small size, to show status information and data. Some 5 mm LED are used for other purposes. 
+{: style="text-align: justify"}
+
+I used different LED colours to build different colour displays following a colour pattern to keep a functional correspondence with the LED displays, I recommended you follow the same pattern for an easy debugging view.
+{: style="text-align: justify"}
+
++	**RED**: BUS, Instruction Register, MAR, Output Register, Flags
++	**GREEN**: General purpose registers
++	**YELLOW**: SRAM, Program Counter, Sequencer counter
++	**BLUE**: ALU, CSM, Sequencer states
+
+
+8 segments LED bar displays are used in the myCPU design to show the current data on the BUS. Later in the next release will be used the 8 segments LED bar displays instead LED 3mm on LED displays to save space and because with two of them you can show either 8 or 16 bits.
+{: style="text-align: justify"}
+
+There are some places where LED are assembled directly to the board, mainly because it shows status or functional information not data. The purpose of LED displays is to show the data movements during the execution process.
+{: style="text-align: justify"}
+
+{:.center}
+![LED samples](/img/mycpu/components/led_displays_min.png){:width="500px"}
+
 ### 4 digits 7 segment displays
 ### Power Jack
 A common horizontal 3 pin 2.1 mm PCB power jack are used for plugging the power source.
