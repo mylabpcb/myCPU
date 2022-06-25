@@ -269,8 +269,8 @@ Below you can find the digital features and limitations of my CPU, some features
 Digital features of my CPU
 
 +	**16-bit data BUS**
-+	**32-lines control BUS, including power supply connections, status flags and clock, reset signCISals**
-+	**Microinstruction length up to 22 control signals**
++	**32-lines control BUS, including power supply connections, status flags, clock and reset signals**
++	**Microinstruction length up to 22 direct control signals**
 +	**Instruction cycle from 5 up to 8 cycles**
 +	**CISC instruction set type approach**
 +	**Von Neumann BUS architecture approach**
@@ -369,13 +369,16 @@ The corresponding control signals are listed below:
 The myCPU support a signed mode of execution, its affects basically only to the mode on how the decimal number display shows numbers. Not affects to the execution itself. There’s a control signal “UN” which tell displays in which mode must display numbers.
 {: style="text-align: justify"}
 
->This mode has not effect on how ALU perform calculations, only how numbers are displayed. 
-
-When **UN is low**, displays can show numbers from **0 to 255**, and when **UN is high** displays show numbers from **-127 to +127** including sign symbol. This behavior was added in this way to keep the same functionality from the Ben Eater’s project and take advantage of his awesome video lectures.
+>This mode has not effect on how ALU perform calculations, only the mode on how numbers are displayed. 
 {: style="text-align: justify"}
 
+When **UN** control signal is low, decimal displays show numbers unsigned from **0** to **255**, and when **UN** control signal is high, decimal displays show numbers in two’s complement form in a range from **-128** to **+127** including sign symbol. This behavior was added in this way to keep the same functionality from the Ben Eater’s project and take advantage of his awesome video lectures explaining the **two’s complement arithmetic** and the build of a decimal 4 digits 7 segment display.
+{: style="text-align: justify"}
+
+>You should watch: [Two's complement arithmetic](https://www.youtube.com/watch?v=4qH4unVtJkE){:target="_blank"}
+
 ##### Testing using the built-in test switches
-The myCPU design provide **BUS switches** located at the BUS Manager module, to setup the BUS current values. And the **Control Signals switches** located at the CSM module, to setup the microinstruction control signals. Using the CSM switches, you can build a real microinstruction and debug the behavior of your myCPU.
+The myCPU design provide **BUS test switches** located at the BUS Manager module, to setup the BUS current values. And the **Control Signals test switches** located at the CSM module, to setup the microinstruction control signals. Using the CSM switches, you can build a real microinstruction and debug the behavior of your myCPU.
 {: style="text-align: justify"}
 
 These test switches will be essentials during the building process of your myCPU, testing modules and logic elements individually, without the need to have assembled the rest of the modules, or to test an entire functional block. Almost all modules or functional blocks could be tested using the test switches except, probably, the instruction decoder and the sequencer which are independents of BUS content and control signals.         
