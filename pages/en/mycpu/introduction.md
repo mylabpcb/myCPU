@@ -89,7 +89,7 @@ The idea behind this hardware architecture is to separate the BUS support from t
     <figcaption>myCPU 3D view sample of hardware layers</figcaption>
 </figure>
 
-The main BUS layer, allows upgrade the features of the myCPU to a new release, simply by changing the old modules by the new ones, without the need to replace the main BUS module structure.
+The main BUS layer allows upgrade the features of the myCPU to a new release, simply by changing the old modules by the new ones, without the need to replace the main BUS module structure.
 {: style="text-align: justify"}
 
 The module layer allows design logic devices independently, break complex logic devices in small modular pieces as individual modules, and use the main BUS layer to create connection between them or also create connections between modules using direct flat wires.
@@ -102,10 +102,19 @@ The display layer also let you to design your own display modules. The myCPU has
 The myCPU is based on a main BUS layer structure composed by chained identical BUS module boards.
 {: style="text-align: justify"}
 
-Each bus module board has its own +5v power supply using a voltage regulator (7805) which provide supply to the two modules plugged on the board. The general power source is provided through the chain connectors and the power supply, to modules, is provided through the control bus connector. This approach allows use a common 9v or 12v power source to provide 5v of stable power supply to modules, without any voltage drop or electrical issues due to the modularity or the size of the total board surface. The top board of the structure must have the power source connector and the power switch, leave the rest without them.
+Each Bus module board has its own +5v power supply using a voltage regulator (7805) which provide supply to the two modules plugged on the board. The general power source is provided through the chain connectors and the power supply is provided through the control bus connector. This approach allows to use a common 9v or 12v power source to provide 5v of stable power supply to modules, without any voltage drop or electrical issues due to the size of the total board surface. The top board of the structure must have the power source connector and the power switch, leave the rest of the boards of the chain without them.
 {: style="text-align: justify"}
 
-Each bus module board has connectors for the Control BUS and the Data BUS to connect the buses with the modules and connectors to create the chain between the main bus modules boards. You can see a more detailed review of buses in next section:  The Buses (link)
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_vertical_chain_partial_min.png" alt="myCPU BUS module chain" title="myCPU BUS module chain" width="60%">
+    <figcaption>myCPU BUS module partial chain sample view with separators</figcaption>
+</figure>
+
+Each bus module board has connectors for the Control BUS and the Data BUS to connect the buses with the modules and connectors to create the chain between the main bus modules boards.
+
+Go to [**BUS Module**](/pages/en/mycpu/modules/bus) to see a full description of the BUS module.
+
+You can see a more detailed review of buses in next section:  [**The Buses**](#the-buses)
 {: style="text-align: justify"}
 
 This architecture lets you increase your myCPU layout and capabilities by adding more bus module boards to the chain which can support additional modules or more complex module blocks. Because of each bus module board has its own power supply regulator, you can grow your layout all what you want without any supply issues. The limit to grow is only the length of the control signals set.
