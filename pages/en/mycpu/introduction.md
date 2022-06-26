@@ -105,8 +105,12 @@ The myCPU is based on a main BUS layer structure composed by chained identical B
 Each Bus module board has its own +5v power supply using a voltage regulator (7805) which provide supply to the two modules plugged on the board. The general power source is provided through the chain connectors and the power supply is provided through the control bus connector. This approach allows to use a common 9v or 12v power source to provide 5v of stable power supply to modules, without any voltage drop or electrical issues due to the size of the total board surface. The top board of the structure must have the power source connector and the power switch, leave the rest of the boards of the chain without them.
 {: style="text-align: justify"}
 
+<figure style="float:left; margin:20px">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_vertical_layout_empty_min.png" alt="myCPU BUS module full chain" title="myCPU BUS module full chain" width="300px">
+    <figcaption>myCPU BUS module full chain view</figcaption>
+</figure>
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/mycpu_vertical_chain_partial_min.png" alt="myCPU BUS module chain" title="myCPU BUS module chain" width="60%">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_vertical_chain_partial_min.png" alt="myCPU BUS module partial chain" title="myCPU BUS module partial chain" width="300px">
     <figcaption>myCPU BUS module partial chain sample view with separators</figcaption>
 </figure>
 
