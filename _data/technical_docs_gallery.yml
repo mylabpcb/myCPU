@@ -5,7 +5,7 @@
       alt: BUS_Power Supply module thumbnail
       description: |-
         **BUS/Power Supply module**
-      file: /downloads/technical/myCPU_BUS_Supply_module_full.pdf
+      file: /downloads/technical/myCPU_BUS_module_full.pdf
 - title:
   images:
     # Clock
@@ -19,7 +19,7 @@
       alt: BUS Manager module
       description: |-
         **BUS Manager module**
-      file: /downloads/technical/myCPU_BUS_Manager_full.pdf
+      file: /downloads/technical/myCPU_BUS_Manager_module_full.pdf
     # CSM
     - link: /img/mycpu/thumbnails/300/control_signal_assembled_300_min.png
       alt: Control Signals module
