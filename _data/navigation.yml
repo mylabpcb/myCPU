@@ -20,7 +20,7 @@
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/modules
-    - name: BUS/Power Supply module
+    - name: BUS/Power Supply
       link: /pages/en/mycpu/modules/bus
     - name: BUS Manager
       link: /pages/en/mycpu/modules/bus_manager
@@ -40,7 +40,7 @@
       link: /pages/en/mycpu/modules/output_register
     - name: MAR 4 bit (Memory Address Register)
       link: /pages/en/mycpu/modules/mar4b
-    - name: SRAM module
+    - name: SRAM (219) module
       link: /pages/en/mycpu/modules/sram219
     - name: Instruction Register
       link: /pages/en/mycpu/modules/instruction_register
@@ -54,7 +54,7 @@
       link: /pages/en/mycpu/modules/display_led
 - name: Extra Modules
   dropdown:
-    - name: EEProm Programmer AT28C64
+    - name: EEProm Programmer (AT28C64)
       link: /pages/en/mycpu/extra_modules/eeprom_programmer
     - name: Protoboard
       link: /pages/en/mycpu/extra_modules/protoboard

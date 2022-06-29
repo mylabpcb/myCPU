@@ -1,5 +1,5 @@
 ---
-title: "myCPU: The SRAM module"
+title: "myCPU: The SRAM (219) module"
 subtitle: A 16 x 8 bits SRAM module based on the 74LS219
 layout: page
 show_sidebar: false
@@ -10,10 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/ram219/ram219_3dview.png" alt="SRAM module 3D view" title="3D view of the SRAM module" width="500px">
-    <figcaption>3D view of the SRAM module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/ram219/ram219_assembled.png" alt="SRAM module assembled view" title="Assembled view of the SRAM module" width="500px">
     <figcaption>Assembled view of the SRAM module</figcaption>

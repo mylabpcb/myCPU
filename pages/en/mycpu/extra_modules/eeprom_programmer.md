@@ -1,6 +1,6 @@
 ---
-title: "myCPU: The EEProm Programmer module"
-subtitle: An Arduino based programmer module for the AT28C64 EEProm memory
+title: "myCPU: The AT28C64 EEProm Programmer module"
+subtitle: An Arduino Nano based programmer module for the AT28C64 EEProm memory
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,10 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_3dview.png" alt="EEProm Programmer module 3D view" title="3D view of the EEProm Programmer module" width="500px">
-    <figcaption>3D view of the EEProm Programmer module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_assembled.png" alt="EEProm Programmer module assembled view" title="Assembled view of the EEProm Programmer module" width="500px">
     <figcaption>Assembled view of the EEProm Programmer module</figcaption>

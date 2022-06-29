@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Clock module"
-subtitle: A 555 timer based clock module
+subtitle: A 555 timer based clock signal generator
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -14,7 +14,7 @@ hero_darken: false
 </figure>
 
 ### Description
-The clock module is a very accurate square wave generator following the Ben Eater’s design. Ben’s design is a very useful and interesting design to help in the debugging process. It provides a precise and clean clock signal at slow speed controlled with a potentiometer. The myCPU recommended component values combines with a 1M potentiometer give us control for a speed between a few Hz to 3 KHz.
+The clock module is a very accurate square wave generator following the **Ben Eater’s design**. Ben’s design is a very useful and interesting design to help in the debugging process. It provides a precise and clean clock signal at slow speed controlled with a potentiometer. The myCPU recommended component values combines with a 1M potentiometer give us control for a speed between a few Hz to 3 KHz.
 {: style="text-align: justify"}
 
 >I strongly recommended to see the video lectures about the design of the clock module and the 555 operation.

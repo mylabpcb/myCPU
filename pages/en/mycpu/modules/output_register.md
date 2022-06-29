@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Output Register module"
-subtitle: A 8 bit output register port
+subtitle: A 8 bit output register
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,10 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/output_register/output_register_8b_3dview.png" alt="Output Register module 3D view" title="3D view of the Output Register module" width="500px">
-    <figcaption>3D view of the Output Register module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/output_register/output_register_8b_assembled.png" alt="Output Register module assembled view" title="Assembled view of the Output Register module" width="500px">
     <figcaption>Assembled view of the Output Register module</figcaption>

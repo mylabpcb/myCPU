@@ -106,7 +106,7 @@ Each Bus module board has its own +5v power supply using a voltage regulator (78
 {: style="text-align: justify"}
 
 <figure style="float:left; margin:20px">
-    <img src="{{ site.baseurl }}/img/mycpu/myCPU_vertical_layout_empty_min.png" alt="myCPU BUS module full chain" title="myCPU BUS module full chain" width="300px">
+    <img src="{{ site.baseurl }}/img/mycpu/myCPU_vertical_layout_empty_min.png" alt="myCPU BUS module full chain" title="myCPU BUS module full chain" width="200px">
     <figcaption>myCPU BUS module full chain view</figcaption>
 </figure>
 <figure class="center">

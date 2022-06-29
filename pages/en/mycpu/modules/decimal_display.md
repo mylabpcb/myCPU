@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Decimal 4 digit Display module"
-subtitle: A 0-255 or +-127 decimal display
+subtitle: A decimal display with binary conversion
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,10 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayAT28C64_3dview_min.png" alt="Decimal Display module 3D view" title="3D view of the Decimal Display module" width="500px">
-    <figcaption>3D view of the Decimal Display module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayAT28C64_assembled_min.png" alt="Decimal Display module assembled view" title="Assembled view of the Decimal Display module" width="500px">
     <figcaption>Assembled view of the Decimal Display module</figcaption>

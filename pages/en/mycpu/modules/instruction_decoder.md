@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Instruction Decoder module"
-subtitle: A programmable microcode instruction decoder
+subtitle: A programmable instruction decoder
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,10 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/instruction_decoder/logic_control_AT28C64_3dview.png" alt="Instruction Decoder module 3D view" title="3D view of the Instruction Decoder module" width="500px">
-    <figcaption>3D view of the Instruction Decoder module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/instruction_decoder/logic_control_AT28C64_assembled.png" alt="Instruction Decoder module assembled view" title="Assembled view of the Instruction Decoder module" width="500px">
     <figcaption>Assembled view of the Instruction Decoder module</figcaption>

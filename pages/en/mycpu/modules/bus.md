@@ -1,5 +1,5 @@
 ---
-title: "myCPU: The BUS/Power Supply module"
+title: "myCPU: The BUS and Power Supply main board"
 subtitle: A chain capable board which provide BUS support and power supply to modules
 layout: page
 show_sidebar: false

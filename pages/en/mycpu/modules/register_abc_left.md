@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Register ABC module"
-subtitle: A 8 bit general purpose register module
+subtitle: A 8 bit general purpose register, LEFT version
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,17 +10,14 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-A 8 bit general purpose register module for the LEFT side of the layout.
-{: style="text-align: justify"}
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_3d.png" alt="Register ABC module 3D view" title="3D view of the Register ABC module" width="500px">
-    <figcaption>3D view of the Register ABC module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_assembled.png" alt="Register ABC module assembled view" title="Assembled view of the Register ABC module" width="500px">
     <figcaption>Assembled view of the Register ABC module</figcaption>
 </figure>
+
+A 8 bit general purpose register module for the LEFT side of the layout.
+{: style="text-align: justify"}
+
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/register_abc_left/register_abc_left_clear_front.png" alt="PCB front view" title="Front view of the printed board" width="500px">
     <figcaption>Front view of the printed board</figcaption>

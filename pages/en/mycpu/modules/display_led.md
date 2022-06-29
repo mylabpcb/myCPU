@@ -10,11 +10,6 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayLED_3dview.png" alt="LED Display module 3D view" title="3D view of the LED Display module" width="500px">
-    <figcaption>3D view of the LED Display module</figcaption>
-</figure>
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayLED_assembled.png" alt="LED Display module assembled view" title="Assembled view of the LED Display module" width="500px">
     <figcaption>Assembled view of the LED Display module</figcaption>
