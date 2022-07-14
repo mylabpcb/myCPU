@@ -253,26 +253,6 @@ The myCPU design include two additional modules: An **EEProm programmer module f
 >[EEProm programmer module](/pages/en/mycpu/extra_modules/eeprom_programmer) and
 >[Protoboard](/pages/en/mycpu/extra_modules/protoboard)
 
-#### Planned Modules
-The next release of myCPU project, which could be the myCPU+ involved a new set of modules to provide 16 bits data support, 16 bits addressing capabilities which give a more bigger SRAM support , up to 64 Kb, support of an instruction set with a length up to 64 instructions, support of CISC instruction type mode with a sequencer length up to 16 steps, support of variable instruction cycle  length, more state flags, SRAM program loader, more output ports, input ports support, and many more…
-{: style="text-align: justify"}
-
-You will find below, a list of planned modules:
-
-1.	**MAR 16 bits**
-2.	**Registers 16 bits**
-3.	**Program Counter 16 bits**
-4.	**SRAM 2K x 8 16 bits**
-5.	**Stack Pointer 8 bits**
-6.	**Instruction Cycle up to 16 states and variable length**
-7.	**Improved ALU based on 74LS181**
-8.	**Up to 4 flags register**
-9.	**Instruction Register 6 bits with up to 16 bits argument length**
-10.	**CSM with more control signals support**
-11.	**Input Register 16 bits with two ports**
-12.	**Output Register 16 bits with two ports**
-
-
 
 ### Features and Limitations of the myCPU
 Below you can find the digital features and limitations of my CPU, some features are improvements over the Ben’s eater breadboard computer and other features are obvious derived of the basic nature of the myCPU, but I think could be interesting recognize them too:
@@ -510,3 +490,28 @@ The memory selection bits are used to set from which memory unit will be write (
 
 These binary values compose an **address of 11 bits**, the address determine the location of the memory where is the microinstruction to execute correponding to a sequencer state. The decoded microinstuction word is passed to the CSM (control signals manager) which send the right control signals to the logic devices of the CPU.
 {: style="text-align: justify"}
+
+### myCPU Roadmap
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_roadmap.png" alt="myCPU Roadmap picture" title="myCPU Roadmap" width="1000">
+    <figcaption>myCPU Project Roadmap</figcaption>
+</figure>
+
+#### Next Modules
+The next release of myCPU project, which could be the myCPU+ involved a new set of modules to provide 16 bits data support, 16 bits addressing capabilities which give a more bigger SRAM support , up to 64 Kb, support of an instruction set with a length up to 64 instructions, support of CISC instruction type mode with a sequencer length up to 16 steps, support of variable instruction cycle  length, more state flags, SRAM program loader, more output ports, input ports support, and many more…
+{: style="text-align: justify"}
+
+You will find below, a list of planned modules:
+
+1.	**MAR 16 bits**
+2.	**Register 8 and 16 bits**
+3.	**Program Counter 16 bits**
+4.	**SRAM 64K x 8 bits**
+5.	**Stack Pointer 8 bits**
+6.	**Instruction Cycle up to 16 states and variable length**
+7.	**Improved ALU based on 74LS181**
+8.	**Up to 8 bits flags register**
+9.	**Instruction Register 8 bits**
+10.	**CSM with more control signals support**
+11.	**Input Register 16 bits with two ports**
+12.	**Output Register 16 bits with two ports**
