@@ -20,7 +20,7 @@
   dropdown:
     - name: Introduction
       link: /pages/en/mycpu/modules
-    - name: BUS/Power Supply
+    - name: BUS module
       link: /pages/en/mycpu/modules/bus
     - name: BUS Manager
       link: /pages/en/mycpu/modules/bus_manager
@@ -30,16 +30,16 @@
       link: /pages/en/mycpu/modules/csm
     - name: Program Counter
       link: /pages/en/mycpu/modules/program_counter
-    - name: register ABC (Right)
+    - name: Register ABC (Right)
       link: /pages/en/mycpu/modules/register_abc_right
-    - name: register ABC (Left)
+    - name: Register ABC (Left)
       link: /pages/en/mycpu/modules/register_abc_left
     - name: ALU
       link: /pages/en/mycpu/modules/alu
     - name: Output Register
       link: /pages/en/mycpu/modules/output_register
     - name: MAR 4 bit (Memory Address Register)
-      link: /pages/en/mycpu/modules/mar4b
+      link: /pages/en/mycpu/modules/mar4b 
     - name: SRAM (219) module
       link: /pages/en/mycpu/modules/sram219
     - name: Instruction Register

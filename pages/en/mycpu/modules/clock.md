@@ -13,6 +13,10 @@ hero_darken: false
     <figcaption>Assembled view of the Clock module</figcaption>
 </figure>
 
+[Clock module documentation](/downloads/technical/myCPU_Clock_module_full.pdf){:target="_blank"}
+
+Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
+
 ### Description
 The clock module is a very accurate square wave generator following the **Ben Eater’s design**. Ben’s design is a very useful and interesting design to help in the debugging process. It provides a precise and clean clock signal at slow speed controlled with a potentiometer. The myCPU recommended component values combines with a 1M potentiometer give us control for a speed between a few Hz to 3 KHz.
 {: style="text-align: justify"}

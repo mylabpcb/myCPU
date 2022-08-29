@@ -15,6 +15,10 @@ hero_darken: false
     <figcaption>Assembled view of the CSM module</figcaption>
 </figure>
 
+[CSM module documentation](/downloads/technical/myCPU_ControlSignalsManager_module_full.pdf){:target="_blank"}
+
+Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
+
 The control signals manager is like the main nervous system of the myCPU, sending control signals to the other parts of the CPU.
 {: style="text-align: justify"}
 

@@ -1,6 +1,6 @@
 ---
-title: "myCPU: The MAR module"
-subtitle: A 4 bit MAR (Memory Address Register)
+title: "myCPU: The MAR 8 bit module"
+subtitle: A 8 bit MAR (Memory Address Register)
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -15,7 +15,7 @@ hero_darken: false
     <figcaption>Assembled view of the MAR module</figcaption>
 </figure>
 
-[MAR 4bits module documentation](/downloads/technical/myCPU_MAR_4b_module_full.pdf){:target="_blank"}
+[MAR 8bits module documentation](/downloads/technical/myCPU_MAR_4b_module_full.pdf){:target="_blank"}
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 

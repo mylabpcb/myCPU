@@ -17,6 +17,7 @@ hero_darken: false
 [ALU module documentation](/downloads/technical/myCPU_ALU_module_full.pdf){:target="_blank"}
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
+
 #### Description
 The myCPU ALU is an 8 bit full adder implementation based on the **74LS283 (4-bit full adder)**, supporting the subtract operation by using the technique of addition of the **2’s complement**.
 {: style="text-align: justify"}

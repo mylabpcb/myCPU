@@ -15,6 +15,10 @@ hero_darken: false
     <figcaption>Assembled view of the Program Counter module</figcaption>
 </figure>
 
+[Program Counter module documentation](/downloads/technical/myCPU_Program_Counter_module_full.pdf){:target="_blank"}
+
+Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
+
 Control the flow of the execution.
 {: style="text-align: justify"}
 
