@@ -14,7 +14,7 @@ myCPU is a fully modular 8-bit TTL computer/CPU with support to working and debu
 {: style="text-align: justify"}
 
 ### A learning Platform
-The myCPU is a learning platform, it means that the entire project has been designed to provide the best learning experience on how a CPU works, what kind of logic devices are involved in a basic CPU architecture and how work together some digital logic devices. The architecture, the module concerns separation, the components, and their distribution on the board was thought with the objective to give a good understanding of a CPU system to all people, including beginners, and the affordability to buy the components by yourself wherever you want even on Chinese stores if you want. 
+The myCPU is a development platform for learning, it means that the entire project has been designed to provide the best learning experience on how a CPU works, what kind of logic devices are involved in a basic CPU architecture and how work together some digital logic devices. The architecture, the module concerns separation, the components, and their distribution on the board was thought with the objective to give a good understanding of a CPU system to all people, including beginners, and the affordability to buy the components by yourself wherever you want even on Chinese stores if you want. 
 {: style="text-align: justify"}
 
 >You can see a more extensive explanation about the components in the dedicated page [The Components](/pages/en/mycpu/components).
