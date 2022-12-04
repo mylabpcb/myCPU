@@ -25,7 +25,7 @@
       alt: Control Signals module
       description: |-
         **Control Signals Manager module**
-      file: /downloads/technical/myCPU_ControlSignalsManager_module_full.pdf
+      file: /downloads/technical/myCPU_CSM_module_full.pdf
     # Program Counter
     - link: /img/mycpu/thumbnails/300/programCounter_assembled_300_min.png
       alt: Program Counter module thumbnail
@@ -79,7 +79,7 @@
       alt: Instruction Register module thumbnail
       description: |-
         **Instruction Register module**
-      file: /downloads/technical/myCPU_InstructionRegister_8b_R_module_full.pdf
+      file: /downloads/technical/myCPU_InstructionRegister_4b_R_module_full.pdf
     # Instruction Decoder
     - link: /img/mycpu/thumbnails/300/logic_control_AT28C64_assembled_300_min.png
       alt: Instruction Decoder module thumbnail

@@ -15,7 +15,7 @@ hero_darken: false
     <figcaption>Assembled view of the Instruction Register module</figcaption>
 </figure>
 
-[Instruction Register module documentation](/downloads/technical/myCPU_InstructionRegister_8b_R_module_full.pdf){:target="_blank"}
+[Instruction Register module documentation](/downloads/technical/myCPU_InstructionRegister_4b_R_module_full.pdf){:target="_blank"}
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
