@@ -62,12 +62,12 @@
       description: |-
         **MAR - Memory Address Register module**
       file: /downloads/technical/myCPU_MAR_4b_module_full.pdf
-    # SRAM 219
+    # SRAM 189
     - link: /img/mycpu/thumbnails/300/ram219_assembled_300_min.png
-      alt: SRAM 219 module thumbnail
+      alt: SRAM 189 module thumbnail
       description: |-
-        **SRAM 219 module**
-      file: /downloads/technical/myCPU_RAM219_module_full.pdf
+        **SRAM 189 module**
+      file: /downloads/technical/myCPU_RAM189_module_full.pdf
     # FlagsRegister_Seq
     - link: /img/mycpu/thumbnails/300/flag_register_sequencer_assembled_300_min.png
       alt: Flags Register module thumbnail
