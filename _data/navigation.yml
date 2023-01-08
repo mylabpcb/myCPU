@@ -63,6 +63,7 @@
     - name: Clock 4-2-1Mhz module
       link: /pages/en/mycpu/custom_modules/clock4mhz
 - name: Downloads
+  link: /pages/en/mycpu/downloads
   dropdown:
     - name: Technical Documentation
       link: /pages/en/mycpu/downloads/technical_docs
