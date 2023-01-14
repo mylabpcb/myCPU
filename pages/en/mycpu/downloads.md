@@ -19,6 +19,8 @@ hero_darken: false
 
 [Code](/pages/en/mycpu/downloads/code){: target="_blank"}
 
+[Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
+
 [Component Libraries](/pages/en/mycpu/downloads/libraries){: target="_blank"}
 
 [Useful Templates](/pages/en/mycpu/downloads/templates){: target="_blank"}

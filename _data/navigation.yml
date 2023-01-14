@@ -75,6 +75,8 @@
     #  link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
+    - name: Sample Programs
+      link: /pages/en/mycpu/downloads/programs
     - name: Component Libraries
       link: /pages/en/mycpu/downloads/libraries
     - name: Useful templates
