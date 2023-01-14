@@ -6,14 +6,14 @@
       ratio: is-128x128
       description: |-
         **Display decoder program for Arduino**
-      file: /downloads/code/arduino/display_decoder_mycpu_v2.1.zip
+      file: /downloads/code/arduino/Display_Decoder_myCPUOne_v2.1.zip
     # Instruction Decoder
     - link: /img/thumbnails/arduino_ide.png
       alt: Arduino Logo
       ratio: is-128x128
       description: |-
         **Instruction decoder program for Arduino**
-      file: /downloads/code/arduino/microinstruction_decoder_mycpu_v2.2.zip
+      file: /downloads/code/arduino/MicroinstructionDecoder_myCPUOne_v2.2.zip
 - title: Platform IO
   images:
     # Display
@@ -21,13 +21,13 @@
       alt: Pio logo
       ratio: is-128x128
       description: |-
-        **Display decoder program for Platform IO**
-      file: /downloads/code/pio/display_decoder_mycpu_v2.1_pio.zip
+        **Display decoder program v2.1 for Platform IO**
+      file: /downloads/code/pio/DisplayDecoder_myCPUOne_v2.1.zip
     # Instruction Decoder
     - link: /img/thumbnails/pio_ide.png
       alt: Pio Logo
       ratio: is-128x128
       description: |-
-        **Instruction decoder program for Platform IO**
-      file: /downloads/code/pio/microinstruction_decoder_mycpu_v2.2_pio.zip
+        **Instruction decoder v 2.5 program for Platform IO**
+      file: /downloads/code/pio/MicroinstructionDecoder_myCPUOne_v2.5.zip
 
