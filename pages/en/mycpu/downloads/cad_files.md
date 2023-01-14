@@ -10,4 +10,4 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/cad/cad.zip">Download ZIP with all CAD files</a>
+<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/cad/mycpu_cad.zip">Download ZIP with all CAD files</a>
