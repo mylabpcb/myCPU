@@ -10,4 +10,4 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/templates/mycpu_templates.zip">Download Templates ZIP file</a>
+<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/templates/mycpu_templates_v3.1.zip">Download Templates v3.1 ZIP file</a>

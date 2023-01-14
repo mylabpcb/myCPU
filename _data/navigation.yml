@@ -71,8 +71,8 @@
       link: /pages/en/mycpu/downloads/diagrams
     - name: Bill of Materials
       link: /pages/en/mycpu/downloads/bom
-    - name: Datasheets
-      link: /pages/en/mycpu/downloads/datasheets
+    #- name: Datasheets
+    #  link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
     - name: Component Libraries

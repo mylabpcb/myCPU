@@ -17,8 +17,6 @@ hero_darken: false
 
 [Bill of materials](/pages/en/mycpu/downloads/bom){: target="_blank"}
 
-[Datasheet](/pages/en/mycpu/downloads/datasheets){: target="_blank"}
-
 [Code](/pages/en/mycpu/downloads/code){: target="_blank"}
 
 [Component Libraries](/pages/en/mycpu/downloads/libraries){: target="_blank"}
