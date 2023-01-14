@@ -69,8 +69,8 @@
       link: /pages/en/mycpu/downloads/technical_docs
     - name: Diagrams
       link: /pages/en/mycpu/downloads/diagrams
-    - name: Bill of Materials
-      link: /pages/en/mycpu/downloads/bom
+    #- name: Bill of Materials
+    #  link: /pages/en/mycpu/downloads/bom
     #- name: Datasheets
     #  link: /pages/en/mycpu/downloads/datasheets
     - name: Code

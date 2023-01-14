@@ -10,4 +10,4 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/programs/myCPU_sample_programs_v1.0.zip">Download ZIP with sample programs</a>
+<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/programs/myCPU_sample_programs_v1.0.zip">Download ZIP v1.0 with sample programs</a>
