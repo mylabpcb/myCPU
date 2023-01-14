@@ -15,8 +15,6 @@ hero_darken: false
 
 [Diagrams](/pages/en/mycpu/downloads/diagrams){: target="_blank"}
 
-[Bill of materials](/pages/en/mycpu/downloads/bom){: target="_blank"}
-
 [Code](/pages/en/mycpu/downloads/code){: target="_blank"}
 
 [Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
