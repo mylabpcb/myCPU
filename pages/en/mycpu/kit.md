@@ -26,7 +26,7 @@ The myCPU One Kit is composed by a set of 40+ printed boards of 6 different boar
 > No components will be supplied with the Kit, mainly because is not affordable for me and I would recommend you do this job by yourself.
 {: style="text-align: justify"}
 
-> If you are insterested in get the myCPU Kit, please go to [The Kit Feedback form](/pages/en/feedback_kit) to let me know your interest and give me your email address for future announcements.
+> If you are insterested in get the myCPU Kit, please go to [The Kit Feedback form](/pages/en/mycpu/feedback_kit) to let me know your interest and give me your email address for future announcements.
 {: style="text-align: justify"}
 
 But I think it could be very interesting and instructive get the components by yourself and decide where to buy and how many units of each component you want to buy. Other reason is that I can guaranteed that the boards was well designed and tested but I cannot do with components. You can see interesting and detailed information as well as tips about components on The Components page.
