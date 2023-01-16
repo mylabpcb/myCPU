@@ -80,7 +80,7 @@ Ben Eater is a great communicator. I’ve learned a lot with his videos, which w
 
 ### Recommendations
 
-To all people which could be interested in build his own myCPU, I recommended to visit the download pages and download all the documentation related to the project, so you can check the quality of the project and if the project could be interesting and affordable for you. I’ve tried to share everything has been possible.
+To all people which could be interested in build his own myCPU, I recommended to visit the downloads page and download all the documentation related to the project, so you can check the quality of the project and if the project could be interesting and affordable for you. I’ve tried to share everything has been possible.
 {: style="text-align: justify"}
 
 Print the schematics pages from the technical documentation download. Will be very useful have by hand a printed version of schematics when you are going to assemble your myCPU and your modules.
