@@ -96,6 +96,4 @@ Also, I recommended you to visit [**The Kit feedback form page**](/pages/en/mycp
 
 [**Twitter**](https://twitter.com/mylabpcb){:target="_blank"}
 
-[**The Kit feedback form**}](https://mycpu.mylabpcb.com/pages/en/feedback_kit/)
-
 I wish to enjoy to all people who decide to build his own myCPU!
