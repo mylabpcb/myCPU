@@ -503,6 +503,11 @@ The next release of myCPU project, which could be the myCPU+ involved a new set 
 
 You will find below, a list of planned modules:
 
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_256_feature_changes.png" alt="myCPU 256 Changes" title="myCPU 256 Changes" width="800">
+    <figcaption>myCPU Project Roadmap</figcaption>
+</figure>
+
 1.	**MAR 16 bits**
 2.	**Register 8 and 16 bits**
 3.	**Program Counter 16 bits**
