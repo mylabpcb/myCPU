@@ -53,24 +53,14 @@ The extensive documentation provided may appear redundant or over-detailed to ex
 The myCPU was designed with an open architecture concept in mind, focusing on modularity and ease of customization. This allows for scalability in size and complexity through the addition of additional modules or replacement of the provided ones with more advanced ones.
 {: style="text-align: justify"}
 
-This is possible thanks to the chained BUS module boards which include independent power supply using its own voltage regulator. So, you can scale your myCPU by adding more BUS module boards.
+This design is made possible by the use of chained BUS module boards. The boards in the chain connect the data and control buses and share them with the two modules plugged into the left and right. Each BUS module supplies power to the connected modules through its own voltage regulator. As a result, you can increase the capabilities of your myCPU by adding more BUS module boards. However, due to the limitations of the first release of myCPU, a chain of 8 BUS module boards or two chains of 4 BUS module boards (in the case of a horizontal layout) may be sufficient.
 {: style="text-align: justify"}
 
-Modularity, allows you customize the myCPU layout, as you want, choosing your own module distribution. Even you can build totally different types of layouts based on how you plug the main BUS module boards between them. You can choose, by example, between horizontal or vertical layouts, or even, built a layout composed by multiple layouts as well.
+The modular and open architecture of the myCPU allows you to customize its functionality and behavior by designing your own modules and module boards. When designing custom modules, the only consideration to keep in mind is to properly place the control and data bus connectors within the mechanical dimension specifications of the BUS module board design. 
+You can check the mechanical dimensions in the technical documentation of the myCPU avalaible at the [Downloads](/pages/en/mycpu/downloads) page.
 {: style="text-align: justify"}
 
-Not all module distributions as possible, because of the wire connectivity between the modules which conform a logic block or if a module has both sides version or not, but you will see that it is very flexible.
-{: style="text-align: justify"}
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/myCPU_both_layout.png" alt="Modular Layout Samples" title="View of modular layout" width="1024px">
-    <figcaption>View of modular layout</figcaption>
-</figure>
-
-In addition, the modularity and the open architecture allows you design your own module boards, using the way as you want. The only thing to keep in mind, when you design you own module, is placing the control and data bus connectors of the module according to the mechanical dimension rules of the main BUS module structure. Also, you can build your modules using the prototype boards provided in the kit, which was designed to be fully compatible with the BUS module board.
-{: style="text-align: justify"}
-
-I’ve created two templates for Circuitmaker in Altium 365 [Altium 365](https://365.altium.com/){: target="_blank"} for custom Left and Right modules and publish them shared. You can find the links in the [Modules introductory page](/pages/en/mycpu/modules) page.
+There are avalaible two templates for Circuitmaker in Altium 365 [Altium 365](https://365.altium.com/){: target="_blank"} for custom Left and Right modules and publish them shared. You can find the links in the [Modules introductory page](/pages/en/mycpu/modules) page.
 {: style="text-align: justify"}
 
 <figure class="center">
@@ -82,8 +72,17 @@ I’ve created two templates for Circuitmaker in Altium 365 [Altium 365](https:/
     <figcaption>View of right template</figcaption>
 </figure>
 
-Also, you can build your modules using the prototype boards provided in the kit, which was designed to be fully compatible with the BUS module board. You can download the related documentation to the protoboard from the [technical documentation downloads](/pages/en/mycpu/downloads/technical_docs) page and see a real image of the board in [The Kit](/pages/en/mycpu/kit) page.
+Custom  modules, also can be designed using the protoboards provided in the kit, which was designed to be fully compatible with the BUS module board and will be provided in both side versions. See the section about [Protoboards](/pages/en/mycpu/extra_modules/protoboard).
 {: style="text-align: justify"}
+
+Moreover, the modular design allows you to customize the layout of your myCPU by selecting your desired module distribution. You can create two different types of layouts using either one chain of BUS module boards for a vertical layout or two chains connected by the myCPU layout connector for a more landscape layout. However, not all module distributions may be possible due to the physical connections between certain modules that form a block. The position of a module will also depend on whether it has versions for both the left and right sides. Regardless, you will find that the system is highly flexible.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/myCPU_both_layout.png" alt="myCPU Layout Samples" title="View of myCPU layouts" width="1024px">
+    <figcaption>View of modular layout</figcaption>
+</figure>
+
 
 ### Hardware architecture
 
