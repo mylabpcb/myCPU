@@ -8,37 +8,49 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-Welcome to the presentation page of the myCPU project.
+Welcome to the introductory page of the myCPU project.
 
-myCPU is a fully modular 8-bit TTL computer/CPU with support to working and debugging at microinstruction level, built over most common logic integrated circuits, mostly TTL, and designed on PCBs.
+The myCPU is an 8-bit TTL CPU design that is fully modular and built using only discrete logic with common integrated circuits, mostly TTL. It features microinstruction level debugging support and is designed on printed circuit boards (PCBs).
 {: style="text-align: justify"}
 
-### A learning Platform
-The myCPU is a development platform for learning, it means that the entire project has been designed to provide the best learning experience on how a CPU works, what kind of logic devices are involved in a basic CPU architecture and how work together some digital logic devices. The architecture, the module concerns separation, the components, and their distribution on the board was thought with the objective to give a good understanding of a CPU system to all people, including beginners, and the affordability to buy the components by yourself wherever you want even on Chinese stores if you want. 
+The feature of microinstruction level debugging allows you to observe the execution of individual microinstructions and step through each one while viewing the state of all logic devices. This provides insight into the execution of the instruction in real-time
 {: style="text-align: justify"}
+
+### A development and learning Platform
+The myCPU is designed as a learning platform to provide an educational experience in the workings of a CPU, including the logic elements involved in its basic architecture and how various digital logic devices interact in a synchronized way.
+{: style="text-align: justify"}
+
+The myCPU, with its modular design and hardware-level accessibility, also serves as a development platform. With the ability to directly access the relationship between hardware and software, users have the opportunity to design their own modules and create their own instruction sets for program writing. This is made possible through the Instruction Decoder, a programmable EEProm-based decoder that can be configured with custom microinstructions to define a unique instruction set.
+{: style="text-align: justify"}
+
+The myCPU architecture, including its modular design and the choice of components and their distribution, was created with the goal of providing a clear understanding of a CPU system and its workings to people of all levels, including beginners. The components can also be easily purchased from a variety of sources, including non-official online retailers and official stores.
+{: style="text-align: justify"}
+
 
 >You can see a more extensive explanation about the components in the dedicated page [The Components](/pages/en/mycpu/components).
 
-As a learning platform, this design could not to be the best approach under and electronic point of view, mostly for experienced engineers or advanced electronic hobbyist, probably could be improved to get a better performance, but performance never was an objective in this kind of design. Also, experienced people could feel like the entire documentation is too extensive or redundant, but I think it could be very useful to beginners or less experienced people on electronics.
+As a learning platform, the myCPU design may not be the most technically advanced approach for experienced engineers or advanced electronic hobbyists. While the design could potentially be improved for better performance or to address electronic issues, this was not a primary objective in its creation.
 {: style="text-align: justify"}
 
-Below, I point to you a brief list of what you can learn with this project:
+The next list shows some of the topics you can learn with this project:
 
 +	**Understanding the electronic relationship between software and hardware**
 +	**Understanding a basic CPU architecture, blocks, and logic devices involved**
-+	**Learn how a CPU execute a program**
++	**Learn how a CPU execute an instruction and a whole program**
 +	**Learn how to implement a CPU instruction set and design new instructions**
 +	**Learn what a microinstruction is and how microinstructions are decoded**
 +	**Understanding the timings of a CPU, and the cycle of an instruction**
 +	And much more.
 
-In this introduction, I will describe some points or remarks some features of the myCPU which could be obvious, for more experienced people, or even inherent to the basic nature of the design. But as a learning platform, I think it will be useful review them to understand the whole design under a perspective near to reality and not only as a device building exercise.
+In this introduction, I will discuss some aspects of the myCPU that may seem obvious to more experienced individuals. However, as a learning platform, it is valuable to review these elements to gain a deeper understanding of the design from a perspective similar to that of real CPUs, rather than simply viewing it as an exercise in electronic assembly.
 {: style="text-align: justify"}
 
+The extensive documentation provided may appear redundant or over-detailed to experienced individuals, but it is valuable for beginners or those with limited knowledge of digital electronics.
+{: style="text-align: justify"}
 
 ### Open Architecture and modular design
 
-The myCPU was designed with an open architecture in mind, it means that I put special attention to get modularity and ease of customization. Providing support to grow, in size and complexity, by adding additional modules or replacing the built-in ones by more complex and advanced modules.
+The myCPU was designed with an open architecture concept in mind, focusing on modularity and ease of customization. This allows for scalability in size and complexity through the addition of additional modules or replacement of the provided ones with more advanced ones.
 {: style="text-align: justify"}
 
 This is possible thanks to the chained BUS module boards which include independent power supply using its own voltage regulator. So, you can scale your myCPU by adding more BUS module boards.
