@@ -119,7 +119,7 @@ The BUS module board was designed to connect multiple BUS module boards together
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_power_module_assembled_min.png" alt="myCPU BUS module board" title="myCPU BUS module board" width="80%">
-    <figcaption>myCPU 3D view sample of hardware layers</figcaption>
+    <figcaption>myCPU BUS module board view</figcaption>
 </figure>
 
 The data and control buses, as well as the 9V power source, are connected from one BUS module board to the next board in the chain through the use of the top and bottom connectors. The buses are shared with the modules through two connectors located on both sides of the BUS module board. For a more detailed explanation of the buses, see the section: [The Buses](#the-buses).
@@ -258,7 +258,7 @@ The myCPU design include, in the first release, 3 display modules: two of them a
 [8-bit LED binary display](/pages/en/mycpu/modules/display_led) and
 [16-bit LED binary display](/pages/en/mycpu/modules/display_led16)
 
-#### Extra Modules
+#### Additional tools and extra boards
 The myCPU kit include one additional module and two extra boards: 
 
 1. **EEProm programmer tool for the AT28C64 EEProm memory**
@@ -277,13 +277,15 @@ The protoboard will be provided with version for both sides, left anb right, in 
 >[Layout Connector](/pages/en/mycpu/extra_modules/bus_layout_connector)
 
 
-### Features and Limitations of the myCPU
-Below you can find the digital features and limitations of my CPU, some features are improvements over the Ben’s eater breadboard computer and other features are obvious derived of the basic nature of the myCPU, but I think could be interesting recognize them too:
+### Features of myCPU
+Below is a brief list of myCPU digital features. Some of these features are improvements over the Ben's Eater breadboard computer. It is highly recommended to understand the meaning of these features in relation to the design of myCPU. In the following sections, I will briefly explain what each of these features means.
 {: style="text-align: justify"}
 
-#### Features
-Digital features of my CPU
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_features.png" alt="myCPU Features" title="myCPU Features" width="800">
+</figure>
 
+<!--
 +	**16-bit data BUS**
 +	**32-lines control BUS, including power supply connections, status flags, clock and reset signals**
 +	**Microinstruction length up to 22 direct control signals**
@@ -297,37 +299,56 @@ Digital features of my CPU
 +	**Microprogrammed instruction decodes**
 +	**Clock speed from 5-10 Hz to 3 kHz**
 +	**+- 127 programmable integer display mode by a control signal**
-
-##### The Buses
-The myCPU uses two buses to share data and connectivity between modules and logical blocks: a **Control BUS** and a **Data BUS**. It uses a **Von Neumann BUS architecture** approach because data and memory addresses share the same BUS: the Data BUS. Really, some of these features are due to the very basic nature of the myCPU design but it very interesting, to students and learners pay attention to this point. Exist another approach, the Harvard architecture which use a dedicated BUS for data and memory addresses.
+-->
+#### The Buses
+The myCPU uses only two buses to facilitate data sharing and connectivity between modules and functional blocks: the **Control Bus** and the **Data Bus,** following the **Von Neumann Bus Architecture**, where data and memory addresses are shared on the same bus, the Data Bus. Despite its basic design, it is important for students and learners to take note of this aspect of the myCPU design. Something like a dedicated **Address Bus **is only present in the connection between the MAR and SRAM modules.
 {: style="text-align: justify"}
 
->The myCPU has a shared Data BUS, up to 16 bits, for data and addresses, but only 8-bit are used, in this first release, because all logic devices included, in the myCPU design, support just up to 8-bits.
+The Data Bus supports data lengths up to 16 bits, which is sufficient for future releases of the myCPU. With 16 bits, we can address up to 64Kb, which satisfies the requirements of a common CPU like myCPU, and more. Due to the 8-bit nature of the myCPU, will be enough to use only 8 bits for data exchange. However, this may result in a performance reduction due to the need of multiple fetch cycles to manage 16 bits data. Managing 16 bits data using 8 bits data transfer requires two clock cycles to each movement between registers and memory.
 {: style="text-align: justify"}
 
-All the myCPU control signals goes through the Control BUS. The Control BUS has support to 32 lines length over a 32-pin connector, but not all of them are used by control signals. The voltage regulators placed in each BUS module uses pins GND, and +5v of the control BUS to supply power to modules. Clock, Reset signals, also, goes through the control BUS and the Status Flags signals as well.
+All of the myCPU control signals are transmitted through the Control Bus. The Control Bus has a capacity of 32 lines, via a 32-pin connector, although not all of these lines are used for control signals. The voltage regulators located in each bus module utilize the GND and +5v pins of the Control Bus to provide power to the modules. The clock and reset signals, as well as the status flags signals, also travel through the Control Bus.
+{: style="text-align: justify"}
+
+The lines included on the control BUS are distributed as indicated in the list below:
 {: style="text-align: justify"}
 
 The lines included on the control BUS are distributed as indicated below:
 
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_bus_lines.png" alt="myCPU Control Bus Lines" title="myCPU Control Bus Lines" width="700">
+</figure>
+
+<!--
 +	**Up to 22 control signals**
 +	**2 clock signals:** CLK, /CLK
 +	**4 flag signals:** FV, FZ, FN, FC, only the first two of them are used in this release
 +	**1 HLT signal:** HLT
 +   **2 reset signals** RST, /RST
 +	**Power Supply lines:** +5v and GND
+-->
 
-The 22 control signals are handled by the **CSM module (control signal manager)** which set the right digital state for each one when connected to each logical element of the myCPU.
+#### The Control Signals of myCPU
+The myCPU support up to 23 control signals driving the logic devices of myCPU. The 23 control signals are managed directly by the Control Signals Manager (**CSM**), which sets the appropriate digital state to be sent to each logical device in the myCPU.
 {: style="text-align: justify"}
 
-##### The Control Signals of myCPU
-The myCPU support up to 22 control signals which control the logic devices of myCPU. Control signals are described deeper at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
-
+Control signals are described deeper at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
 {: style="text-align: justify"}
 
-The next list shows the function of each control signal and the corresponding logic device:
+Knowing the default values of each control signal is essential for understanding the behavior of the modules. Control signals are the truly key in the interaction between **the hardware (logic devices)** and the **software (instructions)**. Instructions are composed by microinstructions, and those microinstructions are binary words composed by control signals that act directly on the electronics of the modules.
 {: style="text-align: justify"}
 
+Designing your own custom modules also requires a deep understanding of the control signals, their default values and the actions they produce on logic devices.
+{: style="text-align: justify"}
+
+The below table 2.6 shows the full list of the myCPU control signals.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_signals.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="800">
+</figure>
+
+<!--
 1.	**CLK, /CLK**: clock signals
 2.	**RST, /RST**: reset signals, myCPU need both signals High and Low. 
 3.	**HLT**: Pause signal, used by the clock module to block the clock signal.
@@ -346,16 +367,16 @@ The next list shows the function of each control signal and the corresponding lo
 16.	**EO**: ALU Output.
 17.	**SU**: ALU Subtract mode enable.
 18.	**FC, FV, FN, FZ**: Flags. Carry, Overflow, Negative and Zero flags.
+-->
 
-
-##### The Instruction Cycle
+#### The Instruction Cycle
 The myCPU instruction execution is based on unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
 {: style="text-align: justify"}
 
 Next image shows an example of the instruction cycle for the ADD instruction:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instruction_cycle.png" alt="Instruction cycle example" title="Example of ADD Instruction cycle" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instruction_cycle_flow.png" alt="Instruction cycle example" title="Example of ADD Instruction cycle" width="850">
     <figcaption>ADD Instruction cycle sample diagram</figcaption>
 </figure>
 
