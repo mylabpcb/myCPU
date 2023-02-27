@@ -368,9 +368,17 @@ The below table 2.6 shows the full list of the myCPU control signals.
 17.	**SU**: ALU Subtract mode enable.
 18.	**FC, FV, FN, FZ**: Flags. Carry, Overflow, Negative and Zero flags.
 -->
+##### Signed display mode support
+The myCPU support a signed mode of execution, its affects basically only to the mode on how the decimal number display shows numbers, not to the execution itself. There’s a control signal \textbf{UN} which enable the signed display mode.
+{: style="text-align: justify"}
+
+The binary to decimal display shows numbers as unsigned, with a range from **0 to 255**, when the **UN** control signal is LOW. When the **UN** control signal is HIGH, the display shows numbers as signed numbers using 2's complement representation, with a range from **-128 to 127**. This feature is in line with the corresponding feature of the Ben Eater's project.
+{: style="text-align: justify"}
+
+>You should watch the Ben Eater's video about: [Two's complement arithmetic](https://www.youtube.com/watch?v=4qH4unVtJkE){:target="_blank"}
 
 #### The Instruction Cycle
-The myCPU instruction execution is based on unique Instruction cycle, composed by a Fetch cycle and an Execution cycle. The instruction cycle could have a length from 5 up to 8 states. Each state or step involve one clock cycle and executes only one microinstruction.
+The myCPU instruction execution is performed through a single Instruction cycle that consists of a fetch cycle followed by an execution cycle. Due to the simplicity of the instruction set and program limitations, the myCPU execution cycle does not require any additional specialized phases. The length of the Instruction cycle reach to 8 states or steps. Each step of the instruction cycle requires one clock cycle to complete and executes a single microinstruction.
 {: style="text-align: justify"}
 
 Next image shows an example of the instruction cycle for the ADD instruction:
@@ -380,57 +388,112 @@ Next image shows an example of the instruction cycle for the ADD instruction:
     <figcaption>ADD Instruction cycle sample diagram</figcaption>
 </figure>
 
->The myCPU support a microinstruction length up to 24 bits, involving 22 control signals.
+>The myCPU support a microinstruction length up to 24 bits, involving 23 control signals and 22 of them shared through the Control BUS.
 {: style="text-align: justify"}
 
-More advanced and modern CPUs, support more than one instruction cycle per instruction and variable instruction cycle length with dozens of states or steps. The myCPU is based, in its first release, on a fixed length instruction cycle, so an instruction could have an execution cycle with empty states, and it means wasted timings. I’ve planned to implement a variable length instruction cycle, in the next release of the project, by providing an improved set of modules for the instruction processor block.
+MyCPU is a basic design of an early CPU with limited capabilities compared to modern CPUs. Unlike modern CPUs that can perform multiple instruction cycles simultaneously through pipelining, myCPU can only execute one instruction cycle per instruction. The original design of myCPU had a variable instruction cycle length unlike the Ben Eater's breadboard computer, but later versions introduced the ability to reset the sequencer at specific steps and initiate a new instruction cycle. This gave myCPU the capability of the variable length instruction cycle feature.
 {: style="text-align: justify"}
 
-Because the instruction decoder uses the current state number to decode the corresponding microinstruction for an instruction, the increment of the possible number of states affects to the complexity of the instruction decode process. So, incrementing the number of the states and implementing a variable instruction cycle length is not an simple upgrade but I think it’s mandatory to approach to a more real CPU and is planned for the next version.
-{: style="text-align: justify"}
-
-Due to the microinstruction based nature of the myCPU, the instruction architecture of myCPU could be described as **CISC (Complex Instruction Set Computer)** instead of a **RISC (Reduced Instruction Set Computer)**. Each instruction could consumes from 1 to 8 execution state cycles, and probably, it will be upgraded up to 16 state cycles in next release.
+Due to the microinstruction based nature of the myCPU, the instruction architecture of myCPU could be described as **RISC** (Reduced Instruction Set Computer) instead of a **CISC** (Complex Instruction Set Computer). Each instruction can consume from 2 (the minimal intruction cycle length) to 8 clock or state cycles, and probably, it could be upgraded up to 16 state cycles in next releases. Remember that in the myCPU design each state cycle is equivalent to a single clock cycle.
 {: style="text-align: justify"}
 
 ##### The Flags
-The myCPU design include up to **4 status flags**, but only two of them are used. Mainly for the limitations on the ALU, which is based on simple adders. The first release includes only: a flag for “**Overflow**”, which correspond with the last carry bit of the adders, and a flag for “**Zero**” which is calculated by a set of logic gates.
+The myCPU design include up to 4 status flags, but only two of them are used in the first relaese. Mainly for the limitations of the ALU, which is based on simple adders. The first release uses only: The **Carry Out flag FC**, which correspond with the last carry bit of the adders cascade, the **Zero flag FZ** which is calculated using logic gates and the **Negative flag FN** which correspond to the most significant bit of the ALU value or sign bit in 2's complement value representation. The **Overflow flag FV** is not used, in the first release, but is supported by the flags register. 
 {: style="text-align: justify"}
+
+>Only ALU related flags are supported in the first release.
 
 The corresponding control signals are listed below:
 
-1.	**FZ: Zero flag**
-2.	**FV: Overflow flag**
+1.	**FC: Carry Out flag**
+2.  **FZ: Zero flag**
+3.  **FN: Negative flag**
+4.	**FV: Overflow flag** (not used in this release)
 
-
-##### Signed Integer display support
-The myCPU support a signed mode of execution, its affects basically only to the mode on how the decimal number display shows numbers. Not affects to the execution itself. There’s a control signal “UN” which tell displays in which mode must display numbers.
+Flags are a essencial part of the decoding process for the **Conditional Jump Instructions**. The flags combination define the state of the myCPU after each executed instruction and this state can enable the execution of a conditional jump instruction based on that state. In the myCPU first release, only conditional jump instructions for the state of 3 individual flags: FC, FC and FN, are encoded. 
 {: style="text-align: justify"}
 
->This mode has not effect on how ALU perform calculations, only the mode on how numbers are displayed. 
+####  The Instruction processor
+The design of myCPU is based on microprogramming for instruction decoding, meaning that the values resulting from the conversion of an instruction into its equivalent set of microinstructions are stored in an EEProm memory instead of being generated through combinational logic.
 {: style="text-align: justify"}
 
-When **UN** control signal is low, decimal displays show numbers unsigned from **0** to **255**, and when **UN** control signal is high, decimal displays show numbers in two’s complement form in a range from **-128** to **+127** including sign symbol. This behavior was added in this way to keep the same functionality from the Ben Eater’s project and take advantage of his awesome video lectures explaining the **two’s complement arithmetic** and the build of a decimal 4 digits 7 segment display.
+The instruction processor is a logic block responsible of process and execute an instruction and involves several logic elements:
 {: style="text-align: justify"}
 
->You should watch: [Two's complement arithmetic](https://www.youtube.com/watch?v=4qH4unVtJkE){:target="_blank"}
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_instruction_processor.png" alt="myCPU Instrucion Processor table" title="myCPU Instruction processor table" width="800">
+</figure>
+<!--
+1.	**Instruction Register**
+2.	**Sequencer**
+3.	**Flags Register**
+4.	**Instruction Decoder**
+5.	**CSM (Control Signals Manager)**
+-->
 
-##### Testing using the built-in test switches
-The myCPU design provide **BUS test switches** located at the BUS Manager module, to setup the BUS current values. And the **Control Signals test switches** located at the CSM module, to setup the microinstruction control signals. Using the CSM switches, you can build a real microinstruction and debug the behavior of your myCPU.
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_InstructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
+    <figcaption>Instruction Processor block</figcaption>
+</figure>
+
+#### Microprogramming
+In the myCPU design a CPU native instruction is decoded into a set of microinstructions, which are a sequence of bits representing the control signals values that can modify the state of the logic devices of the myCPU. Microprogramming is the process to encode the microinstruction equivalent to each step in a instruction cyle to create the corresponding set of microinstructions for every instruction in the instructon set. These microinstructions are then written to an EEPROM memory for later decoding when and instruction is executes.
 {: style="text-align: justify"}
 
-These test switches will be essentials during the building process of your myCPU, testing modules and logic elements individually, without the need to have assembled the rest of the modules, or to test an entire functional block. Almost all modules or functional blocks could be tested using the test switches except, probably, the instruction decoder and the sequencer which are independents of BUS content and control signals.         
+Each instruction in the CPU can consist of multiple microinstructions, with each microinstruction executing during a single sequencer clock cycle. The sequencer counter is enabled during the fall state of the clock signal, allowing microinstructions to be executed during this clock state. Some control signals cause immediate changes in the CPU state, while others produce changes during the next rise state of the clock signal. To maintain good synchronization, certain logical actions in the CPU must occur before others, such as outputting data to the data bus before a register can read and store it. This is accomplished by performing these actions in alternate clock signal states, which allows enough time for the integrated circuits to perform their electronic functions.
 {: style="text-align: justify"}
 
-##### Debugging over each single clock cycle including high and low states
-The myCPU Clock module provide a mechanism to run the myCPU at one clock cycle at a time using a push button. Letting you to debug what is happen during each clock cycle.
+The **Sequencer** determine the current instruction step or state of the instruction cycle.
 {: style="text-align: justify"}
 
-The Clock module is based in the 555 timer and is the original design of Ben Eater from his 8-bit breadboard computer, which is an awesome approach to a square wave generator with support to see a clock cycle at a time. In addition, the clock module lets you see what happens during the high and low states of the clock signal. This is very interesting because the myCPU is a synchronized system, where the microinstructions are executed during the low state of the clock signal and the changes of the myCPU status occur during the next high state or the next high edge of the signal.
+The **Instruction Register** holds the current **Opcode** of the instruction, which is shared with the Intruction Decoder, and the optional argument for the instruction. The argument can be a literal value or and address point to the memory cell where the values is stored.
 {: style="text-align: justify"}
 
->You can see more detailed description about the clock module on its page: [Clock Module](/pages/en/mycpu/modules/clock)
+The **Flags Register**, provides the state flags activated on the myCPU to the decoding process. The myCPU could manage up to  four  flags and each correspond to 1 bit in the order: FV,FZ,FN,FC.
+{: style="text-align: justify"}
 
-#### Limitations
+So, the decoded microinstruction to execute will be determined by:
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_micro_encoding_parts.png" alt="myCPU Microinstruction encoding parts" title="myCPU Microinstruction encoding parts" width="800">
+</figure>
+<!--
+1.	**Opcode (4 bits)**
+2.	**Sequencer step (3 bits)**
+3.	**Flags (2 bits)**
+4.	**Memory Selection (2 bits)**
+-->
+
+The **Memory Selection** bits determine which memory unit will be used to write (during programming) or read (during decoding) each byte of a microinstruction. In the myCPU design, microinstruction consists of 3 bytes or 24 bits, which are handled by three memory units. To understand the memory selection and the order of the encoding value parts during memory programming, it is necessary to review both the Instruction decoder schematic and the programmer code.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/schematics/myCPU_Decoder_AddrBitOrder.png" alt="Instruction decoder address bit order" title="Instruction decoder address bit order" width="400">
+    <figcaption>Instruction Decoder address bit order</figcaption>
+</figure>
+
+The binary encoding value is a **13 bits address** that specifies the location of the microinstruction to be executed during a sequence step. This microinstruction word is then passed to the control signals manager, which sends the appropriate signal states to the logic devices of the myCPU. The instruction encoding is covered by 8Kx8 EEProm memories with an address support up to 13 bits (A0-A12).
+{: style="text-align: justify"}
+
+#### Testing and Debugging the myCPU
+The are two sets of switches to test the electronic behavior of the myCPU:
+{: style="text-align: justify"}
+
+The **BUS Manager** module in the myCPU design includes test switches that can be used to set the current values of the data BUS.
+{: style="text-align: justify"}
+
+The **Control Signals Manager (CSM)** module also have test switches that enable the activation of individual control signals. By using the CSM switches, it is possible to test individual module actions or configure a real microinstruction by combining multiple switches at a time, to test, statically, the myCPU modules behavior when they are all acting together.       
+{: style="text-align: justify"}
+
+>Combining the BUS Manager and CSM switches you can reproduce a true runtime execution condition statically.
+
+##### Microinstruction debugging and testing
+The myCPU Clock module enables running the myCPU one clock cycle at a time using a push button, which facilitates debugging and allows examination of each clock cycle during runtime. This module is based on the 555 timer, and is an original design by Ben Eater, who used it in his 8-bit breadboard computer. Furthermore, the clock module enables examination of the high and low states of the clock signal independently. This feature is especially interesting because the myCPU is a synchronized system, in which microinstructions are executed during the low state of the clock signal producing some changes in the myCPU status, while other changes in the myCPU status will occur during the next high state or high edge of the clock signal.
+{: style="text-align: justify"}
+
+>You can see more detailed explanation about the clock module in: [Clock Module](/pages/en/mycpu/modules/clock)
+
+#### Limitations of the myCPU
 The limitations of the myCPU design are due two reasons: the first one is to keep a direct reference to the Ben Eater’s breadboard computer project and take advantage of his fantastic video lectures, and the second one is to provide a smooth learning path to beginners, unexperienced electronics hobbyists or students.
 {: style="text-align: justify"}
 
@@ -487,53 +550,7 @@ You can review some of these improvements below:
 +	**A filter capacitor in each module**
 
 
-### The Instruction Processor
 
-The myCPU design in based on a microprogramming instruction decode, it means that the decoding process to convert an instruction into its equivalent set of microinstructions is done by the code programmed in a EEProm memory instead using combinational logic.
-{: style="text-align: justify"}
-
-The instruction processor is a logic block responsible of process and execute an instruction and involves several logic elements:
-{: style="text-align: justify"}
-
-1.	**Instruction Register**
-2.	**Sequencer**
-3.	**Flags Register**
-4.	**Instruction Decoder**
-5.	**CSM (Control Signals Manager)**
-
-#### Microinstruction decoding
-In the myCPU design, a CPU native instruction (machine code) is decoded to a set of microinstructions which are a single sequence of bits representing a set of control signals which can change the status of the myCPU logic elements in a synchronized way. 
-{: style="text-align: justify"}
-
-Each instruction is composed by **two or more microinstructions**, and each microinstruction is executed during an individual **sequencer clock cycle** or **step**, which is another clock signal but dependent of the main clock signal. In the myCPU design the sequencer clock signal is inverted regard to the main clock signal to avoid issues with the response time of the TTL ICs. 
-{: style="text-align: justify"}
-
-The Sequencer determine the microinstruction execution and the main Clock signal determine de myCPU logic status change.
-{: style="text-align: justify"}
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_InstructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
-    <figcaption>Instruction Processor block</figcaption>
-</figure>
-
-The **Instruction Register** holds the current **Opcode** of the instruction, and the address or value of an optional argument if it was defined in the program.
-{: style="text-align: justify"}
-
-Another piece in the instruction decode process is the **Flags Register**, which provide the cpu state flags activated on the myCPU to the decoding process. The myCPU has only two flags in this release: **Overflow (FV)** and **Zero (FZ)**
-{: style="text-align: justify"}
-
-So, the decoded microinstruction to execute will be determined by:
-
-1.	**Opcode (4 bits)**
-2.	**Sequencer step (3 bits)**
-3.	**Flags (2 bits)**
-4.	**Memory Selection (2 bits)**
-
-The memory selection bits are used to set from which memory unit will be write (during programming) or read (during decoding) each microinstruction byte. In the myCPU design each microinstruction is composed by 3 bytes handled by 3 memory units. Review the Instruction decoder schematic and the programmer code to understand the memory selection when programming the memory.
-{: style="text-align: justify"}
-
-These binary values compose an **address of 11 bits**, the address determine the location of the memory where is the microinstruction to execute correponding to a sequencer state. The decoded microinstuction word is passed to the CSM (control signals manager) which send the right control signals to the logic devices of the CPU.
-{: style="text-align: justify"}
 
 ### myCPU Roadmap
 <figure class="center">
