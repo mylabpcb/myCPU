@@ -9,7 +9,7 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled_v16_min.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="500px">
     <figcaption>Assembled view of the Clock module</figcaption>
 </figure>
 
