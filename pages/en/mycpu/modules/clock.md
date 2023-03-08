@@ -12,6 +12,10 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled_v16_min.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="500px">
     <figcaption>Assembled view of the Clock module</figcaption>
 </figure>
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="500px">
+    <figcaption>Assembled view of the Clock module</figcaption>
+</figure>
 
 [Clock module documentation](/downloads/technical/myCPU_Clock_module_full.pdf){:target="_blank"}
 

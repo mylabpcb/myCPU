@@ -16,4 +16,10 @@ of the next projects: **myCPU+** and **myEnigma**.
 Please send me the feedback form below and let me know if you would be comfortable getting the myCPU Kit through a crowdfunding campaign.
 {: style="text-align: justify"}
 
-<a class="button is-primary is-light" href="https://forms.gle/4VwE5mrbV5YzRwvZ9" target="_blank">Feedback myCPU Kit form</a> 
+<form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="GET" target="_blank">
+  <input type="text" name="name" placeholder="Your Fullname">
+  <input type="text" name="email" placeholder="Your Email">
+  <button type="submit">Submit</button>
+</form>
+
+
