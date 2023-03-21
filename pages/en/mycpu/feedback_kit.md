@@ -12,7 +12,7 @@ hero_darken: false
 At this moment, the only way, affordable for me, to provide the myCPU16 full boards Kit is from a crowdfunding campaign. Also your support would let me to continue with the development of the next projects: **myCPU256**, **myCPU+** and **myEnigma**.
 {: style="text-align: justify"}
 
-Please send me the feedback form below and let me know if you would be comfortable getting the myCPU16 Kit through a crowdfunding campaign.
+Please send me the feedback form below and let me know your interest in getting the myCPU Kit and if you would be comfortable getting the myCPU Kit through a crowdfunding campaign.
 {: style="text-align: justify"}
 
 <form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="GET" target="_blank" enctype='text/plain'>
