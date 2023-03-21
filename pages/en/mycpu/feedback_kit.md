@@ -22,9 +22,9 @@ Please send me the feedback form below and let me know if you would be comfortab
   <input type="text" name="email" placeholder="Your Email"><br/>
   <label><strong>Would you agree to get the kit from a crowfunding project?</strong></label><br/>
   <label>Yes:</label>
-  <input type="radio" name="kitAgreement" placeHolder="Yes" checked>
+  <input type="radio" name="kitAgreement" placeHolder="Yes" checked value="Yes">
   <label>No:</label>
-  <input type="radio" name="kitAgreement" placeHolder="No"><br/>
+  <input type="radio" name="kitAgreement" placeHolder="No" value="No"><br/>
   <button type="submit">Submit</button>
 </form>
 
