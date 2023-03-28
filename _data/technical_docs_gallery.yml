@@ -21,25 +21,25 @@
         **BUS Manager module**
       file: /downloads/technical/myCPU_BUS_Manager_module_full.pdf
     # CSM
-    - link: /img/mycpu/thumbnails/300/control_signal_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/csm_assembled_300_min.png
       alt: Control Signals module
       description: |-
         **Control Signals Manager module**
       file: /downloads/technical/myCPU_CSM_module_full.pdf
     # Program Counter
-    - link: /img/mycpu/thumbnails/300/programCounter_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/pc_assembled_300_min.png
       alt: Program Counter module thumbnail
       description: |-
         **Program Counter module**
       file: /downloads/technical/myCPU_Program_Counter_module_full.pdf
     # Register ABC right
-    - link: /img/mycpu/thumbnails/300/register_abc_8b_right_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/register_abc_right_assembled_300_min.png
       alt: Register ABC module thumbnail
       description: |-
         **Register ABC 8 bit (Right) module**
       file: /downloads/technical/myCPU_Register_8b_R_module_full.pdf
     # Register ABC left
-    - link: /img/mycpu/thumbnails/300/register_abc_8b_left_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/register_abc_left_assembled_300_min.png
       alt: Register ABC module thumbnail
       description: |-
         **Register ABC 8 bit (LEFT) module**
@@ -51,37 +51,37 @@
         **ALU module**
       file: /downloads/technical/myCPU_ALU_module_full.pdf
     # Output register
-    - link: /img/mycpu/thumbnails/300/output_register_8b_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/output_register_assembled_300_min.png
       alt: Output Register module thumbnail
       description: |-
         **Output Register module**
       file: /downloads/technical/myCPU_Output_Register_8b_module_full.pdf
     # MAR
-    - link: /img/mycpu/thumbnails/300/mar_4b_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/mar_assembled_300_min.png
       alt: MAR module thumbnail
       description: |-
         **MAR - Memory Address Register module**
       file: /downloads/technical/myCPU_MAR_4b_module_full.pdf
     # SRAM 189
-    - link: /img/mycpu/thumbnails/300/ram219_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/sram_219_assembled_300_min.png
       alt: SRAM 189 module thumbnail
       description: |-
         **SRAM 189 module**
       file: /downloads/technical/myCPU_RAM189_module_full.pdf
     # FlagsRegister_Seq
-    - link: /img/mycpu/thumbnails/300/flag_register_sequencer_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/flags_seq_assembled_300_min.png
       alt: Flags Register module thumbnail
       description: |-
         **Sequencer + Flags Register module**
       file: /downloads/technical/myCPU_FlagsRegister_Seq_module_full.pdf
     # Instruction Register
-    - link: /img/mycpu/thumbnails/300/instruction_register_8b_right_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/inst_register_assembled_300_min.png
       alt: Instruction Register module thumbnail
       description: |-
         **Instruction Register module**
       file: /downloads/technical/myCPU_InstructionRegister_4b_R_module_full.pdf
     # Instruction Decoder
-    - link: /img/mycpu/thumbnails/300/logic_control_AT28C64_assembled_300_min.png
+    - link: /img/mycpu/thumbnails/300/inst_decoder_assembled_300_min.png
       alt: Instruction Decoder module thumbnail
       description: |-
         **Instruction Decoder module**

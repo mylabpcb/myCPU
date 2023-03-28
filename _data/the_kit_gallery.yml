@@ -21,25 +21,25 @@
         **BUS Manager module**
         ## x 1
     # CSM
-    - link: /img/mycpu/thumbnails/boards/md/control_signal_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/csm_clear_front_300_min.png
       alt: Control Signals module
       description: |-
         **CSM module**  
         ## x 1
     # Program Counter
-    - link: /img/mycpu/thumbnails/boards/md/program_counter_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/pc_clear_front_300_min.png
       alt: Program Counter module thumbnail
       description: |- 
         **Program Counter module**
         ## x 1
     # Register ABC right
-    - link: /img/mycpu/thumbnails/boards/md/register_abc_8b_right_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/register_abc_right_clear_front_300_min.png
       alt: Register ABC module thumbnail
       description: |- 
         **Register ABC Right module**
         ## x 2
     # Register ABC left
-    - link: /img/mycpu/thumbnails/boards/md/register_abc_8b_left_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/register_abc_left_clear_front_300_min.png
       alt: Register ABC module thumbnail
       description: |- 
         **Register ABC Left module**
@@ -51,37 +51,37 @@
         **ALU module**
         ## x 1
     # Output register
-    - link: /img/mycpu/thumbnails/boards/md/output_register_8b_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/output_register_clear_front_300_min.png
       alt: Output Register module thumbnail
       description: |- 
         **Output Register module**
         ## x 1
     # MAR
-    - link: /img/mycpu/thumbnails/boards/md/mar_4b_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/mar_clear_front_300_min.png
       alt: MAR module thumbnail
       description: |- 
         **MAR 4 bit module**
         ## x 1
     # SRAM 219
-    - link: /img/mycpu/thumbnails/boards/md/ram219_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/sram_219_clear_front_300_min.png
       alt: SRAM  module thumbnail
       description: |- 
         **SRAM module**
         ## x 1
     # FlagsRegister_Seq
-    - link: /img/mycpu/thumbnails/boards/md/flag_register_sequencer_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/flags_seq_clear_front_300_min.png
       alt: Flags Register module thumbnail
       description: |- 
         **Sequencer + Flags Register module**
         ## x 1
     # Instruction Register
-    - link: /img/mycpu/thumbnails/boards/md/instruction_register_8b_right_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/inst_register_clear_front_300_min.png
       alt: Instruction Register module thumbnail
       description: |- 
         **Instruction Register module**
         ## x 1
     # Instruction Decoder
-    - link: /img/mycpu/thumbnails/boards/md/logic_control_AT28C64_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/inst_decoder_clear_front_300_min.png
       alt: Instruction Decoder module thumbnail
       description: |- 
         **Instruction Decoder module**
@@ -101,13 +101,13 @@
 - title:
   images:
     # Display 4 digits AT28C64
-    - link: /img/mycpu/thumbnails/boards/md/displayAT28C64_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/display_AT28C64_clear_front_300_min.png
       alt: Display AT28C64 module thumbnail
       description: |- 
         **Decimal Display 4 Digits module**
         ## x 4
     # Display LED 8 bits
-    - link: /img/mycpu/thumbnails/boards/md/displayLED_clear_front_300_min.png
+    - link: /img/mycpu/thumbnails/boards/md/display_LED_clear_front_300_min.png
       alt: Display LED 8 bits module thumbnail
       description: |- 
         **Display LED 8 bits module**
@@ -115,7 +115,7 @@
 - title:
   images:
     # EEProm Programmer AT28C64
-    - link: /img/mycpu/thumbnails/boards/md/eeprom_programmer_clear_front_300.png
+    - link: /img/mycpu/thumbnails/boards/md/eeprom_prog_clear_front_300.png
       alt: EEProm programmer module thumbnail
       description: |- 
         **EEProm Programmer AT28C64 module**
