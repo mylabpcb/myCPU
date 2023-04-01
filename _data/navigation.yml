@@ -58,10 +58,10 @@
       link: /pages/en/mycpu/extra_modules/eeprom_programmer
     - name: Protoboard
       link: /pages/en/mycpu/extra_modules/protoboard
-- name: Custom modules
-  dropdown:
-    - name: Clock 4-2-1Mhz module
-      link: /pages/en/mycpu/custom_modules/clock4mhz
+#- name: Custom modules
+#  dropdown:
+#    - name: Clock 4-2-1Mhz module
+#      link: /pages/en/mycpu/custom_modules/clock4mhz
 - name: Downloads
   link: /pages/en/mycpu/downloads
   dropdown:
