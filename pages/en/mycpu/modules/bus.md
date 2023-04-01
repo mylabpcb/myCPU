@@ -13,7 +13,7 @@ hero_darken: false
 > Only the top board of the chained structure must have the power source connector and on/off switch. Should be the first at the top of the chain. The rest of the boards don't need them, and you can leave their places empty with no electrical issues.
 {: style="text-align: justify"}
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_power_module_assembled_min.png" alt="BUS module assembled view" title="Assembled view of the BUS module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_assembled_min.png" alt="BUS module assembled view" title="Assembled view of the BUS module" width="500px">
     <figcaption>Assembled view of the BUS module</figcaption>
 </figure>
 
@@ -37,10 +37,10 @@ The BUS module includes a voltage regulator which provide the power supply to th
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_power_module_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="500px">
     <figcaption>Front view of the printed board</figcaption>
 </figure>
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_power_module_clear_back_min.png" alt="PCB back view" title="Back view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_clear_back_min.png" alt="PCB back view" title="Back view of the printed board" width="500px">
     <figcaption>Back view of the printed board</figcaption>
 </figure>
