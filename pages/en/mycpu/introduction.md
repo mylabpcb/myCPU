@@ -13,7 +13,8 @@ Welcome to the introductory page of the myCPU project.
 The myCPU is an 8-bit TTL CPU design that is fully modular and built using only discrete logic with common integrated circuits, mostly TTL. It features microinstruction level debugging support and is designed on printed circuit boards (PCBs).
 {: style="text-align: justify"}
 
-The feature of microinstruction level debugging allows you to observe the execution of individual microinstructions and step through each one while viewing the state of all logic devices. This provides insight into the execution of the instruction in real-time
+The feature of microinstruction level debugging allows you to observe the execution of individual microinstructions and step through each one while viewing the state of all logic devices. This provides a detailed view of
+the instruction execution in real-time.
 {: style="text-align: justify"}
 
 ### A development and learning Platform
