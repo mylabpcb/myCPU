@@ -119,7 +119,7 @@ The BUS module board was designed to connect multiple BUS module boards together
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_power_module_assembled_min.png" alt="myCPU BUS module board" title="myCPU BUS module board" width="80%">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/bus/bus_module_assembled_min.png" alt="myCPU BUS module board" title="myCPU BUS module board" width="80%">
     <figcaption>myCPU BUS module board view</figcaption>
 </figure>
 
