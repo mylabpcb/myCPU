@@ -1,6 +1,6 @@
 ---
 title: "myCPU Downloads: The Code"
-subtitle: All decoders programs with detailed comments
+subtitle: Encoders and programs with detailed comments
 layout: page
 gallery: code_gallery
 galleryType: download

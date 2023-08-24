@@ -37,19 +37,19 @@
       description: |-
         **Instruction decoder v2.5 for PlatformIO**
       file: /downloads/code/pio/MicroinstructionDecoder_myCPUOne_v2.5.zip
-- title: Programmer CLI
+- title: myCPU Encoder CLI
   images:
     # Windows
     - link: /img/thumbnails/logo_windows.png
       alt: Windows
       ratio: is-64x64
       description: |-
-        **Programmer CLI v1.3.0 for Windows**
+        **myCPU Encoder CLI v1.3.0 for Windows**
       file: /downloads/code/programmer_cli/windows/myCPU_EncoderCLI_v1.3.0.zip
     # Linux/MacOS
     - link: /img/thumbnails/logo_linux.png
       alt: Linux/MacOS
       ratio: is-64x64
       description: |-
-        **Programmer CLI v1.3.0 for Linux and MacOS**
+        **myCPU Encoder CLI v1.3.0 for Linux and MacOS**
       file: /downloads/code/programmer_cli/ux/myCPU_EncoderCLI_v1.3.0_ux.zip
