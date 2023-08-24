@@ -1,12 +1,19 @@
 - title: Arduino
   images:
-    # Display
+    # DEC Display
     - link: /img/thumbnails/arduino_ide.png
       alt: Arduino logo
       ratio: is-64x64
       description: |-
-        **Display decoder v2.1 for Arduino**
-      file: /downloads/code/arduino/Display_Decoder_myCPUOne_v2.1.zip
+        **DEC Display decoder v2.1 for Arduino**
+      file: /downloads/code/arduino/DEC_Display_Decoder_myCPU_v2.1.zip
+    # HEX Display
+    - link: /img/thumbnails/arduino_ide.png
+      alt: Arduino logo
+      ratio: is-64x64
+      description: |-
+        **HEX Display decoder v1.1 for Arduino**
+      file: /downloads/code/arduino/HEX_Display_Decoder_myCPU_v1.1.zip
     # Instruction Decoder
     - link: /img/thumbnails/arduino_ide.png
       alt: Arduino Logo
@@ -21,7 +28,7 @@
       alt: Pio logo
       ratio: is-64x64
       description: |-
-        **Display decoder v2.1 for PlatformIO**
+        **DEC Display decoder v2.1 for PlatformIO**
       file: /downloads/code/pio/DisplayDecoder_myCPUOne_v2.1.zip
     # Instruction Decoder
     - link: /img/thumbnails/pio_ide.png
@@ -37,12 +44,12 @@
       alt: Windows
       ratio: is-64x64
       description: |-
-        **Programmer CLI v1.0.2 v2.1 for Windows**
-      file: /downloads/code/programmer_cli/windows/myCPU_ISetCLI_1.0.2_win.zip
+        **Programmer CLI v1.3.0 for Windows**
+      file: /downloads/code/programmer_cli/windows/myCPU_EncoderCLI_v1.3.0.zip
     # Linux/MacOS
     - link: /img/thumbnails/logo_linux.png
       alt: Linux/MacOS
       ratio: is-64x64
       description: |-
-        **Programmer CLI v1.0.2 for Linux and MacOS**
-      file: /downloads/code/programmer_cli/ux/myCPU_ISetCLI_1.0.2_ux.zip
+        **Programmer CLI v1.3.0 for Linux and MacOS**
+      file: /downloads/code/programmer_cli/ux/myCPU_EncoderCLI_v1.3.0_ux.zip
