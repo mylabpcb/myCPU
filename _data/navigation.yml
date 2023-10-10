@@ -16,6 +16,10 @@
       link: /pages/en/mycpu/test_debug
     - name: Sample Programs
       link: /pages/en/mycpu/sample_programs
+    - name: Logisim Simulator
+      link: /pages/en/mycpu/simulator
+    - name: The myCPU Book
+      link: /pages/en/mycpu/book
 - name: Modules
   dropdown:
     - name: Introduction
@@ -83,6 +87,8 @@
       link: /pages/en/mycpu/downloads/templates
     - name: CAD files
       link: /pages/en/mycpu/downloads/cad_files
+    - name: Simulator
+      link: /pages/en/mycpu/downloads/simulator
 - name: Blog
   link: /blog/en/
 - name: About
