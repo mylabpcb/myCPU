@@ -1,6 +1,6 @@
 ---
 title: "myCPU Downloads: Logisim Simulator"
-subtitle: A Logisim project emulating the myCPU16
+subtitle: A Logisim project emulating the myCPU
 layout: page
 show_sidebar: false
 hide_footer: true
@@ -10,4 +10,4 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/simulator/myCPU16_Sim.zip">Download myCPU16 Logisim simulator</a>
+<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/simulator/myCPU16_Sim.zip">Download myCPU Logisim simulator</a>

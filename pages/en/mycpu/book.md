@@ -10,4 +10,4 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
-
+The myCPU Book will be available for free to premium subscribers to the patreon subscribers of the myCPU project.
