@@ -1,6 +1,6 @@
 ---
 title: "myCPU: The Code"
-subtitle: Describing the code needed to microprogramming and decoding logic
+subtitle: Microprogramming and Decoding logic Software
 layout: page
 show_sidebar: false
 hide_footer: true
