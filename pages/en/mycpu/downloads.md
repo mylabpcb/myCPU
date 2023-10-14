@@ -24,3 +24,5 @@ hero_darken: false
 [Useful Templates](/pages/en/mycpu/downloads/templates){: target="_blank"}
 
 [CAD files](/pages/en/mycpu/downloads/cad_files){: target="_blank"}
+
+[Simulator](/pages/en/mycpu/downloads/simulator){: target="_blank"}
