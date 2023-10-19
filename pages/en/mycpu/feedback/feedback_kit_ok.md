@@ -11,7 +11,7 @@ hero_darken: false
 
 Thanks for your feedback!.
 
-<p>Feedback result: <span id="feedbackResult"></span></p>
+<p><strong>Feedback result:</strong> <span id="feedbackResult"></span></p>
 
 <script>
     // Step 1: Get the query string
