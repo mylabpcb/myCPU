@@ -60,6 +60,8 @@
       link: /pages/en/mycpu/modules/display_led
 - name: Extra Modules
   dropdown:
+    - name: BUS modules Layout Connectors 
+      link: /pages/en/mycpu/extra_modules/bus_layout_connector
     - name: EEProm Programmer (AT28C64)
       link: /pages/en/mycpu/extra_modules/eeprom_programmer
     - name: Protoboard
