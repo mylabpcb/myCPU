@@ -12,7 +12,12 @@ hero_darken: false
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/layout/layout_connector_assembled_min.png" alt="Assembled PCB view" title="Assembled PCB view" width="500px">
-    <figcaption>Assembled view of the BUS module</figcaption>
+    <figcaption>Assembled view of the Layout Connector</figcaption>
+</figure>
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/layout/layout_terminator_assembled_min.png" alt="Assembled PCB view" title="Assembled PCB view" width="500px">
+    <figcaption>Assembled view of the Layout Terminator</figcaption>
 </figure>
 
 [Layout Connector documentation](/downloads/technical/myCPU_BUS_LayoutConnector_full.pdf){:target="_blank"}
