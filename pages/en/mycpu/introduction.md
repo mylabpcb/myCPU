@@ -152,11 +152,11 @@ Figure below shows a diagram with a precise detail of the functional architectur
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_draw.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
     <figcaption>myCPU functional modules diagram</figcaption>
 </figure>
 
-A printable PDF version of the diagram: [**myCPU Modules Diagram**](/downloads/diagrams/myCPU_modules_draw.pdf){: target="_blank"}
+A printable PDF version of the diagram: [**myCPU Modules Diagram**](/downloads/diagrams/myCPU_modules.pdf){: target="_blank"}
 
 One of the most interesting features of the myCPU design, from a learning perspective, is that almost every logic element of the functional architecture corresponds to a physical module, and each module can be swapped out for new modules or custom modules with different characteristics, different digital functionality or simply other type of ICs.
 {: style="text-align: justify"}
