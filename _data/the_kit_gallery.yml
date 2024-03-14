@@ -6,6 +6,11 @@
       description: |- 
         **BUS module** 
         ## x 10 
+    - link: /img/mycpu/modules/layout/layout_connector_clear_front_min.png
+      alt: Layout connector and terminator
+      description: |- 
+        **Layout connector and terminator** 
+        ## x 2 
 - title:
   images:
     # Clock
