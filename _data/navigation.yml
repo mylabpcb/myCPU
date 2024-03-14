@@ -64,8 +64,8 @@
       link: /pages/en/mycpu/extra_modules/bus_layout_connector
     - name: EEProm Programmer (AT28C64)
       link: /pages/en/mycpu/extra_modules/eeprom_programmer
-    - name: Protoboard
-      link: /pages/en/mycpu/extra_modules/protoboard
+#- name: Protoboard
+#  link: /pages/en/mycpu/extra_modules/protoboard
 #- name: Custom modules
 #  dropdown:
 #    - name: Clock 4-2-1Mhz module

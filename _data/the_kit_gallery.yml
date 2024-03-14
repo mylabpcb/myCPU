@@ -87,17 +87,17 @@
         **Instruction Decoder module**
         ## x 1
     # Protoboard Left
-    - link: /img/mycpu/modules/protoboard/protoboard_left_clear_front_min.png
-      alt: Protoboard Left
-      description: |- 
-        **Protoboard LEFT side**
-        ## x 2
+    # - link: /img/mycpu/modules/protoboard/protoboard_left_clear_front_min.png
+    #   alt: Protoboard Left
+    #   description: |- 
+    #     **Protoboard LEFT side**
+    #     ## x 2
     # Protoboard Right
-    - link: /img/mycpu/modules/protoboard/protoboard_right_clear_front_min.png
-      alt: Protoboard Right
-      description: |- 
-        **Protoboard RIGHT side**
-        ## x 2
+    # - link: /img/mycpu/modules/protoboard/protoboard_right_clear_front_min.png
+    #   alt: Protoboard Right
+    #   description: |- 
+    #     **Protoboard RIGHT side**
+    #     ## x 2
 - title:
   images:
     # Display 4 digits AT28C64

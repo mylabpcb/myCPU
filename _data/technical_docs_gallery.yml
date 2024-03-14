@@ -2,10 +2,11 @@
   images:
     # BUS
     - link: /img/mycpu/modules/bus/bus_module_assembled_min.png
-      alt: BUS_Power Supply module
+      alt: BUS_module
       description: |-
-        **BUS/Power Supply module**
+        **BUS module**
       file: /downloads/technical/myCPU_BUS_module_pulled_full.pdf
+    - link: 
 - title:
   images:
     # Clock
@@ -86,18 +87,18 @@
       description: |-
         **Instruction Decoder module**
       file: /downloads/technical/myCPU_InstructionDecoder_module_full.pdf
-    # Protoboard LEFT
-    - link: /img/mycpu/thumbnails/boards/md/protoboard_left_clear_front_300_min.png
-      alt: Protoboard module
-      description: |-
-        **Protoboard module (Left)**
-      file: /downloads/technical/myCPU_Protoboard_L.pdf
-    # Protoboard RIGHT
-    - link: /img/mycpu/thumbnails/boards/md/protoboard_right_clear_front_300_min.png
-      alt: Protoboard module
-      description: |-
-        **Protoboard module (Right)**
-      file: /downloads/technical/myCPU_Protoboard_R.pdf
+    # # Protoboard LEFT
+    # - link: /img/mycpu/thumbnails/boards/md/protoboard_left_clear_front_300_min.png
+    #   alt: Protoboard module
+    #   description: |-
+    #     **Protoboard module (Left)**
+    #   file: /downloads/technical/myCPU_Protoboard_L.pdf
+    # # Protoboard RIGHT
+    # - link: /img/mycpu/thumbnails/boards/md/protoboard_right_clear_front_300_min.png
+    #   alt: Protoboard module
+    #   description: |-
+    #     **Protoboard module (Right)**
+    #   file: /downloads/technical/myCPU_Protoboard_R.pdf
     
 - title:
   images:
