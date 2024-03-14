@@ -32,7 +32,7 @@
       link: /pages/en/mycpu/modules/bus_manager
     - name: Clock
       link: /pages/en/mycpu/modules/clock
-    - name: Control Signals Manager
+    - name: CSM (Control Signals Manager)
       link: /pages/en/mycpu/modules/csm
     - name: Program Counter
       link: /pages/en/mycpu/modules/program_counter
