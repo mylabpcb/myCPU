@@ -11,7 +11,7 @@ hero_darken: false
 > The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/control_signal_assembled.png" alt="CSM module assembled view" title="Assembled view of the CSM module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/csm_assembled_min.png" alt="CSM module assembled view" title="Assembled view of the CSM module" width="400px">
     <figcaption>Assembled view of the CSM module</figcaption>
 </figure>
 
@@ -23,10 +23,6 @@ The control signals manager is like the main nervous system of the myCPU, sendin
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/control_signal_clear_front.png" alt="PCB front view" title="Front view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/csm_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
     <figcaption>Front view of the printed board</figcaption>
-</figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/control_signal_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
 </figure>
