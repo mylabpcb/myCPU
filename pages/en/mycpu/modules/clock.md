@@ -9,10 +9,13 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled_min.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_assembled_min.png" alt="Clock module assembled view" title="Assembled view of the Clock module" width="400px">
     <figcaption>Assembled view of the Clock module</figcaption>
 </figure>
-
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
+    <figcaption>Front view of the printed board</figcaption>
+</figure>
 
 [Clock module documentation](/downloads/technical/myCPU_Clock_module_full.pdf){:target="_blank"}
 

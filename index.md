@@ -21,7 +21,7 @@ The myCPU project is based on the original 8-bit Breadboard Computer project fro
 And the Malvino's SAP-1 and 2 designs from his book: **Digital Computer Electronics 1993 3rd edition**
 
 {:.center}
-![myCPU Layout]({{ site.baseurl }}/img/mycpu/mycpu_landscape_on_min.png#center){:width="700px"}
+![myCPU Layout]({{ site.baseurl }}/img/mycpu/mycpu_landscape_on_min.png#center){:width="600px"}
 
 ### The origin of the myCPU project, the Ben Eater's project
 
