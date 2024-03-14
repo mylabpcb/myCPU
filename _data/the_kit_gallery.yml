@@ -9,7 +9,7 @@
 - title:
   images:
     # Clock
-    - link: /img/mycpu/thumbnails/boards/md/clock_clear_front_300_min.png
+    - link: /img/mycpu/modules/clock/clock_clear_front_min.png
       alt: Clock module thumbnail
       description: |- 
         **Clock module**
