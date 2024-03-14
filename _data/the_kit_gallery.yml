@@ -63,25 +63,25 @@
         **MAR 4 bit module**
         ## x 1
     # SRAM 189
-    - link: /img/mycpu/modules/ram189/ram_189_clear_front_min.png
+    - link: /img/mycpu/modules/ram189/ram189_clear_front_min.png
       alt: SRAM (189) module
       description: |- 
         **SRAM module**
         ## x 1
     # FlagsRegister_Seq
-    - link: /img/mycpu/modules/flag_register_seq/flags_register_sequencer_clear_front_min.png
+    - link: /img/mycpu/modules/flag_seq/flag_seq_clear_front_min.png
       alt: Flags Register module
       description: |- 
         **Sequencer + Flags Register module**
         ## x 1
     # Instruction Register
-    - link: /img/mycpu/modules/instruction_register/instruction_register_8b_right_clear_front_min.png
+    - link: /img/mycpu/modules/ireg/ireg_4b_clear_front_min.png
       alt: Instruction Register module
       description: |- 
         **Instruction Register module**
         ## x 1
     # Instruction Decoder
-    - link: /img/mycpu/modules/instruction_decoder/idecoder_at28c64_clear_front_min.png
+    - link: /img/mycpu/modules/idecoder/idecoder_at28c64_clear_front_min.png
       alt: Instruction Decoder module
       description: |- 
         **Instruction Decoder module**
@@ -101,13 +101,13 @@
 - title:
   images:
     # Display 4 digits AT28C64
-    - link: /img/mycpu/modules/display/display_at28c64_clear_front_min.png
+    - link: /img/mycpu/modules/display/dec_hex_display_at28c64_clear_front_min.png
       alt: DEC/HEX Display AT28C64 module
       description: |- 
         **DEC/HEX Display 4 Digits module**
         ## x 4
     # Display LED 8 bits
-    - link: /img/mycpu/modules/display/display_led_clear_front_min.png
+    - link: /img/mycpu/modules/display/led_display_8b_clear_front_min.png
       alt: Display LED 8 bits module
       description: |- 
         **Display LED 8 bits module**
