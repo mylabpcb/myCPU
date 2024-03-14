@@ -1,8 +1,8 @@
 - title: 
   images:
     # BUS
-    - link: /img/mycpu/thumbnails/boards/md/bus_module_clear_front_400.min.png
-      alt: BUS module thumbnail
+    - link: /img/mycpu/modules/bus/bus_module_clear_front_min.png
+      alt: BUS module
       description: |- 
         **BUS module** 
         ## x 10 
@@ -10,90 +10,90 @@
   images:
     # Clock
     - link: /img/mycpu/modules/clock/clock_clear_front_min.png
-      alt: Clock module thumbnail
+      alt: Clock module
       description: |- 
         **Clock module**
         ## x 1
     # Power
-    - link: /img/mycpu/thumbnails/boards/md/bus_manager_clear_front_300_min.png
+    - link: /img/mycpu/modules/bus_manager/busman_clear_front_min.png
       alt: BUS Manager module
       description: |- 
         **BUS Manager module**
         ## x 1
     # CSM
-    - link: /img/mycpu/thumbnails/boards/md/csm_clear_front_300_min.png
+    - link: /img/mycpu/modules/csm/csm_clear_front_min.png
       alt: Control Signals module
       description: |-
         **CSM module**  
         ## x 1
     # Program Counter
-    - link: /img/mycpu/thumbnails/boards/md/pc_clear_front_300_min.png
-      alt: Program Counter module thumbnail
+    - link: /img/mycpu/modules/pc/pc_clear_front_min.png
+      alt: Program Counter module
       description: |- 
         **Program Counter module**
         ## x 1
     # Register ABC right
-    - link: /img/mycpu/thumbnails/boards/md/register_abc_right_clear_front_300_min.png
-      alt: Register ABC module thumbnail
+    - link: /img/mycpu/modules/reg_8b_right/reg_8b_right_clear_front_min.png
+      alt: Register ABC module
       description: |- 
         **Register ABC Right module**
         ## x 2
     # Register ABC left
-    - link: /img/mycpu/thumbnails/boards/md/register_abc_left_clear_front_300_min.png
-      alt: Register ABC module thumbnail
+    - link: /img/mycpu/modules/register_abc_left/register_abc_left_clear_front_min.png
+      alt: Register ABC module
       description: |- 
         **Register ABC Left module**
         ## x 2
     # ALU
-    - link: /img/mycpu/thumbnails/boards/md/alu_clear_front_300_min.png
-      alt: ALU module thumbnail
+    - link: /img/mycpu/modules/alu/alu_clear_front_min.png
+      alt: ALU module
       description: |- 
         **ALU module**
         ## x 1
     # Output register
-    - link: /img/mycpu/thumbnails/boards/md/output_register_clear_front_300_min.png
+    - link: /img/mycpu/modules/output_register/output_register_clear_front_min.png
       alt: Output Register module thumbnail
       description: |- 
         **Output Register module**
         ## x 1
     # MAR
-    - link: /img/mycpu/thumbnails/boards/md/mar_clear_front_300_min.png
-      alt: MAR module thumbnail
+    - link: /img/mycpu/modules/mar4b/mar4b_clear_front_min.png
+      alt: MAR module
       description: |- 
         **MAR 4 bit module**
         ## x 1
-    # SRAM 219
-    - link: /img/mycpu/thumbnails/boards/md/sram_219_clear_front_300_min.png
-      alt: SRAM  module thumbnail
+    # SRAM 189
+    - link: /img/mycpu/modules/ram189/ram_189_clear_front_min.png
+      alt: SRAM (189) module
       description: |- 
         **SRAM module**
         ## x 1
     # FlagsRegister_Seq
-    - link: /img/mycpu/thumbnails/boards/md/flags_seq_clear_front_300_min.png
-      alt: Flags Register module thumbnail
+    - link: /img/mycpu/modules/flag_register_seq/flags_register_sequencer_clear_front_min.png
+      alt: Flags Register module
       description: |- 
         **Sequencer + Flags Register module**
         ## x 1
     # Instruction Register
-    - link: /img/mycpu/thumbnails/boards/md/inst_register_clear_front_300_min.png
-      alt: Instruction Register module thumbnail
+    - link: /img/mycpu/modules/instruction_register/instruction_register_8b_right_clear_front_min.png
+      alt: Instruction Register module
       description: |- 
         **Instruction Register module**
         ## x 1
     # Instruction Decoder
-    - link: /img/mycpu/thumbnails/boards/md/inst_decoder_clear_front_300_min.png
-      alt: Instruction Decoder module thumbnail
+    - link: /img/mycpu/modules/instruction_decoder/idecoder_at28c64_clear_front_min.png
+      alt: Instruction Decoder module
       description: |- 
         **Instruction Decoder module**
         ## x 1
     # Protoboard Left
-    - link: /img/mycpu/thumbnails/boards/md/protoboard_left_clear_front_300_min.png
+    - link: /img/mycpu/modules/protoboard/protoboard_left_clear_front_min.png
       alt: Protoboard Left
       description: |- 
         **Protoboard LEFT side**
         ## x 2
     # Protoboard Right
-    - link: /img/mycpu/thumbnails/boards/md/protoboard_right_clear_front_300_min.png
+    - link: /img/mycpu/modules/protoboard/protoboard_right_clear_front_min.png
       alt: Protoboard Right
       description: |- 
         **Protoboard RIGHT side**
@@ -101,21 +101,21 @@
 - title:
   images:
     # Display 4 digits AT28C64
-    - link: /img/mycpu/thumbnails/boards/md/display_AT28C64_clear_front_300_min.png
-      alt: Display AT28C64 module thumbnail
+    - link: /img/mycpu/modules/display/display_at28c64_clear_front_min.png
+      alt: DEC/HEX Display AT28C64 module
       description: |- 
-        **Decimal Display 4 Digits module**
+        **DEC/HEX Display 4 Digits module**
         ## x 4
     # Display LED 8 bits
-    - link: /img/mycpu/thumbnails/boards/md/display_LED_clear_front_300_min.png
-      alt: Display LED 8 bits module thumbnail
+    - link: /img/mycpu/modules/display/display_led_clear_front_min.png
+      alt: Display LED 8 bits module
       description: |- 
         **Display LED 8 bits module**
         ## x 10
 - title:
   images:
     # EEProm Programmer AT28C64
-    - link: /img/mycpu/thumbnails/boards/md/eeprom_prog_clear_front_300.png
+    - link: /img/mycpu/modules/eeprom_prog/eeprom_prog_clear_front_min.png
       alt: EEProm programmer module thumbnail
       description: |- 
         **EEProm Programmer AT28C64 module**
