@@ -11,7 +11,7 @@ hero_darken: false
 > The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/program_counter/program_counter_assembled.png" alt="Program Counter module assembled view" title="Assembled view of the Program Counter module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/pc/pc_assembled_min.png" alt="Program Counter module assembled view" title="Assembled view of the Program Counter module" width="400px">
     <figcaption>Assembled view of the Program Counter module</figcaption>
 </figure>
 
@@ -23,10 +23,7 @@ Control the flow of the execution.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/program_counter/program_counter_clear_front.png" alt="PCB front view" title="Front view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/pc/pc_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
     <figcaption>Front view of the printed board</figcaption>
 </figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/program_counter/program_counter_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
-</figure>
+
