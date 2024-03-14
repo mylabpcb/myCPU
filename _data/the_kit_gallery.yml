@@ -57,7 +57,7 @@
         **Output Register module**
         ## x 1
     # MAR
-    - link: /img/mycpu/modules/mar4b/mar4b_clear_front_min.png
+    - link: /img/mycpu/modules/mar4b/mar_4b_clear_front_min.png
       alt: MAR module
       description: |- 
         **MAR 4 bit module**
