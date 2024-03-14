@@ -11,7 +11,7 @@ hero_darken: false
 > The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/display/led_display_8b_assembled_min.png" alt="LED Display module assembled view" title="Assembled view of the LED Display module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/display/led_display_8b_assembled_min.png" alt="LED Display module assembled view" title="Assembled view of the LED Display module" width="400px">
     <figcaption>Assembled view of the LED Display module</figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ Also you can find all documentation files in the downloads page: [myCPU document
 
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/display/led_display_8b_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/display/led_display_8b_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="300px">
     <figcaption>Front view of the printed board</figcaption>
 </figure>
 
