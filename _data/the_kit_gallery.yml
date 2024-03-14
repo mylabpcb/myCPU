@@ -39,7 +39,7 @@
         **Register ABC Right module**
         ## x 2
     # Register ABC left
-    - link: /img/mycpu/modules/register_abc_left/register_abc_left_clear_front_min.png
+    - link: /img/mycpu/modules/reg_8b_left/reg_8b_left_clear_front_min.png
       alt: Register ABC module
       description: |- 
         **Register ABC Left module**
@@ -51,8 +51,8 @@
         **ALU module**
         ## x 1
     # Output register
-    - link: /img/mycpu/modules/output_register/output_register_clear_front_min.png
-      alt: Output Register module thumbnail
+    - link: /img/mycpu/modules/outreg_8b/outreg_8b_clear_front_min.png
+      alt: Output Register module
       description: |- 
         **Output Register module**
         ## x 1

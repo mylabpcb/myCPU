@@ -42,7 +42,7 @@
       link: /pages/en/mycpu/modules/register_abc_left
     - name: ALU
       link: /pages/en/mycpu/modules/alu
-    - name: Output Register
+    - name: Output Register 8b
       link: /pages/en/mycpu/modules/output_register
     - name: MAR 4 bit (Memory Address Register)
       link: /pages/en/mycpu/modules/mar4b 
