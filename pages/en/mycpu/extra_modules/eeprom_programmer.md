@@ -11,7 +11,7 @@ hero_darken: false
 > The content is under development, the final version will be as soon as possible.
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_assembled.png" alt="EEProm Programmer module assembled view" title="Assembled view of the EEProm Programmer module" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_prog/eeprom_prog_assembled_min.png" alt="EEProm Programmer module assembled view" title="Assembled view of the EEProm Programmer module" width="400px">
     <figcaption>Assembled view of the EEProm Programmer module</figcaption>
 </figure>
 
@@ -20,10 +20,7 @@ hero_darken: false
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_clear_front.png" alt="PCB front view" title="Front view of the printed board" width="500px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_prog/eeprom_prog_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
     <figcaption>Front view of the printed board</figcaption>
 </figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_programmer/eeprom_programmer_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
-</figure>
+
