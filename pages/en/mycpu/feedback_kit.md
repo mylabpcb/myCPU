@@ -15,7 +15,7 @@ At this moment, the only way, affordable for me, to provide the myCPU16 full boa
 Please send me the feedback form below and let me know your interest in getting the myCPU Kit and if you would be comfortable getting the myCPU Kit through a crowdfunding campaign.
 {: style="text-align: justify"}
 
-<form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="GET" target="_blank" enctype='text/plain'>
+<form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="POST" target="_blank">
   <label>FullName:</label>
   <input type="text" name="name" placeholder="Your Fullname">
   <label>Email:</label>
