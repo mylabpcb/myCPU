@@ -5,7 +5,7 @@
       alt: BUS_module
       description: |-
         **BUS module**
-      file: /downloads/technical/myCPU_BUS_module_pulled_full.pdf
+      file: /downloads/technical/myCPU_BUS_module_full.pdf
     - link: /img/mycpu/modules/layout/layout_connector_assembled_min.png
       alt: Layout connector and terminator
       description: |-
