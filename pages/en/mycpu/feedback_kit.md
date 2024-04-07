@@ -15,16 +15,21 @@ At this moment, the only way, affordable for me, to provide the myCPU16 full boa
 Please send me the feedback form below and let me know your interest in getting the myCPU Kit and if you would be comfortable getting the myCPU Kit through a crowdfunding campaign.
 {: style="text-align: justify"}
 
-<form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="POST" target="_blank">
+<form accept-charset="UTF-8" action="https://mycpu-wcontact.azurewebsites.net/api/AddFeedbackContact" method="post" target="_blank" enctype="application/x-www-form-urlencoded">
   <label>FullName:</label>
   <input type="text" name="name" placeholder="Your Fullname">
   <label>Email:</label>
   <input type="text" name="email" placeholder="Your Email"><br/>
-  <label><strong>Would you agree to get the kit from a crowfunding project?</strong></label><br/>
-  <label>Yes:</label>
-  <input type="radio" name="kitAgreement" placeHolder="Yes" checked value="Yes">
+  <label><strong>Would you agree to get the whole kit of pcbs from a crowfunding project?</strong></label><br/>
+  <label>Yes:</label> 
+  <input type="radio" name="Q_kitAgreeCrowfunding" placeHolder="Yes" checked value="Yes">
   <label>No:</label>
-  <input type="radio" name="kitAgreement" placeHolder="No" value="No"><br/>
+  <input type="radio" name="Q_kitAgreeCrowfunding" placeHolder="No" value="No"><br/>
+  <label><strong>Would you prefer purchase the gerber files and order the pcbs by your own?</strong></label><br/>
+  <label>Yes:</label> 
+  <input type="radio" name="Q_kitPurchaseGerber" placeHolder="Yes" checked value="Yes">
+  <label>No:</label>
+  <input type="radio" name="Q_kitPurchaseGerber" placeHolder="No" value="No"><br/>
   <button type="submit">Submit</button>
 </form>
 
