@@ -19,90 +19,102 @@
       description: |- 
         **Clock module**
         ## x 1
-    # Power
-    - link: /img/mycpu/modules/bus_manager/busman_clear_front_min.png
+    # BUS Manager
+    - link: /img/mycpu/boxes/1024x750.png
       alt: BUS Manager module
       description: |- 
         **BUS Manager module**
         ## x 1
     # CSM
-    - link: /img/mycpu/modules/csm/csm_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Control Signals module
       description: |-
         **CSM module**  
         ## x 1
     # Program Counter
-    - link: /img/mycpu/modules/pc/pc_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Program Counter module
       description: |- 
         **Program Counter module**
         ## x 1
     # Register ABC right
-    - link: /img/mycpu/modules/reg_8b_right/reg_8b_right_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Register ABC module
       description: |- 
         **Register ABC Right module**
         ## x 2
     # Register ABC left
-    - link: /img/mycpu/modules/reg_8b_left/reg_8b_left_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Register ABC module
       description: |- 
         **Register ABC Left module**
         ## x 2
     # ALU
-    - link: /img/mycpu/modules/alu/alu_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: ALU module
       description: |- 
         **ALU module**
         ## x 1
     # Output register
-    - link: /img/mycpu/modules/outreg_8b/outreg_8b_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Output Register module
       description: |- 
         **Output Register module**
         ## x 1
     # MAR
-    - link: /img/mycpu/modules/mar4b/mar_4b_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: MAR module
       description: |- 
         **MAR 4 bit module**
         ## x 1
     # SRAM 189
-    - link: /img/mycpu/modules/ram189/ram189_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: SRAM (189) module
       description: |- 
         **SRAM module**
         ## x 1
     # FlagsRegister_Seq
-    - link: /img/mycpu/modules/flag_seq/flag_seq_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Flags Register module
       description: |- 
         **Sequencer + Flags Register module**
         ## x 1
     # Instruction Register
-    - link: /img/mycpu/modules/ireg/ireg_4b_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Instruction Register module
       description: |- 
         **Instruction Register module**
         ## x 1
     # Instruction Decoder
-    - link: /img/mycpu/modules/idecoder/idecoder_at28c64_clear_front_min.png
+    - link: /img/mycpu/boxes/1024x750.png
       alt: Instruction Decoder module
       description: |- 
         **Instruction Decoder module**
         ## x 1
-    # Protoboard Left
-    # - link: /img/mycpu/modules/protoboard/protoboard_left_clear_front_min.png
-    #   alt: Protoboard Left
-    #   description: |- 
-    #     **Protoboard LEFT side**
-    #     ## x 2
-    # Protoboard Right
-    # - link: /img/mycpu/modules/protoboard/protoboard_right_clear_front_min.png
-    #   alt: Protoboard Right
-    #   description: |- 
-    #     **Protoboard RIGHT side**
-    #     ## x 2
+    #Protoboard Left
+    - link: /img/mycpu/boxes/1024x750.png
+      alt: Protoboard Left
+      description: |- 
+        **Protoboard LEFT side**
+        ## x 2
+    #Protoboard Right
+    - link: /img/mycpu/boxes/1024x750.png
+      alt: Protoboard Right
+      description: |- 
+        **Protoboard RIGHT side**
+        ## x 2
+    #Protoboard 245 Right
+    - link: /img/mycpu/boxes/1024x750.png
+      alt: Protoboard with 245 Right
+      description: |- 
+        **Protoboard with 245 and output RIGHT side**
+        ## x 2
+    #Protoboard 245 Left
+    - link: /img/mycpu/boxes/1024x750.png
+      alt: Protoboard with 245 Left
+      description: |- 
+        **Protoboard with 245 and output Left side**
+        ## x 2
 - title:
   images:
     # Display 4 digits AT28C64
@@ -116,6 +128,12 @@
       alt: Display LED 8 bits module
       description: |- 
         **Display LED 8 bits module**
+        ## x 10
+    # Display LED 16 bits
+    - link: /img/mycpu/boxes/1024x750.png
+      alt: Display BarLED 16 bits module
+      description: |- 
+        **Display BarLED 16 bits module**
         ## x 10
 - title:
   images:
