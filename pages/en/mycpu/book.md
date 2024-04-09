@@ -9,5 +9,6 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
-
+{% comment %}
 The myCPU Book will be available for free to the patreon subscribers of the myCPU project.
+{% endcomment %}

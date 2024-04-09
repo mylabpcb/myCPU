@@ -34,5 +34,5 @@ I love digital electronics and microcomputers, more interested in the early days
 
 ![Logo Uned]({{ site.baseurl }}/img/logo_uned.gif)
 
-I’m a Computer Engineering degree student at **UNED**, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I will try. At the moment of writing this, January 19 of 2022, I’m in my first year.
+I’m a Computer Engineering degree student at **UNED**, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I will try.
 {: style="text-align: justify"}

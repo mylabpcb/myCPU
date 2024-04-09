@@ -8,7 +8,9 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
+> The content is under development, the final version will be as soon as possible.
 
+{% comment %}
 The myCPU design is based on through hole components instead SMD because of its ease of assembly and soldering, they are easier to buy and manipulate, especially for beginners, and makes replacement easy in case of an assembly error or malfunction.
 {: style="text-align: justify"}
 
@@ -261,6 +263,7 @@ For the myCPU design you`ll need to build 6 custom IDC wire connectors of differ
 {:.center}
 ![IDC custom samples](/img/mycpu/components/IDC_connectors_built_min.png){:width="600px"}
 
+{% endcomment %}
 
 
 

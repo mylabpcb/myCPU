@@ -10,6 +10,7 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
+{% comment %}
 In this page you can find a brief reference of the tools needed to build the myCPU.
 
 ### Measurement instrument tools
@@ -49,3 +50,4 @@ In this page you can find a brief reference of the tools needed to build the myC
 ### Power Sources
 
 ### Specialized Tools
+{%endcomment%}
