@@ -149,14 +149,13 @@
       "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","BI"], ["EO","AI","SU","FI"], ["SQR"]]
     },
     {
-      "Key": "JN",
+      "Key": "LDP",
       "Opcode": "0x0d",
       "Enabled": true,
-      "FlagsMap" : "0100",
+      "FlagsMap" : "0000",
       "Args": [{"Type":"addr","Length": 4}],
-      "Description":"Jump on Negative.",
-      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","PI"], ["SQR"]],
-      "MicroInstructionsOff": [["PO","MI"], ["PE","RO","II"], ["SQR"]]
+      "Description":"Load INPUT into memory address using A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["SI","AI"], ["IO","MI"], ["AO","RI"], ["SQR"]]
     },
     {
       "Key": "OUT",
