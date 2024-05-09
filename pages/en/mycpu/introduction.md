@@ -10,15 +10,14 @@ hero_darken: false
 ---
 Welcome to the introductory page of the myCPU project.
 
-The myCPU is an 8-bit TTL CPU design that is fully modular and built using only discrete logic with common integrated circuits, mostly TTL. It features microinstruction level debugging support and is designed on printed circuit boards (PCBs).
+The myCPU is a fully modular **8-bit TTL/CMOS CPU **designed using only discrete logic elements implemented by the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU instruction encode/decode is based on the Microprograming technique and the instruction execution flow is based on Microinstructions. The myCPU support debugging at level of an individual microinstruction. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies because the design is TTL compatible. 
 {: style="text-align: justify"}
 
-The feature of microinstruction level debugging allows you to observe the execution of individual microinstructions and step through each one while viewing the state of all logic devices. This provides a detailed view of
-the instruction execution in real-time.
+The feature of debugging at microinstruction level allows to observe the execution of individual microinstructions and step through each one, viewing the state of all logic components statically. Providing a detailed view of the instruction execution flow in real-time.
 {: style="text-align: justify"}
 
 ### A development and learning Platform
-The myCPU is designed as a learning platform to provide an educational experience in the workings of a CPU, including the logic elements involved in its basic architecture and how various digital logic devices interact in a synchronized way.
+The myCPU is designed as a learning platform to provide an educational experience in the workings of a CPU, including the logic elements involved in its basic architecture and how various digital logic elements interact in a synchronized way.
 {: style="text-align: justify"}
 
 The myCPU, with its modular design and hardware-level accessibility, also serves as a development platform. With the ability to directly access the relationship between hardware and software, users have the opportunity to design their own modules and create their own instruction sets for program writing. This is made possible through the Instruction Decoder, a programmable EEProm-based decoder that can be configured with custom microinstructions to define a unique instruction set.
@@ -30,7 +29,7 @@ The myCPU architecture, including its modular design and the choice of component
 
 >You can see a more extensive explanation about the components in the dedicated page [The Components](/pages/en/mycpu/components).
 
-As a learning platform, the myCPU design may not be the most technically advanced approach for experienced engineers or advanced electronic hobbyists. While the design could potentially be improved for better performance or to address electronic issues, this was not a primary objective in its creation.
+As a learning platform, the myCPU design may not be the most technically advanced approach for experienced engineers or advanced electronic hobbyists. While the design could potentially be improved for better performance, this was not a primary objective in its develop but the modularity, the open hardware and the accesibility of the design to beginners, students and less experienced people.
 {: style="text-align: justify"}
 
 The next list shows some of the topics you can learn with this project:
@@ -54,13 +53,15 @@ The extensive documentation provided may appear redundant or over-detailed to ex
 The myCPU was designed with an open architecture concept in mind, focusing on modularity and ease of customization. This allows for scalability in size and complexity through the addition of additional modules or replacement of the provided ones with more advanced ones.
 {: style="text-align: justify"}
 
-This design is made possible by the use of chained BUS module boards. The boards in the chain connect the data and control buses and share them with the two modules plugged into the left and right. Each BUS module supplies power to the connected modules through its own voltage regulator. As a result, you can increase the capabilities of your myCPU by adding more BUS module boards. However, due to the limitations of the first release of myCPU, a chain of 8 BUS module boards or two chains of 4 BUS module boards (in the case of a horizontal layout) may be sufficient.
+This design is made possible by the use of a base hardware layer composed by **chained BUS module boards**. The boards in the chain connect the data and control buses each other, and share them with the two modules plugged on both sides of the board. Each BUS module supplies power to the connected modules through its own voltage regulator and the 9V power source are passing along the chain. As a result, the power supply of a big composed circuit like that can be possible successfully without any issues, and you can increase the capabilities of your myCPU by adding more BUS module boards and additional modules. Due to the basic nature of the first release of myCPU, only 8 BUS module boards are needed to built a basic myCPU layout, although up to 10 BUS module boards will be provided in the myCPU kit. Is possible to build a chain of 8 BUS module boards in a vertical layout or 2 chains of 4 BUS module boards in a landscape layout to run the myCPU.
 {: style="text-align: justify"}
 
-The modular and open architecture of the myCPU allows you to customize its functionality and behavior by designing your own modules and module boards. When designing custom modules, the only consideration to keep in mind is to properly place the control and data bus connectors within the mechanical dimension specifications of the BUS module board design. 
-You can check the mechanical dimensions in the technical documentation of the myCPU avalaible at the [Downloads](/pages/en/mycpu/downloads) page.
+The modular and open architecture of the myCPU allows you to customize its functionality and behavior by designing your own modules and module boards. When designing custom modules, the only consideration to keep in mind, maintaining the compatibility with the myCPU design, is to properly place the control and data bus connectors according the mechanical dimensions specification of the BUS module board design.
+
+>You can check the mechanical dimensions in the technical documentation of the myCPU available at the [Downloads](/pages/en/mycpu/downloads) page.
 {: style="text-align: justify"}
 
+{% comment %}
 There are avalaible two templates for Circuitmaker in Altium 365 [Altium 365](https://365.altium.com/){: target="_blank"} for custom Left and Right modules and publish them shared. You can find the links in the [Modules introductory page](/pages/en/mycpu/modules) page.
 {: style="text-align: justify"}
 
@@ -72,6 +73,7 @@ There are avalaible two templates for Circuitmaker in Altium 365 [Altium 365](ht
     <img src="{{ site.baseurl }}/img/mycpu/templates/cmaker_module_right_template.png" alt="Right template" title="View of right template" width="500px">
     <figcaption>View of right template</figcaption>
 </figure>
+{% endcomment %}
 
 Custom  modules, also can be designed using the protoboards provided in the kit, which was designed to be fully compatible with the BUS module board and will be provided in both side versions. See the section about [Protoboards](/pages/en/mycpu/extra_modules/protoboard).
 {: style="text-align: justify"}
@@ -79,22 +81,23 @@ Custom  modules, also can be designed using the protoboards provided in the kit,
 Moreover, the modular design allows you to customize the layout of your myCPU by selecting your desired module distribution. You can create two different types of layouts using either one chain of BUS module boards for a vertical layout or two chains connected by the myCPU layout connector for a more landscape layout. However, not all module distributions may be possible due to the physical connections between certain modules that form a block. The position of a module will also depend on whether it has versions for both the left and right sides. Regardless, you will find that the system is highly flexible.
 {: style="text-align: justify"}
 
+{% comment %}
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/myCPU_both_layout.png" alt="myCPU Layout Samples" title="View of myCPU layouts" width="1024px">
     <figcaption>View of modular layout</figcaption>
 </figure>
-
+{% endcomment %}
 
 ### Hardware architecture
 
-The myCPU physical architecture consists of 3 hardware layers, with an additional optional layer when using module expansion boards:
+The myCPU physical architecture consists of 3 hardware layers, plus an additional optional layer if a module expansion board is used.
 
-1.	**BUS layer** (main board layer providing power supply)
-2.	**Module layer** (modules)
-3.  **Module Expansion layer** (optional expansion layer)
-4.	**Auxiliary layer** (output display or tool modules)
+1.	**BUS layer** (Main board layer providing power supply)
+2.	**Module layer** (Modules)
+3.  **Module Expansion layer** (Optional layer)
+4.	**Auxiliary layer** (Output display or auxiliary modules)
 
-The concept behind this hardware architecture is to separate the main BUS lines and power supply from the modules using a **BUS layer**. This allows the buses to be shared among the module boards through a base chain of BUS module boards. The logic devices forming the CPU are implemented as separate modules on a **module layer** and connected to the buses through the BUS layer. The output display functionality is also isolated from the modules through an **auxiliary layer**.
+The concept behind this hardware architecture is to separate the main BUS lines and power supply from the modules using a base **BUS layer**. This allow the buses to be shared among the module boards, through a base chain of BUS module boards. The logic elements forming the CPU are implemented as separate modules on a **Module layer** and connected to the buses through the BUS layer. The output display functionality is also isolated from the modules through an **Auxiliary layer**.
 {: style="text-align: justify"}
 
 <figure class="center">
@@ -102,20 +105,20 @@ The concept behind this hardware architecture is to separate the main BUS lines 
     <figcaption>myCPU 3D view sample of hardware layers</figcaption>
 </figure>
 
->This enables you to upgrade the features of the myCPU by replacing existing modules with new ones without altering the existing BUS module base structure.
+>This feature enable the upgrade of the features of the myCPU by replacing existing modules with new ones without altering the existing BUS module base structure.
 {: style="text-align: justify"}
 
-The **Module layer** provides the ability to independently design logic devices and connect them to the buses through the BUS layer. It also allows for the creation of complex logic devices by breaking them down into smaller modular components, and establishing connections between these modules through direct flat wires and IDC connectors.
+The **Module layer** enable the possibility to design logic devices in a independent way and connect them to the buses through the BUS layer. Additionally allow the development of complex logic devices and segmenting them into smaller modular components such modules, and establishing connections between these modules using direct flat wires and IDC connectors.
 {: style="text-align: justify"}
 
-The **Auxiliary layer** gives you the ability to design your own display or output modules. The myCPU kit includes three display modules: a 4-digit decimal number display, an 8-bit LED binary display using 3mm LEDs, and an 8/16-bit binary display using LED bars for a clearer representation of a digital value.
+The **Auxiliary layer** enable the possibility to design your own display or output modules because of the isolation of the device, handling the output, from the module itself. The myCPU kit includes three display modules: a 4-digit Hex or Decimal number display, an 8-bit LED binary display using 3mm LEDs, and an 8/16-bit binary display using LED bars for a clearer representation of a digital value.
 {: style="text-align: justify"}
 
-The optional **Module Expansion layer** is used to design modules that due to their complexity and components density cannot fit into a single module board. You can see more information about expansion boards in the section: \fullref{sec:Expansion_boards}.
+The optional **Module Expansion layer** is used to design modules that due to their complexity and components density cannot fit into a single module board and you prefer have a compact module instead a wider one.
 {: style="text-align: justify"}
 
 #### Chained BUS module board design
-The BUS module board was designed to connect multiple BUS module boards together to form a base **chained structure**. This is achieved by using two female connectors at the top and two male connectors at the bottom of the board, which support the myCPU layout composed by the modules.
+The BUS module board was designed to connect multiple BUS module boards together to form a **chained structure**, which support the myCPU layout formed by the modules. This is achieved by using two female connectors at the top and two male connectors at the bottom of the board connecting BUS module boards between them.
 {: style="text-align: justify"}
 
 <figure class="center">
@@ -123,7 +126,20 @@ The BUS module board was designed to connect multiple BUS module boards together
     <figcaption>myCPU BUS module board view</figcaption>
 </figure>
 
-The data and control buses, as well as the 9V power source, are connected from one BUS module board to the next board in the chain through the use of the top and bottom connectors. The buses are shared with the modules through two connectors located on both sides of the BUS module board. For a more detailed explanation of the buses, see the section: [The Buses](#the-buses).
+The myCPU supports different types of architectural layouts thanks to its modular nature. The most common are: **Vertical** and **Landscape** layouts but other layouts would be possible; In a landscape layout, 2 chains of BUS module boards are connected using the **Layout Connector** at the top to share the buses between both chains and the **Layout Terminator** at the bottom. In a vertical layout only a **Single Layout Connector** at the top is needed to provide the power source to the layout and IDC empty connectors such as terminators at the bottom to a clean isolation.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_vertical_layout_sample_min.png" alt="myCPU Vertical layout diagram" title="myCPU Vertical layout diagram" width="40%">
+    <figcaption>myCPU Vertical layout diagram</figcaption>
+</figure>
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_landscape_layout_sample_min.png" alt="myCPU Landscape layout diagram" title="myCPU Landscape layout diagram" width="80%">
+    <figcaption>myCPU Landscape layout diagram</figcaption>
+</figure>
+
+The data and control buses, as well as the 9V power source, are propagated from one BUS module board to the next BUS module board in the chain using the top and bottom connectors of the board. And the buses are shared with the modules through a connectors pair located on both sides (left and right) of the BUS module board as you can see in the picture. For a more detailed explanation of the buses, see the section: [The Buses](#the-buses).
 {: style="text-align: justify"}
 
 <figure class="center">
@@ -131,15 +147,16 @@ The data and control buses, as well as the 9V power source, are connected from o
     <figcaption>myCPU Partial BUS module chain structure with mounting separators</figcaption>
 </figure>
 
-Each Bus module board has its own +5V power supply using a 7805 voltage regulator, providing power to the two modules connected to the board. The power source is supplied to the Bus module boards through the chain connectors, and the power is supplied to the modules through the control bus connector.
-This approach allows for the use of a common 9V power source to provide a stable +5V power supply to the pair of modules connected to the Bus module board, without any voltage drop or electrical issues. The top Bus module board in the system must have the power source connector and power switch, while the rest of the boards in the chain can be left without them. You can find a full description of the BUS module in the chapter: [The Buses](/pages/en/mycpu/modules/bus).
+Each Bus module board has its own +5V power supply using a 7805 voltage regulator, supplying power to the two modules plugged in to the board. The power source is supplied to the Bus module regulators through the chain connectors, and the power is supplied to the modules through the control bus connector.
+
+This approach enable the use of a common 9V power source to provide a stable +5V power supply to the pair of modules plugged in to each Bus module board, without any voltage drop or electrical issues. The Layout Connector module board has the power source connector, a power switch and filter capacitors providing a clean +9v power supply to the BUS modules. You can find a full description of the BUS module in the related page: [The BUS Module](/pages/en/mycpu/modules/bus).
 {: style="text-align: justify"}
 
-This design, which is based on providing an independent power supply for each pair of modules, makes it possible to increase the capabilities of the myCPU by adding more Bus module boards to the chain. This helps to avoid electrical issues related to the power supply needs of the TTL ICs that could arise from the size of the myCPU layout. The design supports the addition of additional modules and more complex modules at double board size.
+This design, which is based on providing an independent power supply for each pair of modules, makes it possible to increase the capabilities of the myCPU by adding more Bus module boards to the chain. This helps to avoid electrical issues related to the power supply needs of the ICs in a TTL compatibility power supply requirement that could arise from the size of the myCPU layout. This design supports the escalation with additional modules, even more complex modules at double board size.
 {: style="text-align: justify"}
 
 ### Functional architecture
-The functional architecture describes the myCPU logic modules by their functionality, their response to specific control signal and the size of the data exchange between each module with the data bus. As well as the connections between modules belonging to a functional block. 
+The functional architecture describes the myCPU logic modules by their functionality, their response to specific control signals and the size of the data exchange between each module with the data bus. In addition describes the connections between modules belonging to a functional block. Figure bellow shows a diagram with a detailed view of the functional architecture.
 {: style="text-align: justify"}
 
 >The myCPU design is based on 16 functional modules distributed over 15 physical modules.
@@ -152,17 +169,19 @@ Figure below shows a diagram with a precise detail of the functional architectur
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_min.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
     <figcaption>myCPU functional modules diagram</figcaption>
 </figure>
 
 A printable PDF version of the diagram: [**myCPU Modules Diagram**](/downloads/diagrams/myCPU_modules.pdf){: target="_blank"}
 
-One of the most interesting features of the myCPU design, from a learning perspective, is that almost every logic element of the functional architecture corresponds to a physical module, and each module can be swapped out for new modules or custom modules with different characteristics, different digital functionality or simply other type of ICs.
+One of the most interesting features of the myCPU design, from a learning perspective, is that almost every logic element of the functional architecture corresponds to a physical module in the kit. Each module can be exchange separately with new modules from an upgrade, or custom modules with different characteristics, different digital functionality or simply exchanging the type or model of some of the ICs.
 {: style="text-align: justify"}
 
 #### Functional blocks
-The myCPU design is based on 7 functional blocks, plus one Auxiliary block including modules to provide support or connectivity. Each block could be composed by one or more functional modules and could be implemented using one or more physical modules.
+In the myCPU design, logic modules sometimes are grouped as "**Functional Blocks"** because they working together to perform a specific task and could be connected by a dedicated connection, as in the case of the **ALU** module with the accumulator A and operand B, the **SRAM** module with the **MAR** module or the **Instruction Decoder** module with Sequencer, Flags Register, Instruction Register and CSM modules. The myCPU is based on **7 functional blocks**, plus one \textbf{Auxiliary block} that includes other modules to provide specific functionality or connectivity. Each block is composed by one or more functional modules and could be implemented using one or more physical modules.
+
+Bellow you can see a list and a diagram of the functional blocks architecture:
 {: style="text-align: justify"}
 
 1. **Auxiliary block**
@@ -170,7 +189,7 @@ The myCPU design is based on 7 functional blocks, plus one Auxiliary block inclu
     + Displays
 2.	**Core block**
     + BUS module
-    + Power Supply
+    + Reset IO module
 3.	**Memory block**
     + MAR (Memory Address Register)
     + SRAM
@@ -195,17 +214,30 @@ The myCPU design is based on 7 functional blocks, plus one Auxiliary block inclu
     + Stack Pointer (next release)
 
 
-Printable PDF version of the diagram: [**myCPU functional blocks Diagram**](/downloads/diagrams/myCPU_functional_blocks_draw.pdf){: target="_blank"}
+Printable PDF version of the diagram: [**myCPU functional blocks Diagram**](/downloads/diagrams/mycpu_functional_blocks.pdf){: target="_blank"}
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_functional_blocks_draw.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="90%">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_functional_blocks.png" alt="myCPU functional blocks diagram" title="myCPU functional blocks diagram" width="90%">
     <figcaption>myCPU functional blocks diagram</figcaption>
 </figure>
 
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_alu_block_min.png" alt="myCPU ALU block view" title="myCPU ALU block view" width="20%">
+    <figcaption>myCPU ALU block view</figcaption>
+</figure>
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_instruction_processor_block_min.png" alt="myCPU Instruction Processor block view" title="myCPU Instruction Processor block view" width="40%">
+    <figcaption>myCPU Instruction Processor block view</figcaption>
+</figure>
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_memory_block_min.png" alt="myCPU Memory block view" title="myCPU Memory block view" width="20%">
+    <figcaption>myCPU Memory block view</figcaption>
+</figure>
+
 ### Modular architecture
-The myCPU was designed with modularity in mind, allowing for the physical decoupling of functional logic into individual design modules based on specific logical functionality. This enables builders to create custom modules, whether they are simple or complex, and to even customize functional blocks of modules by combining their own custom modules with those provided in the myCPU kit.
+The myCPU was designed with modularity in mind, allowing decoupling between functional logic. This allows for the design of modules that focus on specific logical functions and can be implemented as standalone physical modules. Modularity lets builders to create their own custom modules, control their complexity, and even personalize functional blocks by blending their own custom modules with those included in the myCPU kit.
 {: style="text-align: justify"}
 
-This feature is very interesting, because you can redesign some of the provided modules with your more advanced or improved version of a module while leave the others without any changes, and your myCPU should works properly. A redesign could be entirely, or just change one IC by another type of IC, for example changing the 74LS173 IC of the Register 8 bit module by the 74LS273 IC.
+This feature is very interesting, because you can redesign some of the modules included in the kit with your own new or modified version, while leave the others without any changes. An existing module could be redesign entirely, or just change one IC by another model of IC, for example changing the pair of 4-bit D-Type register 74xx173 IC of the Accumulator module by only one 8-bit D-Type register 74xx377 IC.
 {: style="text-align: justify"}
 
 Modules have left-side or right-side compatibility, which limits their available positions on the module board. Right-side modules cannot be plugged into the left side and vice versa. As of now, not all modules have been designed for both-side compatibility, with only the general-purpose register ABC board having versions for both sides.
