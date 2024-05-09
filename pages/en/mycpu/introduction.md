@@ -169,7 +169,7 @@ Figure below shows a diagram with a precise detail of the functional architectur
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_modules_min.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_modules_min.png" alt="myCPU modules diagram" title="myCPU modules diagram" width="80%">
     <figcaption>myCPU functional modules diagram</figcaption>
 </figure>
 
