@@ -10,7 +10,7 @@ hero_darken: false
 ---
 Welcome to the introductory page of the myCPU project.
 
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_introduction.pdf" target="_blank">Free downloadable pdf version of the myCPU Introduction from the myCPU Book</a>
+<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_chapter2.pdf" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 
 The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements implemented by the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU instruction encode/decode is based on the Microprograming technique and the instruction execution flow is based on Microinstructions. The myCPU support debugging at level of an individual microinstruction. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies because the design is TTL compatible. 
 {: style="text-align: justify"}
