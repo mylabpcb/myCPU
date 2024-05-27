@@ -12,7 +12,7 @@ Welcome to the introductory page of the myCPU project.
 
 <a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_chapter2.pdf" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 
-The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements implemented by the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU instruction encode/decode is based on the Microprograming technique and the instruction execution flow is based on Microinstructions. The myCPU support debugging at level of an individual microinstruction. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies because the design is TTL compatible. 
+The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements implemented by the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU project uses the "**Microprograming Technique**" to encode/decode instructions and the execution flow of an instruction is based on **Microinstructions** with support to debugging at level of an individual microinstruction. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies because the design is TTL compatible. 
 {: style="text-align: justify"}
 
 The feature of debugging at microinstruction level allows to observe the execution of individual microinstructions and step through each one, viewing the state of all logic components statically. Providing a detailed view of the instruction execution flow in real-time.
@@ -150,6 +150,7 @@ The data and control buses, as well as the 9V power source, are propagated from 
 </figure>
 
 Each Bus module board has its own +5V power supply using a 7805 voltage regulator, supplying power to the two modules plugged in to the board. The power source is supplied to the Bus module regulators through the chain connectors, and the power is supplied to the modules through the control bus connector.
+{: style="text-align: justify"}
 
 This approach enable the use of a common 9V power source to provide a stable +5V power supply to the pair of modules plugged in to each Bus module board, without any voltage drop or electrical issues. The Layout Connector module board has the power source connector, a power switch and filter capacitors providing a clean +9v power supply to the BUS modules. You can find a full description of the BUS module in the related page: [The BUS Module](/pages/en/mycpu/modules/bus).
 {: style="text-align: justify"}
@@ -181,7 +182,8 @@ One of the most interesting features of the myCPU design, from a learning perspe
 {: style="text-align: justify"}
 
 #### Functional blocks
-In the myCPU design, logic modules sometimes are grouped as "**Functional Blocks"** because they working together to perform a specific task and could be connected by a dedicated connection, as in the case of the **ALU** module with the accumulator A and operand B, the **SRAM** module with the **MAR** module or the **Instruction Decoder** module with Sequencer, Flags Register, Instruction Register and CSM modules. The myCPU is based on **7 functional blocks**, plus one \textbf{Auxiliary block} that includes other modules to provide specific functionality or connectivity. Each block is composed by one or more functional modules and could be implemented using one or more physical modules.
+In the myCPU design, logic modules sometimes are grouped as "**Functional Blocks"** because they working together to perform a specific task and could be connected by a dedicated connection, as in the case of the **ALU** module with the accumulator A and operand B, the **SRAM** module with the **MAR** module or the **Instruction Decoder** module with Sequencer, Flags Register, Instruction Register and CSM modules. The myCPU is based on **7 functional blocks**, plus one **Auxiliary block** that includes other modules to provide specific functionality or connectivity. Each block is composed by one or more functional modules and could be implemented using one or more physical modules.
+{: style="text-align: justify"}
 
 Bellow you can see a list and a diagram of the functional blocks architecture:
 {: style="text-align: justify"}
@@ -242,22 +244,26 @@ The myCPU was designed with modularity in mind, allowing decoupling between func
 This feature is very interesting, because you can redesign some of the modules included in the kit with your own new or modified version, while leave the others without any changes. An existing module could be redesign entirely, or just change one IC by another model of IC, for example changing the pair of 4-bit D-Type register 74xx173 IC of the Accumulator module by only one 8-bit D-Type register 74xx377 IC.
 {: style="text-align: justify"}
 
-Modules have left-side or right-side compatibility, which limits their available positions on the module board. Right-side modules cannot be plugged into the left side and vice versa. As of now, not all modules have been designed for both-side compatibility, with only the general-purpose register ABC board having versions for both sides.
+Modules have left-side or right-side compatibility, limiting their available positions on the BUS module board. Right-Side modules cannot be plugged into the left side and Left-Side modules cannot be plugged into the right side. Not all modules have been designed for both-side compatibility, at the moment of write the book only the general-purpose register ABC board has versions for both sides.
 {: style="text-align: justify"}
 
-Thanks to the modular architecture, you can build a highly customized myCPU layout with modules distributed according to your preferences.
+Thanks to the modular architecture, you can build a highly personalized myCPU layout with a module distribution according to your preferences.
 {: style="text-align: justify"}
 
->The myCPU design support customizable distributions of modules over the myCPU layout
+>The myCPU design allows to build customizable distributions of modules over the myCPU layout
 
-#### Module Layouts
-According to the BUS module design, and thanks to its modular architecture, you can reorganize the positions of the myCPU modules to configure the myCPU layout. You will have the ability to choose from different physical layouts when plugging in the modules. This feature enables you to customize the layout of your myCPU to suit your preferences. In my case, I prefer to place the clock module at the bottom of the layout, the BUS manager module at the top, and the memory block composed of the MAR and SRAM modules at the bottom as well, to make it easier to access the test switches.
+#### Module distribution layouts
+According to the BUS module design, and thanks to its modular architecture, you can reorganize the positions of the myCPU modules to configure the myCPU layout. You will have the ability to choose from different physical layouts when plug in the modules. This feature enables you to customize the layout of your myCPU to suit your preferences. In my case, I prefer to place the clock module at the bottom of the layout, the BUS manager module at the top, and the memory block composed of the MAR and SRAM modules at the bottom as well, to make it easier to access the test switches.
 {: style="text-align: justify"}
+
+![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_vertical_layout_v1.png){:width="200px"}&nbsp;&nbsp;&nbsp;&nbsp;
+![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_vertical_layout_v2.png){:width="200px"}&nbsp;&nbsp;&nbsp;&nbsp;
+![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_landscape_layout_v1.png){:width="400px"}
 
 The myCPU design has certain layout limitations related to modules that are part of a functional block and are interconnected, or the compatible side version of the module. Modules that are part of a functional block may need to be placed together due to the wiring between them.
 {: style="text-align: justify"}
 
-In addition to customizing the distribution of the modules over the myCPU layout, you can choose the orientation of the layout: vertical or horizontal. You can use one BUS module chain for the vertical layout or two BUS module chains for the horizontal layout, the latter should have the chains connected by the Layout Connector. You can See more info about it in the section: \fullref{sec:Layout_connector}.
+In addition to customizing the distribution of the modules over the myCPU layout, you can choose the orientation of the layout: vertical or landscape. You can use a unique BUS module chain for the vertical layout or two BUS module chains for the landscape layout. The vertical layout need to be connected with \textbf{Single Layout Connector} to provide the power supply input. The landscape layout should have the chains connected by the \textbf{Layout Connector} at the top and the \textbf{Layout Terminator} at the bottom to keep connected both chains from to bottom, as well to provide the power supply input. You can See more info about at the page about [Layout Connectors](/pages/en/mycpu/extra_modules/bus_layout_connector).
 {: style="text-align: justify"}
 
 >At the beginning of the [Open Architecture](#open-architecture-and-modular-design) section you could see two images of real layouts. 
@@ -265,111 +271,107 @@ In addition to customizing the distribution of the modules over the myCPU layout
 And below you will find some examples of layouts according to the block modules and module side version restrictions:
 {: style="text-align: justify"}
 
-![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_module_v1.png){:width="200px"}&nbsp;&nbsp;&nbsp;&nbsp;
-![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_module_v2.png){:width="200px"}&nbsp;&nbsp;&nbsp;&nbsp;
-![myCPU Layout]({{ site.baseurl }}/img/mycpu/diagrams/mycpu_module_h1.png){:width="400px"}
+
 
 #### Functional and physical Modules
-The myCPU architecture design include 16 functional modules in the first release, implemented on 15 physical module boards because the sequencer and the Flags register were designed on the same physical module board. Below you can find a list with all module boards provided with the kit. 
+The myCPU architecture design include 16 functional modules in the final release, implemented on 15 physical module boards because the sequencer and the Flags register were designed on the same physical module board. Below you can find a list with all module boards will be provided in the myCPU kit.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_physical_modules.png" alt="myCPU Physical modules" title="myCPU Physical modules" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_physical_modules.png" alt="myCPU Physical modules" title="myCPU Physical modules" width="700">
 </figure>
 
 >Navigate to [Introduction page of modules](/pages/en/mycpu/modules) for more information related to the myCPU modules and the module design in the open architecture.
 {: style="text-align: justify"}
 
 #### Display Modules
-The myCPU design include, in the first release, 3 display modules: two of them are binary displays and the other is a binary to decimal display/decoder as you can see in the next table: 
-{: style="text-align: justify"}
-
-1. **Binary to decimal display module (4 digits)**
-2. **Binary LED display module 8 bits**
-3. **Binary LEDBar display module 16 bits**
-
->You can see a better description of each module on its specific pages: 
-[Binary to Decimal display 4 Digits](/pages/en/mycpu/modules/decimal_display), 
-[8-bit LED binary display](/pages/en/mycpu/modules/display_led) and
-[16-bit LED binary display](/pages/en/mycpu/modules/display_led16)
-
-#### Additional tools and extra boards
-The myCPU kit include one additional module and two extra boards: 
-
-1. **EEProm programmer tool for the AT28C64 EEProm memory**
-2. **Protoboard for your custom module prototypes**
-3. **Layout Connector board**
-
-The Layout Connector board allows to connect the chains of the landscape layout. 
-{: style="text-align: justify"}
-
-The protoboard will be provided with version for both sides, left anb right, in the myCPU Kit.
-{: style="text-align: justify"}
-
->You can see a better description of each module on its specific pages: 
->[EEProm programmer module](/pages/en/mycpu/extra_modules/eeprom_programmer), 
->[Protoboard](/pages/en/mycpu/extra_modules/protoboard) and
->[Layout Connector](/pages/en/mycpu/extra_modules/bus_layout_connector)
-
-
-### Features of myCPU
-Below is a brief list of myCPU digital features. Some of these features are improvements over the Ben's Eater breadboard computer. It is highly recommended to understand the meaning of these features in relation to the design of myCPU. In the following sections, I will briefly explain what each of these features means.
+The myCPU design include, in the final release, 3 display modules: two of them are LED based binary displays and the other is a 4 digits binary to hexadecimal/decimal decoder display. Available displays are listed below:
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_features.png" alt="myCPU Features" title="myCPU Features" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_display_modules.png" alt="myCPU Display modules" title="myCPU Display  modules" width="700">
+</figure>
+
+>You can see a better description of each module on related display pages at modules menu. 
+
+
+#### Additional tools and extra boards
+The myCPU kit include one additional module for programming the EEProms AT28C64, used in the myCPU. Two auxiliary boards to connect and power the myCPU layout chains: a Single Layout Connector board for the vertical myCPU layout and a Layout Connector/Terminator board to support the landscape layout. And two extra board types for prototyping: A simple protoboard for general purpose and a specified protoboard with connectivity for a 245 and the output port added to the board. The protoboards have compatibility for left and right sides.
+{: style="text-align: justify"}
+
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_extra_modules.png" alt="myCPU Extra modules" title="myCPU Extra modules" width="600">
+</figure>
+
+>You can see a better description of each module on the related pages at the **Extra Modules** menu: 
+
+
+### Features of myCPU
+In the next table you can find a brief list of myCPU digital features. Some of these features come from the original design of the Ben Eater's breadbooard computer and others are improvements over his design. It is highly recommended to understand the meaning of these features in relation to the design of the myCPU. In the following sections, I will briefly explain what each of those features means.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_features.png" alt="myCPU Features" title="myCPU Features" width="700">
 </figure>
 
 #### The Buses
-The myCPU uses only two buses to facilitate data sharing and connectivity between modules and functional blocks: the **Control Bus** and the **Data Bus,** following the **Von Neumann Bus Architecture**, where data and memory addresses are shared on the same bus, the Data Bus. Despite its basic design, it is important for students and learners to take note of this aspect of the myCPU design. Something like a dedicated **Address Bus **is only present in the connection between the MAR and SRAM modules.
+The myCPU uses only two buses to facilitate data sharing and connectivity between modules and functional blocks: the **Control Bus** and the **Data Bus**, following the Von Neumann Bus Architecture, where data and memory addresses are shared on the same bus. In the myCPU design is pointed as the Data Bus. Despite its basic design, it is important for students and learners to take note of this aspect of the myCPU design. Something like a dedicated **Address Bus** is only present in the connection between the MAR and SRAM modules.
 {: style="text-align: justify"}
 
-The Data Bus supports data lengths up to 16 bits, which is sufficient for future releases of the myCPU. With 16 bits, we can address up to 64Kb, which satisfies the requirements of a common CPU like myCPU, and more. Due to the 8-bit nature of the myCPU, will be enough to use only 8 bits for data exchange. However, this may result in a performance reduction due to the need of multiple fetch cycles to manage 16 bits data. Managing 16 bits data using 8 bits data transfer requires two clock cycles to each movement between registers and memory.
+The Data Bus supports data lengths up to 16 bits, which would be enough for future releases of the myCPU using the same BUS module board design or would be enough to design custom modules or modules prototypes supporting handle more than 8 bits. With 16 bits, we can address up to 64Kb, which satisfies the requirements of a very basic CPU like myCPU, and more.
+Due to the 8-bit nature of the myCPU would be enough use just 8 bits for data exchange, However, this may result a limitation by the need of multiple fetch cycles to manage 16 bits data. The Management of 16 bits of data using an 8 bits data transfer requires at least two clock cycles for each exchange of data between registers and memory, so a 16 bits Data BUS is a very interesting feature for a learning platform like the myCPU and is a essential feature for future releases like the myCPU256 or the myCPU2K.
 {: style="text-align: justify"}
 
-All of the myCPU control signals are transmitted through the Control Bus. The Control Bus has a capacity of 32 lines, via a 32-pin connector, although not all of these lines are used for control signals. The voltage regulators located in each bus module utilize the GND and +5v pins of the Control Bus to provide power to the modules. The clock and reset signals, as well as the status flags signals, also travel through the Control Bus.
+All of the myCPU control signals are transmitted through the **Control Bus**. The Control Bus has a capacity of 32 lines, via a 32-pin connector, although not all of these lines are used for control signals. The voltage regulators located in each bus module utilize the GND and +5v pins of the Control Bus to provide power to the modules. The clock and reset signals, as well as the status flags signals, also travel through the Control Bus.
 {: style="text-align: justify"}
 
 The lines included on the control BUS are distributed as indicated in the list below:
 {: style="text-align: justify"}
 
-The lines included on the control BUS are distributed as indicated below:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_bus_lines.png" alt="myCPU Control Bus Lines" title="myCPU Control Bus Lines" width="700">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_bus_lines.png" alt="myCPU Control Bus Lines" title="myCPU Control Bus Lines" width="600">
 </figure>
 
 #### The Control Signals of myCPU
-The myCPU support up to 23 control signals driving the logic devices of myCPU. The 23 control signals are managed directly by the Control Signals Manager (**CSM**), which sets the appropriate digital state to be sent to each logical device in the myCPU.
+The myCPU support up to 23 control signals driving the logic devices of myCPU. 22 of the control signals are managed directly by a dedicated module: the **Control Signals Manager (CSM)**, which sets the corresponding digital state for the control signals sent to each logical device in the myCPU. One of them, the **SQR** signal in internal an handled directly by the Instruction Decoder to control the sequencer cycle.
 {: style="text-align: justify"}
 
-Control signals are described deeper at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
+>More info about control signals can be found at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
 {: style="text-align: justify"}
 
-Knowing the default values of each control signal is essential for understanding the behavior of the modules. Control signals are the truly key in the interaction between **the hardware (logic devices)** and the **software (instructions)**. Instructions are composed by microinstructions, and those microinstructions are binary words composed by control signals that act directly on the electronics of the modules.
+Knowing the default values of each control signal is essential for a proper understanding of the behavior of the modules. Control signals are the truly key in the interaction between the hardware (modules) and the software (instructions). Instructions are composed by microinstructions, and those microinstructions are binary strings composed by control signals which act directly on the electronics of the modules modifying their logic state.
 {: style="text-align: justify"}
 
-Designing your own custom modules also requires a deep understanding of the control signals, their default values and the actions they produce on logic devices.
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_microinstruction_flow.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
+</figure>
+
+Designing your own custom modules will require a deep understanding of the control signals, their default values and the actions they should produce on the logic components of modules.
 {: style="text-align: justify"}
 
 The below table 2.6 shows the full list of the myCPU control signals.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_signals.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_signals.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
 </figure>
 
 ##### Signed display mode support
-The myCPU support a signed mode of execution, its affects basically only to the mode on how the decimal number display shows numbers, not to the execution itself. There’s a control signal \textbf{UN} which enable the signed display mode.
+The myCPU support a 2's complement display mode, its affects basically only to the mode on how the hex/dec decoder display shows binary values, not to the manipulation of a binary value itself. There’s a control signal **UN** which enable the 2's complement display mode.
 {: style="text-align: justify"}
 
-The binary to decimal display shows numbers as unsigned, with a range from **0 to 255**, when the **UN** control signal is LOW. When the **UN** control signal is HIGH, the display shows numbers as signed numbers using 2's complement representation, with a range from **-128 to 127**. This feature is in line with the corresponding feature of the Ben Eater's project.
+The binary to decimal display shows numbers as unsigned, with a range from **0 to 255,** when the **UN** control signal is LOW. When the **UN** control signal is HIGH, the display shows numbers as signed numbers using 2's complement representation, with a range from **-128 to 127**. This feature is in line with the corresponding feature of the output module in the Ben Eater's project.
 {: style="text-align: justify"}
 
 >You should watch the Ben Eater's video about: [Two's complement arithmetic](https://www.youtube.com/watch?v=4qH4unVtJkE){:target="_blank"}
 
 #### The Instruction Cycle
-The myCPU instruction execution is performed through a single Instruction cycle that consists of a fetch cycle followed by an execution cycle. Due to the simplicity of the instruction set and program limitations, the myCPU execution cycle does not require any additional specialized phases. The length of the Instruction cycle reach to 8 states or steps. Each step of the instruction cycle requires one clock cycle to complete and executes a single microinstruction.
+The myCPU instruction execution is performed through a Instruction cycle that consists of a fetch cycle followed by an execution cycle. The myCPU is a single fetch execution cycle, it means that uses only one fetch cycle to gets the instruction and the argument of the instruction. It is possible thanks to an Instruction Register with a 4+4 bits design, most significative 4 bits for the OpCode of the instruction and less significative 4 bits for the argument. So in a single 8 bits data exchange operation with memory retrieve the instruction and the argument, being the most simplified way to view and understand the execution cycle of a CPU in real time.
+{: style="text-align: justify"}
+
+Due to the simplicity of the instruction set and program limitations, the myCPU execution cycle does not require any additional specialized phases. The length of the Instruction cycle reach to 8 states or steps. Each step of the instruction cycle requires one clock cycle to complete and executes a single microinstruction.
 {: style="text-align: justify"}
 
 Next image shows an example of the instruction cycle for the ADD instruction:
@@ -379,17 +381,17 @@ Next image shows an example of the instruction cycle for the ADD instruction:
     <figcaption>ADD Instruction cycle sample diagram</figcaption>
 </figure>
 
->The myCPU support a microinstruction length up to 24 bits, involving 23 control signals and 22 of them shared through the Control BUS.
+>The myCPU design support a microinstruction length up to 24 bits, involving 23 control signals. 22 of them are exposed through the Control BUS.
 {: style="text-align: justify"}
 
-MyCPU is a basic design of an early CPU with limited capabilities compared to modern CPUs. Unlike modern CPUs that can perform multiple instruction cycles simultaneously through pipelining, myCPU can only execute one instruction cycle per instruction. The original design of myCPU had a variable instruction cycle length unlike the Ben Eater's breadboard computer, but later versions introduced the ability to reset the sequencer at specific steps and initiate a new instruction cycle. This gave myCPU the capability of the variable length instruction cycle feature.
+The myCPU is a basic approximation of an early CPU with limited capabilities compared to real CPUs. Unlike modern CPUs that can perform multiple instruction cycles simultaneously through pipelining, myCPU can only execute one instruction cycle per instruction. The design of myCPU supports a variable instruction cycle length through the ability to reset the sequencer at a specific step and initiate a new instruction cycle.
 {: style="text-align: justify"}
 
-Due to the microinstruction based nature of the myCPU, the instruction architecture of myCPU could be described as **RISC** (Reduced Instruction Set Computer) instead of a **CISC** (Complex Instruction Set Computer). Each instruction can consume from 2 (the minimal intruction cycle length) to 8 clock or state cycles, and probably, it could be upgraded up to 16 state cycles in next releases. Remember that in the myCPU design each state cycle is equivalent to a single clock cycle.
+The instruction set architecture of myCPU could be described as **RISC (Reduced Instruction Set Computer)** instead of a CISC (Complex Instruction Set Computer) because of the microinstruction based nature of the myCPU execution flow. Each instruction can consume from 2 (the minimal instruction cycle length) up to 8 cycle steps, and probably, it could be upgraded up to 16 steps in next releases. Remember that in the myCPU design each step or state is equivalent to a single clock cycle.
 {: style="text-align: justify"}
 
 #### The Flags
-The myCPU design include up to 4 status flags, but only two of them are used in the first relaese. Mainly for the limitations of the ALU, which is based on simple adders. The first release uses only: The **Carry Out flag FC**, which correspond with the last carry bit of the adders cascade, the **Zero flag FZ** which is calculated using logic gates and the **Negative flag FN** which correspond to the most significant bit of the ALU value or sign bit in 2's complement value representation. The **Overflow flag FV** is not used, in the first release, but is supported by the flags register. 
+The myCPU design include up to 4 status flags, but only 3 of them are used in the first release. Mainly for the limitations of the ALU module, which is based on simple adders. myCPU uses only: The **Carry Out flag FC**, which correspond with the last carry bit of the adders cascade, the **Zero flag FZ** which is calculated using logic gates and the **Negative flag FN** which correspond to the most significant bit of the ALU value or sign bit in 2's complement value representation. The **Overflow flag FV** is not used, in the first release, although is supported by the flags register. 
 {: style="text-align: justify"}
 
 >Only ALU related flags are supported in the first release.

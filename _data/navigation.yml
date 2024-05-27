@@ -54,16 +54,20 @@
       link: /pages/en/mycpu/modules/flags_reg_sequencer
     - name: Instruction Decoder
       link: /pages/en/mycpu/modules/instruction_decoder
-    - name: Decimal Display 4 digits
+    - name: Hex/Dec Display 4 digits
       link: /pages/en/mycpu/modules/decimal_display
-    - name: Display LED 8 bit
+    - name: Display LED 8 bits
       link: /pages/en/mycpu/modules/display_led
+    - name: Display LED 16 bits
+      link: /pages/en/mycpu/modules/display_led16
 - name: Extra Modules
   dropdown:
     - name: BUS modules Layout Connectors 
       link: /pages/en/mycpu/extra_modules/bus_layout_connector
     - name: EEProm Programmer (AT28C64)
       link: /pages/en/mycpu/extra_modules/eeprom_programmer
+    - name: Protoboards
+      link: /pages/en/mycpu/extra_modules/protoboard
 #- name: Protoboard
 #  link: /pages/en/mycpu/extra_modules/protoboard
 #- name: Custom modules
