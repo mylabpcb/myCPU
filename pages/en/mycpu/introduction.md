@@ -386,7 +386,7 @@ The myCPU is a basic approximation of an early CPU with limited capabilities com
 Next image shows an example of the instruction cycle for the ADD instruction:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_instruction_cycle_flow.png" alt="Instruction cycle example" title="Example of ADD Instruction cycle" width="850">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_instruction_cycle_flow.png" alt="Instruction cycle example" title="Example of ADD Instruction cycle" width="730">
     <figcaption>ADD Instruction cycle sample diagram</figcaption>
 </figure>
 
@@ -444,7 +444,7 @@ In the myCPU the decoding of an instruction is based on the address for the memo
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_encoding_parts.png" alt="myCPU Encoding Parts" title="myCPU Encoding Part" width="600">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_encoding_parts.png" alt="myCPU Encoding Parts" title="myCPU Encoding Part" width="440">
 </figure>
 
 The **Sequencer** determine the current step or state of the instruction cycle, in the myCPU the sequence is up to 8 steps. The sequencer step value is used in a multiplexed form as part of the encoding address, so is 3 bits length.
@@ -462,82 +462,134 @@ Therefore, the decoding address for the microinstruction to execute  will be det
     <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_micro_encoding_parts.png" alt="myCPU Microinstruction encoding parts" title="myCPU Microinstruction encoding parts" width="600">
 </figure>
 
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/schematics/myCPU_Decoder_AddrBitOrder.png" alt="Instruction decoder address bit order" title="Instruction decoder address bit order" width="400">
+    <figcaption>Instruction Decoder address bit order</figcaption>
+</figure>
+
 The **Memory Selection** bits determine which memory unit will be used to encode or decode each byte part of a microinstruction. In the myCPU design, a microinstruction is composed of 24 bits or 3 bytes, which are handled by three memory units.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_micro_parts.png" alt="myCPU Microinstruction parts" title="myCPU Microinstruction parts" width="600">
-</figure>
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/schematics/myCPU_Decoder_AddrBitOrder.png" alt="Instruction decoder address bit order" title="Instruction decoder address bit order" width="400">
-    <figcaption>Instruction Decoder address bit order</figcaption>
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_micro_parts.png" alt="myCPU Microinstruction parts" title="myCPU Microinstruction parts" width="500">
 </figure>
 
 The decoded microinstruction is passed to the **CSM** (control signals manager), which is responsible to expose the appropriate control signal values to the logic components of the myCPU.
 {: style="text-align: justify"}
 
 #### Testing and Debugging the myCPU
-The are two sets of switches to test the electronic behavior of the myCPU:
+The myCPU design has support for debugging by stepping the execution flow at a clock cycle level, viewing the state of the logic components of the CPU in real time. Through a set of DIP switches added on the CSM module, we can setup and execute isolated microinstructions whether partial or complete microinstruction, and see what happens on the logic components of myCPU. 
 {: style="text-align: justify"}
 
-The **BUS Manager** module in the myCPU design includes test switches that can be used to set the current values of the data BUS.
+In addition, the myCPU design has support for input test values to check module behavior or include test values in the debug process of a microinstruction through a set of DIP switches added on the BUS Manager module. In myCPU we can test and debug an entire instruction by testing and debugging the particular microinstructions that composed it.
 {: style="text-align: justify"}
 
-The **Control Signals Manager (CSM)** module also have test switches that enable the activation of individual control signals. By using the CSM switches, it is possible to test individual module actions or configure a real microinstruction by combining multiple switches at a time, to test, statically, the myCPU modules behavior when they are all acting together.       
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_switches.png" alt="myCPU Test and debug switches" title="myCPU Test and debug switches" width="500">
+    <figcaption>myCPU Test and debug switches</figcaption>
+</figure>
+
+#### Testing Modules
+In myCPU we can test the electronic and logic behavior of modules by introducing testing values through the BUS Manager module and set specific control signals through the CSM module. This is possible thanks to the debug mode of the clock module that enables the myCPU in stepping mode.
 {: style="text-align: justify"}
+
+The **BUS manager** has two DIP switches of 8 bits each to put a 16 bits test value on the Data BUS, by setting up a specific value on the switches and pressing the TEST button. 
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_busmanager_switches_min.png" alt="myCPU BUS Manager switches" title="myCPU BUS Manager switches" width="400">
+    <figcaption>myCPU BUS Manager switches</figcaption>
+</figure>
+
+The **CSM module** has two DIP switches of 12 bits each, to set a test value for each individual control signal.
+By using the CSM switches, is possible to trigger module actions, or to configure a real microinstruction by combining multiple switches at a time.   
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_csm_switches_min.png" alt="myCPU CSM switches" title="myCPU CSM switches" width="400">
+    <figcaption>myCPU CSM switches</figcaption>
+</figure>
 
 >Combining the BUS Manager and CSM switches you can reproduce a true runtime execution condition statically.
 
 ##### Microinstruction debugging and testing
-The myCPU Clock module enables running the myCPU one clock cycle at a time using a push button, which facilitates debugging and allows examination of each clock cycle during runtime. This module is based on the 555 timer, and is an original design by Ben Eater, who used it in his 8-bit breadboard computer. Furthermore, the clock module enables examination of the high and low states of the clock signal independently. This feature is especially interesting because the myCPU is a synchronized system, in which microinstructions are executed during the low state of the clock signal producing some changes in the myCPU status, while other changes in the myCPU status will occur during the next high state or high edge of the clock signal.
+The myCPU Clock module support a debug mode that enable running the myCPU at one clock step at a time using a push button. This debug mode facilitates the debugging by the view of the logic state of the modules statically in real time during the execution flow. The feature to view statically the state of the modules allows to check the current values of logic elements using a digital logic tester. 
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_clock_debug_push_min.png" alt="myCPU CSM switches" title="myCPU CSM switches" width="400">
+    <figcaption>myCPU CSM switches</figcaption>
+</figure>
+
+We can build and test an entire microinstruction by removing the Instruction Decoder connector to CSM module and configure the CSM module test switches, checking what happens to the state of logic components at the **LOW** and **HIGH** part of the clock cycle using the debug mode of the clock module.
+{: style="text-align: justify"}
+
+In myCPU, a microinstruction is executed when a control signals string is placed on the control BUS. This take place when the sequencer moves to a new step of the execution cycle and this happens during the fall state of the clock signal, so the microinstruction is executed during the LOW part of the clock cycle.
+When we are in DEBUG mode we can transit to the **RISE** state of the clock cycle by pushing the clock button and transit to the **FALL** state when the button is released, which is the default state in debug mode.
+{: style="text-align: justify"}
+
+When a microinstruction is placed on the control BUS, at the fall state of the clock signal, some changes occur modifying the state of the logic components of the myCPU, and other related changes will happen in the immediate rise state of the clock signal.
 {: style="text-align: justify"}
 
 >You can see more detailed explanation about the clock module in: [Clock Module](/pages/en/mycpu/modules/clock)
 
-#### Limitations of the myCPU
-The myCPU design has limitations for two reasons. The first reason is the need to keep aligned to the Ben Eater's breadboard computer project, taking advantage of his fantastic video lectures. The second reason is to create a smooth learning path for beginners, inexperienced electronics hobbyists, and students.
+#### Programming the myCPU
+The myCPU design includes a unique SRAM memory module acting as CPU's internal memory and as program/data memory.
 {: style="text-align: justify"}
 
->The myCPU design try to maintain a direct correspondence with the Ben Eater's breadboard computer project and take advantage of his great video lectures.[Ben Eater's site](https://eater.net/){:target="_blank"}
+Programming the myCPU involves the **MAR** and **SRAM** memory modules. The MAR module store the address for the RAM memory in read and writing operations and is only 4 bits length. The SRAM module is a very basic discrete logic memory module with capacity to only 16 bytes. The MAR module is connected to the SRAM module through an **Address Connector** to setup the address of the SRAM memory module in both, RUN or PROG mode. The myCPU design has not a dedicated Address BUS.
+{: style="text-align: justify"}
 
-Although the myCPU is a valuable learning and development platform, it is a very limited CPU with some limitations due to the fact of the myCPU was not designed prioritizing performance or advanced functionality. Some of these limitations will be reduced or removed in the next releases, myCPU256 and myCPU+. Building the myCPU using discrete logic and basic TTL integrated circuits could also cause several drawbacks in the design and electrical issues due to the TTL known issues.
+The myCPU Programming is performing by the introduction of a program into the program memory. This operation is realized manually using the DIP switches provided by the MAR and the SRAM memory modules. The MAR module includes in its design a switch to alternate the operation mode between "**RUN**" and "**TEST**", and a **4 bits DIP switch** to introduce a memory address. The address set at the MAR DIP switch will be exposed through the Address Connector whenever the MAR is in TEST mode. 
+{: style="text-align: justify"}
+
+The SRAM memory module includes also a switch to enable the "**PROG**" mode and a **8 bits DIP switch** to configure the data to store into memory. The data configured on the switches will be write to memory when the WRITE button is pressed whenever the mode switch is in the PROG mode.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_limitations.png" alt="myCPU Limitations" title="myCPU Limitations" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/mycpu_mar_sram_switches_min.png" alt="myCPU MAR/SRAM switches" title="myCPU MAR/SRAM switches" width="400">
+    <figcaption>myCPU MAR/SRAM switches</figcaption>
 </figure>
 
-The **ALU** was designed using just 4-bit adders with the consequent limitation to adding operations and subtracting using the 2´s complement approach. But only the B operand in converted to 2's complement so the sustracting is limited to A + (-B).
+#### Limitations of the myCPU
+The myCPU design has basic limitations for two reasons. The first one reason is that the myCPU project is based on the Ben Eater's breadboard computer project and for taking advantage of his fantastic video lectures it was necessary to keep aligned the myCPU project with his project in some way. The second one is to provide a soft approach to a CPU basic operation for beginners, inexperienced electronics hobbyists and students acting as an introductory project to the CPU  building and programming. 
 {: style="text-align: justify"}
 
-The **SRAM** module is based on the 74219 or the 74189 which is a very limited SRAM chip of 16 x 4 bits. The limited available memory, to 16 bytes, limiting the possibility to write complex or large programs because of the limit to 16 instructions. I understand that the SRAM limit is a hard inconvenient but remember that myCPU is a learning platform and you can explore the basics of a CPU and a programmable computer using just 12 to 14 instructions.
+>The myCPU design try to keep aligned with the Ben Eater's breadboard computer project and to get the benefits of his great video lectures. [Ben Eater's site](https://eater.net/){:target="_blank"}
+
+Despite its limitations, myCPU is a valuable learning and development platform, and some of these limitations will be overcome in the planned next releases. Some of these limitations are listed bellow:
 {: style="text-align: justify"}
 
-Due to the limitation of SRAM, **memory address register (MAR)** has a limit to 4-bit address. Does not make sense make it bigger.
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_limitations.png" alt="myCPU Limitations" title="myCPU Limitations" width="700">
+</figure>
+
+The **ALU** was designed using just 4-bit adders with the consequent limitation to just addition operations, and subtracting using the 2´s complement approach. Only the B operand in converted to 2's complement so the subtracting is limited to A + (-B) form.
 {: style="text-align: justify"}
 
-The **Instruction Register** has a limitation to 4 bits for the instruction opcode and this limit the possible max length of the instruction set to 16 instructions.
+The **SRAM** module is based on the **74xx189** which is a very limited SRAM chip of 16 x 4 bits using 2 of them to support up to 16 Bytes. The limited available memory, to 16 Bytes, prevents the possibility to write more than simple test programs because are limited to 16 instructions. Due to the limitation of SRAM, the Memory **Address Register (MAR)** has a limited length to 4 bits address.
+The MAR and SRAM limit could be a hard inconvenient but remember that myCPU is a learning platform and you can explore the basics of a CPU and a programmable computer using just 12 to 14 instructions including conditional jumps.
 {: style="text-align: justify"}
 
-In this release, there is **no input register module** and no dedicated control signals for inputs. However, it is possible to design your own 8-bit input register and dedicate one of the control signals from other purposes to the input register. Afterwards, you can add a specific instruction to your instruction set to load data from the input register into the A register. An input register is planned to be included in the next releases, myCPU256 and myCPU+.
+The **Instruction Register** has a limitation to 4 bits for the instruction opcode and 4 bits for the instruction argument. Limiting the possible maximum length of the ISA (Instruction Set) to 16 instructions and limit the argument to 0x0F (15) as  maximum value. For beginners, this limitation become an advantage providing a better a more easy way to understand and follow the execution flow and the debugging process.
 {: style="text-align: justify"}
 
->keep in mind that the myCPU is not just a device executing a machine code program, its more than that, myCPU is a platform letting you to show what happens on a digital system, like a CPU, during the execution of a program.
+In this first release, there is no input register module. However, is possible to use the BUS Manager module as input port by using the "**SI**" control signal, to expose the value at the BUS Manager DIP switches to the Data BUS. In the myCPU basic ISA there's an instruction for this purpose: the **LDP** instruction. You can see more details at the BUS Manager module page: [BUS Manager](/pages/en/mycpu/modules/bus_manager) 
+{: style="text-align: justify"}
+
+>keep in mind that the myCPU is not just a device executing a machine code program, its more than that, myCPU is a platform which let you to show what happens on a digital system, like a CPU, during the execution of a program.
 {: style="text-align: justify"}
 
 #### Electronic improvements of myCPU
-The myCPU, because of its PCB based design, include several electronic improvements respect the original breadboard project.
+The myCPU project has several electronic improvements over the original Ben Eater's Breadboard project. These improvements and the implementation of basic rules in digital electronics are possible because myCPU uses a PCB design, which is hard to implement with breadboards. Some of them are listed bellow:
 {: style="text-align: justify"}
 
-You can review some of these improvements in the table below:
-
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_electronics.png" alt="myCPU Improvements" title="myCPU Improvements" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_electronics.png" alt="myCPU Improvements" title="myCPU Improvements" width="700">
 </figure>
 
 #### myCPU Roadmap
-The main and final goal of the myCPU is desing a totally capable and functional CPU emulating a 6502 or a Z80 including a reduced basic interpreter and support to 64K of SRAM using the same open and modular platform with only discrete logic. To reach this goal the project will pass through a set of steps to evolve the myCPU since an early stage with the first release of myCPU, following with the myCPU256 and myCPU2K, until the most advanced releases near a small computer the myCPU+ 32/64K.
+The main and final goal of the myCPU project is to desing a totally capable and functional CPU emulating a 6502 or a Z80 with support up to 64K of SRAM. Proposing a platform based on an open architecture and modular paradigms and using only discrete logic. To reach this goal the project will navigate through a set of steps to evolve from an early stage of myCPU with the first release of myCPU16, following with the myCPU256 and myCPU2K, to the most advanced releases the myCPU+ 32/64K probably with support for a BASIC interpreter and a C compiler, closer to a tiny computer.
 {: style="text-align: justify"}
 
 Below picture shows, graphically, the roadmap of the myCPU project:
@@ -548,44 +600,51 @@ Below picture shows, graphically, the roadmap of the myCPU project:
 </figure>
 
 ##### myCPU 16
-The first release of myCPU planned to the summer of 2023. With the limitation to  only 16 bytes of memory that enable to execute very small programs up to 16 bytes length and capable only to support an instruction set up to 16 instructions.
+The first release of myCPU, planned to the summer of 2024. Limited to only 16 bytes of memory enabling to execute very small programs up to 16 bytes length and capable only to support an instruction set up to 16 instructions. This book is dedicated to this myCPU16 release.
 {: style="text-align: justify"}
 
 ##### myCPU 256
-This improved version of myCPU 16 includes several notable changes. Firstly, an 8 bits Memory Address Register (MAR) capable of addressing up to 256 bytes of SRAM. Secondly, the number of supported instructions has been increased to a total of 32. Additionally, this version will  includes a new CMOS SRAM module up to 2Kx8, although for this release only 256 bytes can be  used due to the MAR limitation. Lastly, an updated Instruction Decoder module, which can support the expanded instruction set size and will be based on the AT28C256 EEprom memory.
+This improved version of myCPU16 will includes several notable changes. Firstly, an 8 bits Memory Address Register (MAR) capable of addressing up to 256 bytes of SRAM. Secondly, the number of supported instructions will be increased to a total of 64, a good number to experimenting with the ISA. Additionally, this version will includes a new SRAM module up to 2K, although for this release only 256 bytes can be used due to the MAR address length limit. Lastly, an updated Instruction Decoder module, which can support the extended instruction set and will be based on the \textbf{W27C010} EEprom memory. Basically is a myCPU16 with support up to 256 Bytes of memory and up to 64 instructions for the ISA.
 {: style="text-align: justify"}
 
+Included features in the myCPU 256 are pointed below:
+
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_256_features.png" alt="myCPU 256 Features" title="myCPU 256 Features" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_256_features.png" alt="myCPU 256 Features" title="myCPU 256 Features" width="700">
 </figure>
 
 ##### myCPU 2K
-This is a small evolution from de myCPU 256. The only changes regarding the myCPU 256 are: a new 16 bits MAR module capable to addressing up to 2K bytes and more, a program counter up to 16 bits capable to count up to 2K and more, and an improvement EEProm Boot module to support the loading up to 2K bytes program length.
+This is a small evolution from the myCPU256. It will includes: a 16 bits MAR module and a 16 bits program counter both capable to manage addresses up to 64K, far enough to the 2K version needs. In this release the Sequencer will be modified to support up to 16 steps per execution cycle to enable the triple fetch cycle capability. The 8 bits C register will be modified to support the output to the higher word of the 16 bits data BUS enabling to calculate 16 bits addresses with 6668 bits registers.
 {: style="text-align: justify"}
 
+Regards to programming: the increase in memory size, allows to include instruction addressing modes and conditional branches; and the triple fetch cycle capability enabled two 8 bits arguments per instruction which is necessary to manage 16 bits values using 8 bits data blocks.
+{: style="text-align: justify"}
+
+Included features in the myCPU2K are pointed below:
+
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_2K_features.png" alt="myCPU 2K Features" title="myCPU 2K Features" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_2K_features.png" alt="myCPU 2K Features" title="myCPU 2K Features" width="700">
 </figure>
 
 ##### myCPU+ 64K
-This a very strong evolution regarding the myCPU releases: 16, 256 or 2K. One of the most radical advance is the change of the microprogramming paradigm, coming from a horizontal and static control signal model to a vertical paradigm with a dynamic control signals model. This model of microprogramming enable handle a large number and more complex logic devices with a reduced set of control signals.
+This version will be a very strong evolution regarding the myCPU releases: 16, 256 or 2K. One of the most radical advance is the change of the microprogramming paradigm, coming from a horizontal and static control signal model to a hybrid model paradigm including some static control signals and some multiplexed as a dynamic control signals model. This model of microprogramming enables to handle a large number and more complex logic components with a reduced set of control signals.
 {: style="text-align: justify"}
 
-Other advantages of the myCPU+ is an advanced ALU module based on the 74181 ALU IC, a stack pointer 8-bit module, the support of more deep instruction decoding up to 17 bits which will get a capability to design and manage a 256 instructions set, an instruction cycle length up to 16 steps or a full SRAM module up to 32/64K based on the 62256 family CMOS SRAM ICs.
+Other advantages of the myCPU+ will be an advanced **ALU** module based on the **74xx181**, a special logic module for bit manipulation, shifting and rotating binary values, an 8 bits stack pointer module, support to a more extended instruction decoding up to 17 bits which will get a capability to design and manage an ISA of 256 instructions, or a full SRAM module up to 32/64K based on the 62256 SRAM family.
 {: style="text-align: justify"}
 
 A full list of the feature changes of the myCPU+ is shown below:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU+_64K_features.png" alt="myCPU+ 64K Features" title="myCPU+ 64K Features" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU+_64K_features.png" alt="myCPU+ 64K Features" title="myCPU+ 64K Features" width="700">
 </figure>
 
 #### Future Modules
-The next releases of myCPU project, involved a new set of modules to provide 16 bits data support, increasing memory addressing capabilities and add more features and improvements to reach the most capable myCPU+.
+All of the next releases of the myCPU project coming from the first myCPU16, involved a new set of modules to provide 16 bits data support, increasing memory addressing capabilities and add more features and improvements to reach the most capable myCPU+.
 {: style="text-align: justify"}
 
 In the table below you can see a list of planned modules:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_future_modules.png" alt="myCPU Planned Modules" title="myCPU Planned Modules" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_future_modules.png" alt="myCPU Planned Modules" title="myCPU Planned Modules" width="700">
 </figure>
