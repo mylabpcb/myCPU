@@ -12,26 +12,26 @@ Welcome to the introductory page of the myCPU project.
 
 <a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_chapter2.pdf" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 
-The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements implemented by the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU project uses the "**Microprograming Technique**" to encode/decode instructions and the execution flow of an instruction is based on **Microinstructions** with support to debugging at level of an individual microinstruction. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies because the design is TTL compatible. 
+The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements and implemented with the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU project uses the **Microprograming Technique** for the processing of instructions, so the execution flow of an instruction is based on **Microinstructions**. The myCPU supports debugging at microinstruction level. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies. 
 {: style="text-align: justify"}
 
-The feature of debugging at microinstruction level allows to observe the execution of individual microinstructions and step through each one, viewing the state of all logic components statically. Providing a detailed view of the instruction execution flow in real-time.
+The feature of debugging at microinstruction level allows to observe the execution of individual microinstruction, and step through each one, viewing the state of all logic components statically. Providing a detailed view of the instruction execution flow in real time.
 {: style="text-align: justify"}
 
 ### A development and learning Platform
-The myCPU is designed as a learning platform to provide an educational experience in the workings of a CPU, including the logic elements involved in its basic architecture and how various digital logic elements interact in a synchronized way.
+The myCPU was designed as a learning platform to provide an educational experience in the workings of a CPU, including the logic elements involved in its basic architecture and how several digital logic elements interact in a synchronized way.
 {: style="text-align: justify"}
 
-The myCPU, with its modular design and hardware-level accessibility, also serves as a development platform. With the ability to directly access the relationship between hardware and software, users have the opportunity to design their own modules and create their own instruction sets for program writing. This is made possible through the Instruction Decoder, a programmable EEProm-based decoder that can be configured with custom microinstructions to define a unique instruction set.
+With a modular design and hardware-level accessibility, myCPU serves as development platform. The myCPU platform enables the direct access to the relationship between hardware and software and give builders the opportunity to design their own modules. Thanks to the Instruction Decoder module, a programmable EEProm-based microinstruction decoder, builders can create their own instruction set for program writing.
 {: style="text-align: justify"}
 
-The myCPU architecture, including its modular design and the choice of components and their distribution, was created with the goal of providing a clear understanding of a CPU system and its workings to people of all levels, including beginners. The components can also be easily purchased from a variety of sources, including non-official online retailers and official stores.
+The myCPU architecture was designed with the purpose to provide a clear understanding of a CPU system and its workings to people of all levels, including beginners. The design of myCPU architecture and modules is very simple and accessible to all levels, and the choice of components was made to provide an easy manipulation and a comfortable assembling experience. The components can be easily purchased from a variety of sources, including non-official online retailers and official stores.
 {: style="text-align: justify"}
 
 
 >You can see a more extensive explanation about the components in the dedicated page [The Components](/pages/en/mycpu/components).
 
-As a learning platform, the myCPU design may not be the most technically advanced approach for experienced engineers or advanced electronic hobbyists. While the design could potentially be improved for better performance, this was not a primary objective in its develop but the modularity, the open hardware and the accesibility of the design to beginners, students and less experienced people.
+The myCPU design was planned from the beginning as a learning platform. Even though its design could be improved for a better performance, that was not a primary objective in its develop. The main objective, as learnning platform, was the modularity, the open hardware architecture, the availability of components and ease of assembly, and the accesibility of the design to beginners, students and less experienced people.
 {: style="text-align: justify"}
 
 The next list shows some of the topics you can learn with this project:
@@ -44,7 +44,7 @@ The next list shows some of the topics you can learn with this project:
 +	**Understanding the timings of a CPU, and the cycle of an instruction**
 +	And much more.
 
-In this introduction, I will discuss some aspects of the myCPU that may seem obvious to more experienced individuals. However, as a learning platform, it is valuable to review these elements to gain a deeper understanding of the design from a perspective similar to that of real CPUs, rather than simply viewing it as an exercise in electronic assembly.
+In this introduction, we will cover aspects of the myCPU that might seem obvious to experienced individuals. However, as learning platform, it's useful to review some topics to gain a deeper understanding of the design. In this way, we can appreciate how myCPU looks like a real CPU, rather than just seeing it as a simple electronics device.
 {: style="text-align: justify"}
 
 The extensive documentation provided may appear redundant or over-detailed to experienced individuals, but it is valuable for beginners or those with limited knowledge of digital electronics.
