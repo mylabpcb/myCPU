@@ -317,14 +317,16 @@ In the next table you can find a brief list of myCPU digital features. Some of t
 </figure>
 
 #### The Buses
-The myCPU uses only two buses to facilitate data sharing and connectivity between modules and functional blocks: the **Control Bus** and the **Data Bus**, following the Von Neumann Bus Architecture, where data and memory addresses are shared on the same bus. In the myCPU design is pointed as the Data Bus. Despite its basic design, it is important for students and learners to take note of this aspect of the myCPU design. Something like a dedicated **Address Bus** is only present in the connection between the MAR and SRAM modules.
+The myCPU uses only two buses to facilitate data and control signals sharing, and connectivity between modules: the **Control Bus** and the **Data Bus**. The myCPU design follows the "Von Neumann Bus Architecture", where data and memory addresses are shared over the same bus, being the Data BUS in the myCPU design. Despite the myCPU basic design, is important for students or beginners to take note of this particular aspect of the myCPU. Something like a dedicated **Address Bus** is only present in the connection between the MAR and SRAM modules.
 {: style="text-align: justify"}
 
-The Data Bus supports data lengths up to 16 bits, which would be enough for future releases of the myCPU using the same BUS module board design or would be enough to design custom modules or modules prototypes supporting handle more than 8 bits. With 16 bits, we can address up to 64Kb, which satisfies the requirements of a very basic CPU like myCPU, and more.
-Due to the 8-bit nature of the myCPU would be enough use just 8 bits for data exchange, However, this may result a limitation by the need of multiple fetch cycles to manage 16 bits data. The Management of 16 bits of data using an 8 bits data transfer requires at least two clock cycles for each exchange of data between registers and memory, so a 16 bits Data BUS is a very interesting feature for a learning platform like the myCPU and is a essential feature for future releases like the myCPU256 or the myCPU2K.
+The Data Bus supports data lengths up to 16 bits, which will be enough for future releases of the myCPU using the same BUS module board design, and should be enough to design custom modules or modules prototypes handle more than 8 bits. With 16 bits, we can share values such as addresses up to 64Kb, which satisfies the requirements of a very basic CPU like myCPU, and a more complex cpu in the future.
 {: style="text-align: justify"}
 
-All of the myCPU control signals are transmitted through the **Control Bus**. The Control Bus has a capacity of 32 lines, via a 32-pin connector, although not all of these lines are used for control signals. The voltage regulators located in each bus module utilize the GND and +5v pins of the Control Bus to provide power to the modules. The clock and reset signals, as well as the status flags signals, also travel through the Control Bus.
+Due to the 8-bit nature of the myCPU, could be enough to use only 8 bits for data exchange. However, this may result a limitation by the need of multiple fetch cycles to manage 16 bits of data. The Management of 16 bits of data using 8 bits of data transfer requires at least 2 clock cycles for each exchange of data between registers and memory, so a 16 bits Data BUS is a very interesting feature for a learning platform like the myCPU, and is a essential feature for future releases like the the myCPU2K and beyond.
+{: style="text-align: justify"}
+
+All of the myCPU control signals are transmitted through the **Control Bus**. The Control Bus has a capacity of 32 lines via a 32-pin connector, although not all of these lines are used for control signals. The voltage regulators, located in each bus module board,  uses the GND and +5v pins of the Control Bus to provide power to the modules. The clock and reset signals, as well as the status flags signals, also travel through the Control Bus.
 {: style="text-align: justify"}
 
 The lines included on the control BUS are distributed as indicated in the list below:
@@ -336,43 +338,49 @@ The lines included on the control BUS are distributed as indicated in the list b
 </figure>
 
 #### The Control Signals of myCPU
-The myCPU support up to 23 control signals driving the logic devices of myCPU. 22 of the control signals are managed directly by a dedicated module: the **Control Signals Manager (CSM)**, which sets the corresponding digital state for the control signals sent to each logical device in the myCPU. One of them, the **SQR** signal in internal an handled directly by the Instruction Decoder to control the sequencer cycle.
+The myCPU support up to 23 control signals to drive the logic devices of myCPU. 22 of the control signals are managed directly by a dedicated module: the \textbf{Control Signals Manager (CSM)}, which sets the corresponding digital state for the control signals sent to each logical device in the myCPU. But there's and exception, the \textbf{SQR} control signal is internal an handled directly by the Instruction Decoder to control the instruction cycle length.
 {: style="text-align: justify"}
 
 >More info about control signals can be found at the **[CSM module page](/pages/en/mycpu/modules/csm)**.
 {: style="text-align: justify"}
 
-Knowing the default values of each control signal is essential for a proper understanding of the behavior of the modules. Control signals are the truly key in the interaction between the hardware (modules) and the software (instructions). Instructions are composed by microinstructions, and those microinstructions are binary strings composed by control signals which act directly on the electronics of the modules modifying their logic state.
-{: style="text-align: justify"}
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_microinstruction_flow.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
-</figure>
-
-Designing your own custom modules will require a deep understanding of the control signals, their default values and the actions they should produce on the logic components of modules.
-{: style="text-align: justify"}
-
-The below table 2.6 shows the full list of the myCPU control signals.
+The below table shows the full list of the myCPU control signals describing the action produced on the modules.
 {: style="text-align: justify"}
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_control_signals.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
 </figure>
 
-##### Signed display mode support
-The myCPU support a 2's complement display mode, its affects basically only to the mode on how the hex/dec decoder display shows binary values, not to the manipulation of a binary value itself. There’s a control signal **UN** which enable the 2's complement display mode.
+Knowing the default values of each control signal is essential for a proper understanding of the behavior of the modules. In the myCPU platform, Control signals are the truly key in the interaction between the hardware (modules) and the software (instructions). The myCPU is based on microprogramming, so instructions are composed by microinstructions, those microinstructions are binary strings composed by control signals acting directly, trough the CSM module, on the electronics of the modules modifying their behavior or logic state.
 {: style="text-align: justify"}
 
-The binary to decimal display shows numbers as unsigned, with a range from **0 to 255,** when the **UN** control signal is LOW. When the **UN** control signal is HIGH, the display shows numbers as signed numbers using 2's complement representation, with a range from **-128 to 127**. This feature is in line with the corresponding feature of the output module in the Ben Eater's project.
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_microinstruction_flow.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
+</figure>
+
+Designing your own custom modules will require a deep understanding of the control signals, their default values and the actions they produce on the logic components of the modules.
+{: style="text-align: justify"}
+
+##### Signed display mode support
+The myCPU support a 2's complement display mode, affecting basically, to the mode on how the hex/dec decoder display shows binary values, not to the manipulation of a binary value itself. There’s a control signal **UN** which enable the 2's complement display mode.
+{: style="text-align: justify"}
+
+When the **UN** control signal is LOW, decimal displays show numbers as unsigned, with a range from \textbf{0 to 255}. When the **UN** control signal goes HIGH, decimal displays show numbers as signed, using 2's complement representation with a range of **-128 to 127**. This feature is in line with the corresponding feature of the output module in the Ben Eater's project.
 {: style="text-align: justify"}
 
 >You should watch the Ben Eater's video about: [Two's complement arithmetic](https://www.youtube.com/watch?v=4qH4unVtJkE){:target="_blank"}
 
 #### The Instruction Cycle
-The myCPU instruction execution is performed through a Instruction cycle that consists of a fetch cycle followed by an execution cycle. The myCPU is a single fetch execution cycle, it means that uses only one fetch cycle to gets the instruction and the argument of the instruction. It is possible thanks to an Instruction Register with a 4+4 bits design, most significative 4 bits for the OpCode of the instruction and less significative 4 bits for the argument. So in a single 8 bits data exchange operation with memory retrieve the instruction and the argument, being the most simplified way to view and understand the execution cycle of a CPU in real time.
+The myCPU instruction execution is performed through an **Instruction cycle** that composed by a **Fetch cycle** followed by an **Execution cycle**. The myCPU is based on single fetch execution cycle, it means that uses only one fetch cycle to get the instruction and the argument of the instruction. This is possible thanks to an Instruction Register with a 4+4 bits design, using the most significative 4 bits for the OpCode of the instruction and the less significative 4 bits for the argument. So, in a single 8 bits data exchange operation with memory are retrieved the instruction plus the argument, being the most simplified way to view and understand the execution cycle of a CPU in real time.
 {: style="text-align: justify"}
 
-Due to the simplicity of the instruction set and program limitations, the myCPU execution cycle does not require any additional specialized phases. The length of the Instruction cycle reach to 8 states or steps. Each step of the instruction cycle requires one clock cycle to complete and executes a single microinstruction.
+Due to the simplicity of the myCPU instruction set and the programming limitations, the myCPU execution cycle does not require any additional specialized phases. The length of the Instruction cycle can reach up to 8 cycle states or steps. Each step of the instruction cycle requires one clock cycle to complete, and executes a single microinstruction.
+{: style="text-align: justify"}
+
+>The myCPU design supports a microinstruction length up to 24 bits, involving 23 control signals. 22 of them are exposed through the Control BUS.
+{: style="text-align: justify"}
+
+The myCPU is a basic approximation of an early CPU with limited capabilities compared to real CPUs. Unlike modern CPUs that can perform multiple instruction cycles simultaneously through pipelining, myCPU can only execute one instruction cycle per instruction. The design of myCPU supports a variable length instruction cycle through the capability to reset the sequencer at a specific step and initiate a new instruction cycle, by sending a \textbf{SQR} control signal from the Instruction decoder to the Sequencer.
 {: style="text-align: justify"}
 
 Next image shows an example of the instruction cycle for the ADD instruction:
@@ -382,40 +390,43 @@ Next image shows an example of the instruction cycle for the ADD instruction:
     <figcaption>ADD Instruction cycle sample diagram</figcaption>
 </figure>
 
->The myCPU design support a microinstruction length up to 24 bits, involving 23 control signals. 22 of them are exposed through the Control BUS.
-{: style="text-align: justify"}
 
-The myCPU is a basic approximation of an early CPU with limited capabilities compared to real CPUs. Unlike modern CPUs that can perform multiple instruction cycles simultaneously through pipelining, myCPU can only execute one instruction cycle per instruction. The design of myCPU supports a variable instruction cycle length through the ability to reset the sequencer at a specific step and initiate a new instruction cycle.
-{: style="text-align: justify"}
-
-The instruction set architecture of myCPU could be described as **RISC (Reduced Instruction Set Computer)** instead of a CISC (Complex Instruction Set Computer) because of the microinstruction based nature of the myCPU execution flow. Each instruction can consume from 2 (the minimal instruction cycle length) up to 8 cycle steps, and probably, it could be upgraded up to 16 steps in next releases. Remember that in the myCPU design each step or state is equivalent to a single clock cycle.
+The instruction set architecture of myCPU could be described as **RISC** (Reduced Instruction Set Computer) instead of a CISC (Complex Instruction Set Computer) because of the microinstruction based nature of the myCPU execution flow. Each instruction can consume from 2 (the minimal instruction cycle length) up to 8 cycle steps, and probably, it could be upgraded up to 16 steps in next releases. Remember that in the myCPU design each step or state is equivalent to a single clock cycle.
 {: style="text-align: justify"}
 
 #### The Flags
-The myCPU design include up to 4 status flags, but only 3 of them are used in the first release. Mainly for the limitations of the ALU module, which is based on simple adders. myCPU uses only: The **Carry Out flag FC**, which correspond with the last carry bit of the adders cascade, the **Zero flag FZ** which is calculated using logic gates and the **Negative flag FN** which correspond to the most significant bit of the ALU value or sign bit in 2's complement value representation. The **Overflow flag FV** is not used, in the first release, although is supported by the flags register. 
+The myCPU design includes 4 status flags related to ALU operations, managed by the Flags Register. Only 3 of them are used in the first release due to the limitations of the ALU module, based on simple adders. These flags are: the **Carry Out flag (FC)**, which correspond with the last carry bit of the adders cascade, the **Zero flag (FZ)** calculated using logic gates and the **Negative flag (FN)** which correspond to the most significant bit of the ALU value or sign bit in 2's complement representation. **Overflow flag (FV)** is not used, in the first release, although is supported by the flags register. 
 {: style="text-align: justify"}
 
 >Only ALU related flags are supported in the first release.
 
 The corresponding control signals are listed below:
 
-1.	**FC: Carry Out flag**
-2.  **FZ: Zero flag**
-3.  **FN: Negative flag**
-4.	**FV: Overflow flag** (not used in this release)
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_flags.png" alt="myCPU Flags" title="myCPU Flags" width="700">
+</figure>
 
-Flags are a essencial part of the decoding process for the **Conditional Jump Instructions**. The flags combination define the state of the myCPU after each executed instruction and this state can enable the execution of a conditional jump instruction based on that state. In the myCPU first release, only conditional jump instructions for the state of 3 individual flags: FC, FC and FN, are encoded. 
+Flags are an essential part of the decoding process for the **Conditional Instructions**.
+Flags combinations define the status of the myCPU after each executed instruction and that status could enable the execution of a conditional instruction, like a conditional jump which is encoded for a specific flags combination. In the myCPU first release, only conditional jump instructions are possible for a CPU status based on the combination of 3 flags: **FC**, **FZ** and **FN**. 
 {: style="text-align: justify"}
 
 ####  The Instruction processor
-The design of myCPU is based on microprogramming for instruction decoding, meaning that the values resulting from the conversion of an instruction into its equivalent set of microinstructions are stored in an EEProm memory instead of being generated through combinational logic.
+The execution process of an instruction in the myCPU design is based in **Microinstructions** using the **Microprogramming technique**. 
 {: style="text-align: justify"}
 
-The instruction processor is a logic block responsible of process and execute an instruction and involves several logic elements:
+In Microprogramming an instruction is divided into small pieces, called Microinstructions, executed sequentially. Microinstructions are binary strings of control signals exposed to CPU logic components by the CSM (Control Signals Manager) through the Control BUS. In Microprogramming, the set of microinstructions encoded for an ISA (Intruction Set) are called the **Microcode**. The microcode is encoded into a ROM, or into an EEProm memory providing a better way to modify the behavior of an instruction or to design new instructions for the ISA (Instruction Set) of the CPU.
 {: style="text-align: justify"}
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_instruction_processor.png" alt="myCPU Instrucion Processor table" title="myCPU Instruction processor table" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_microinstruction_flow.png" alt="myCPU Control Signals" title="myCPU Control Signals" width="700">
+</figure>
+
+In a Microprogramming based CPU, like myCPU, the Instruction Processor is the logic block responsible of 
+decoding an instruction and executing its associated microcode. The Instruction Processor uses the Instruction Decoder for the microinstrucions decoding process of the instruction. The Instruction Processor involves several logic elements, as you can see in the next table:
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_instruction_processor.png" alt="myCPU Instrucion Processor table" title="myCPU Instruction processor table" width="600">
 </figure>
 
 <figure class="center">
@@ -423,37 +434,47 @@ The instruction processor is a logic block responsible of process and execute an
     <figcaption>Instruction Processor block</figcaption>
 </figure>
 
-#### Microprogramming
-In the myCPU design a CPU native instruction is decoded into a set of microinstructions, which are a sequence of bits representing the control signals values that can modify the state of the logic devices of the myCPU. Microprogramming is the process to encode the microinstruction equivalent to each step in a instruction cyle to create the corresponding set of microinstructions for every instruction in the instructon set. These microinstructions are then written to an EEPROM memory for later decoding when and instruction is executes.
+In microprogrammning, each instruction is composed by a set of microinstructions executed in a sequence. The Sequencer manage the sequence of execution, each microinstruction is executed at a sequencer step synchronized with the fall state of the clock signal. Because of that, some control signals of the microinstruction cause immediate changes in the CPU state, while others will produce changes during the next rise state of the clock signal.
 {: style="text-align: justify"}
 
-Each instruction in the CPU can consist of multiple microinstructions, with each microinstruction executing during a single sequencer clock cycle. The sequencer counter is enabled during the fall state of the clock signal, allowing microinstructions to be executed during this clock state. Some control signals cause immediate changes in the CPU state, while others produce changes during the next rise state of the clock signal. To maintain good synchronization, certain logical actions in the CPU must occur before others, such as outputting data to the data bus before a register can read and store it. This is accomplished by performing these actions in alternate clock signal states, which allows enough time for the integrated circuits to perform their electronic functions.
+In addition, certain types of instructions like conditional jumps are dependent of the flags state and its microinstructions have to be encoded according to a specific state of flags. Therefore, Microprogramming is the process to encode the microinstruction corresponding to each step of the instruction cycle for an instruction OpCode, with or without the dependency of a specific state of flags.
 {: style="text-align: justify"}
 
-The **Sequencer** determine the current instruction step or state of the instruction cycle.
+In the myCPU the decoding of an instruction is based on the address for the memory in which the microcode is encoded, an AT28C64 EEProm memory for the myCPU. This address is a 13 bits length address generated using the OpCode of the instruction stored at the Instruction Register, the flags status stored at the flags register, the 3 bits encoded value of the current sequencer step, and 2 bits for the memory unit selection because myCPU uses 3 memory units to store the whole 24 bits microinstruction. The bit order is shown in the picture bellow.
 {: style="text-align: justify"}
-
-The **Instruction Register** holds the current **Opcode** of the instruction, which is shared with the Intruction Decoder, and the optional argument for the instruction. The argument can be a literal value or and address point to the memory cell where the values is stored.
-{: style="text-align: justify"}
-
-The **Flags Register**, provides the state flags activated on the myCPU to the decoding process. The myCPU could manage up to  four  flags and each correspond to 1 bit in the order: FV,FZ,FN,FC.
-{: style="text-align: justify"}
-
-So, the decoded microinstruction to execute will be determined by:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_micro_encoding_parts.png" alt="myCPU Microinstruction encoding parts" title="myCPU Microinstruction encoding parts" width="800">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_encoding_parts.png" alt="myCPU Encoding Parts" title="myCPU Encoding Part" width="600">
 </figure>
 
-The **Memory Selection** bits determine which memory unit will be used to write (during programming) or read (during decoding) each byte of a microinstruction. In the myCPU design, microinstruction consists of 3 bytes or 24 bits, which are handled by three memory units. To understand the memory selection and the order of the encoding value parts during memory programming, it is necessary to review both the Instruction decoder schematic and the programmer code.
+The **Sequencer** determine the current step or state of the instruction cycle, in the myCPU the sequence is up to 8 steps. The sequencer step value is used in a multiplexed form as part of the encoding address, so is 3 bits length.
 {: style="text-align: justify"}
+
+The **Instruction Register** holds the current **Opcode** of the instruction in execution. In myCPU the length for the opcode is 4 bits because only is used the 4 most significative bits of the instruction register for the opcode, being the less significative 4 bits is for the argument.
+{: style="text-align: justify"}
+
+The **Flags Register**, keeps the myCPU status of the flags, in myCPU only 4 flags are available so the length for this address part is 4 bits because is not multiplexed.
+{: style="text-align: justify"}
+
+Therefore, the decoding address for the microinstruction to execute  will be determined by:
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/tables/myCPU_micro_encoding_parts.png" alt="myCPU Microinstruction encoding parts" title="myCPU Microinstruction encoding parts" width="600">
+</figure>
+
+The **Memory Selection** bits determine which memory unit will be used to encode or decode each byte part of a microinstruction. In the myCPU design, a microinstruction is composed of 24 bits or 3 bytes, which are handled by three memory units.
+{: style="text-align: justify"}
+
+<figure class="center">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_micro_parts.png" alt="myCPU Microinstruction parts" title="myCPU Microinstruction parts" width="600">
+</figure>
 
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/schematics/myCPU_Decoder_AddrBitOrder.png" alt="Instruction decoder address bit order" title="Instruction decoder address bit order" width="400">
     <figcaption>Instruction Decoder address bit order</figcaption>
 </figure>
 
-The binary encoding value is a **13 bits address** that specifies the location of the microinstruction to be executed during a sequence step. This microinstruction word is then passed to the control signals manager, which sends the appropriate signal states to the logic devices of the myCPU. The instruction encoding is covered by 8Kx8 EEProm memories with an address support up to 13 bits (A0-A12).
+The decoded microinstruction is passed to the **CSM** (control signals manager), which is responsible to expose the appropriate control signal values to the logic components of the myCPU.
 {: style="text-align: justify"}
 
 #### Testing and Debugging the myCPU
