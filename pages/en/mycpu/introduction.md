@@ -430,7 +430,7 @@ decoding an instruction and executing its associated microcode. The Instruction 
 </figure>
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_InstructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_InstructionProcessor_block.png" alt="Instruction Processor block picture" title="Instruction Processor block" width="400">
     <figcaption>Instruction Processor block</figcaption>
 </figure>
 
@@ -595,7 +595,7 @@ The main and final goal of the myCPU project is to desing a totally capable and 
 Below picture shows, graphically, the roadmap of the myCPU project:
 
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/diagrams/myCPU_roadmap.png" alt="myCPU Roadmap picture" title="myCPU Roadmap" width="1000">
+    <img src="{{ site.baseurl }}/img/mycpu/diagrams/mycpu_roadmap.png" alt="myCPU Roadmap picture" title="myCPU Roadmap" width="1000">
     <figcaption>myCPU Project Roadmap</figcaption>
 </figure>
 
