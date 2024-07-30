@@ -19,10 +19,6 @@ hero_darken: false
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
-The control signals manager is like the main nervous system of the myCPU, sending control signals to the other parts of the CPU.
+The control signals manager is like the main nervous system of the myCPU, exposing control signals right values to the logic elements of the CPU.
 {: style="text-align: justify"}
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/csm/csm_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>

@@ -10,6 +10,7 @@ hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
 
+{% comment %}
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/alu/alu_assembled_min.png" alt="ALU module assembled view" title="Assembled view of the ALU module" width="400px">
     <figcaption>Assembled view of the ALU module</figcaption>
@@ -18,10 +19,6 @@ hero_darken: false
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/alu/alu_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
 
 #### Description
 The myCPU ALU is an 8 bit full adder implementation based on the **74LS283 (4-bit full adder)**, supporting the subtract operation by using the technique of addition of the **2’s complement**.
@@ -53,12 +50,4 @@ The SU control signal has two purposes, the first one enable the one’s complem
 
 >The two’s complement is done by get the one’s complement of a binary number and adding one.
 {: style="text-align: justify"}
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/alu/alu_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="500px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/alu/alu_clear_back_min.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
-</figure>
+{% endcomment %}

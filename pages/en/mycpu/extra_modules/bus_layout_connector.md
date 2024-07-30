@@ -22,12 +22,3 @@ hero_darken: false
 
 [Layout Connector documentation](/downloads/technical/myCPU_BUS_LayoutConnector_full.pdf){:target="_blank"}
 
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/layout/layout_connector_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="500px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/layout/layout_connector_clear_back_min.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
-</figure>

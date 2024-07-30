@@ -20,8 +20,3 @@ hero_darken: false
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/display/led_display_8b_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="300px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-

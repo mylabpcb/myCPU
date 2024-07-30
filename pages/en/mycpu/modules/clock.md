@@ -17,11 +17,7 @@ hero_darken: false
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-
+{% comment %}
 ### Description
 The clock module is a very accurate square wave generator following the **Ben Eater’s design**. Ben’s design is a very useful and interesting design to help in the debugging process. It provides a precise and clean clock signal at slow speed, controlled with a potentiometer. The myCPU recommended component values combined with a 1M potentiometer give us control for a speed between a few Hz to 2-3 KHz.
 {: style="text-align: justify"}
@@ -90,16 +86,6 @@ Bellow is the recommended order to mount the components for a comfortable assemb
 5.	IC sockets
 6.	Buttons and Switches
 
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_clear_front.png" alt="PCB front view" title="Front view of the printed board" width="500px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/clock/clock_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
-    <figcaption>Back view of the printed board</figcaption>
-</figure>
-
 ### Testing
 The clock module requires the **CSM module** plugged because it provides the **HLT signal**, to low by default, needed by the clock module to enable the output of monostable block of the module.
 {: style="text-align: justify"}
@@ -118,3 +104,4 @@ Proceed with the following checking steps:
 4. Test the **states and voltages of CLK and /CLK** signals using digital pen probe and a multimeter.
     {: style="text-align: justify"}
 
+{% endcomment %}

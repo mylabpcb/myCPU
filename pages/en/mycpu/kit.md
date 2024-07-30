@@ -2,8 +2,8 @@
 title: "myCPU: The Kit" 
 subtitle: A full set of 40+ PCBs
 layout: page
-gallery: the_kit_gallery
-galleryType: image
+gallery: #the_kit_gallery
+galleryType: #image
 show_sidebar: false
 hide_footer: true
 hide_hero: false
@@ -13,6 +13,7 @@ hero_darken: false
 
 > The content is under development, the final version will be as soon as possible.
 
+{% comment %}
 Because I’m an individual and I have not an online store, the only way I have to afford the manufacturing process is through a crowdfunding campaign, but before that I need to know how many people could be interested in get the myCPU One kit. You can find below detailed information about the kit.
 {: style="text-align: justify"}
 
@@ -43,3 +44,4 @@ Below is the detailed final image of each board type with the number of units pr
 + **Display LED board**
 + **EEProm Programmer board**
 
+{% endcomment %}

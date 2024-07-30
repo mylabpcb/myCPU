@@ -18,9 +18,3 @@ hero_darken: false
 [EEPRom Programmer module documentation](/downloads/technical/myCPU_EEProm%20Programmer_AT28C64_module_full.pdf){:target="_blank"}
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
-
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/eeprom_prog/eeprom_prog_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
-

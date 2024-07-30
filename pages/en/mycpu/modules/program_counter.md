@@ -19,11 +19,5 @@ hero_darken: false
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 
-Control the flow of the execution.
-{: style="text-align: justify"}
 
-<figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/pc/pc_clear_front_min.png" alt="PCB front view" title="Front view of the printed board" width="400px">
-    <figcaption>Front view of the printed board</figcaption>
-</figure>
 
