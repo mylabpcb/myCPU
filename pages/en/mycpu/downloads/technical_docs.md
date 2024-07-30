@@ -2,14 +2,15 @@
 title: "myCPU Downloads: Technical documentation"
 subtitle: "All tecnical documentation, schematics and more..."
 layout: page
-gallery: technical_docs_gallery
-galleryType: download
+gallery: #technical_docs_gallery
+galleryType: #download
 show_sidebar: false
 hide_footer: true
 hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
+{% comment %}
 On this page you find the downloads for all related technical documentation to the myCPU project.
 
 ### Organization
@@ -48,3 +49,5 @@ In the schematics I made use of net labels so much instead of wiring connections
 
 Click on the thumbnail to open the pdf in a new tab or use the mouse right button to save the file.
 {: style="text-align: justify"}
+
+{% endcomment %}

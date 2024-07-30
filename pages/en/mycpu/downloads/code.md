@@ -2,8 +2,8 @@
 title: "myCPU Downloads: The Code"
 subtitle: Encoders and Tools for the myCPU
 layout: page
-gallery: code_gallery
-galleryType: download
+gallery: #code_gallery
+galleryType: #download
 show_sidebar: false
 hide_footer: true
 hide_hero: false

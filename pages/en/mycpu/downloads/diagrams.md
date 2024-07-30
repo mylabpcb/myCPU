@@ -10,7 +10,6 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-> The content is under development, the final version will be as soon as possible.
 
 On this page you find the downloads for all related diagrams of the myCPU project in printable pdf version. 
 
