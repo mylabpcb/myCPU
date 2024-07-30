@@ -8,8 +8,8 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-> The content is under development, the final version will be as soon as possible.
 
+Based on Logisim Evolution software: [Logisim Evolution](https://github.com/logisim-evolution/logisim-evolution){:target="_blank"}
 
 [Download the myCPU Simulator](/pages/en/mycpu/downloads/simulator)
 {: style="text-align: justify"}
