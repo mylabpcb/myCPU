@@ -12,7 +12,7 @@ Welcome to the introductory page of the myCPU project.
 
 <a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_chapter2.pdf" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 
-The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements and implemented with the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU project uses the **Microprograming Technique** for the processing of instructions, so the execution flow of an instruction is based on **Microinstructions**. The myCPU supports debugging at microinstruction level. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies. 
+The myCPU is a fully modular **8-bit TTL/CMOS CPU** designed using only discrete logic elements and implemented with the most common integrated circuits from the 74xx family over CMOS or TTL technologies. The myCPU project uses the **Microprograming Technique** to process instructions, relying on **Microinstructions** to control the execution flow. The myCPU supports debugging at microinstruction level. It was designed on printed circuit boards (PCBs) and it can built using TTL or CMOS technologies. 
 {: style="text-align: justify"}
 
 The feature of debugging at microinstruction level allows to observe the execution of individual microinstruction, and step through each one, viewing the state of all logic components statically. Providing a detailed view of the instruction execution flow in real time.
