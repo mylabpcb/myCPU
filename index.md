@@ -10,8 +10,10 @@ hero_darken: false
 ---
 
 # Welcome to the myCPU Project
-The myCPU project is a basic fully modular TTL or CMOS 8-bit CPU/Computer designing on PCBs with support to debugging at microinstruction level and using only the most common logic TTL/CMOS ICs of the 74xxx family.
+The myCPU is a fully modular **8-bit CPU**. It was designed using only discrete logic components, and implemented with the most common integrated circuits from the 74 family. The myCPU project uses the **Microprograming Technique** to process instructions, relying on **Microinstructions** the instruction execution flow, and supporting the debugging at a microinstruction level. The myCPU was designed on printed circuit boards (PCBs), and it can built using TTL or CMOS technologies. 
 {: style="text-align: justify"}
+
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU" target="_blank">Public repository of the myCPU Project</a>
 
 The myCPU project is based on the original 8-bit Breadboard Computer project from Ben Eater:
 
