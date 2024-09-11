@@ -13,6 +13,9 @@ hero_darken: false
 
 > The content is under development, the final version will be as soon as possible.
 
+> If you are insterested in get the myCPU Kit, please go to [The Kit Feedback form](/pages/en/mycpu/feedback_kit) to let me know your interest and give me your email address for future announcements.
+{: style="text-align: justify"}
+
 {% comment %}
 Because I’m an individual and I have not an online store, the only way I have to afford the manufacturing process is through a crowdfunding campaign, but before that I need to know how many people could be interested in get the myCPU One kit. You can find below detailed information about the kit.
 {: style="text-align: justify"}
