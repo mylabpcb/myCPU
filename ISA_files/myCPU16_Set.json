@@ -1,0 +1,196 @@
+{  
+  "ControlSignals":
+  [
+        {"Key":"NOP","Map":"00000000_00000000_00000000","Value":0,       "Desc":"NO Operation"},
+        {"Key":"RST","Map":"00000000_00000000_00000001","Value":1,       "Desc":"CPU Reset"},
+        {"Key":"SQR","Map":"00000000_00000000_00000010","Value":2,       "Desc":"Sequencer Reset"},
+        {"Key":"MI", "Map":"00000000_00000000_00000100","Value":4,       "Desc":"MAR (LOAD)"},
+        {"Key":"SI", "Map":"00000000_00000000_00001000","Value":8,       "Desc":"System NOT Used"},
+        {"Key":"SO", "Map":"00000000_00000000_00010000","Value":16,      "Desc":"System NOT Used"},
+        {"Key":"RI", "Map":"00000000_00000000_00100000","Value":32,      "Desc":"SRAM (LOAD)"},
+        {"Key":"RO", "Map":"00000000_00000000_01000000","Value":64,      "Desc":"SRAM (OUT)"},
+        {"Key":"OI", "Map":"00000000_00000000_10000000","Value":128,     "Desc":"Output Register (LOAD)"},
+        {"Key":"UN", "Map":"00000000_00000001_00000000","Value":256,     "Desc":"Enable 2's complement display"},
+        {"Key":"PE", "Map":"00000000_00000010_00000000","Value":512,     "Desc":"PC enable count"},
+        {"Key":"PO", "Map":"00000000_00000100_00000000","Value":1024,    "Desc":"PC (OUT)"},
+        {"Key":"PI", "Map":"00000000_00001000_00000000","Value":2048,    "Desc":"Unconditional JMP. PC (LOAD)"},
+        {"Key":"FI", "Map":"00000000_00010000_00000000","Value":4096,    "Desc":"Flags Register (LOAD)"},
+        {"Key":"II", "Map":"00000000_00100000_00000000","Value":8192,    "Desc":"Instruction Register (LOAD)"},
+        {"Key":"IO", "Map":"00000000_01000000_00000000","Value":16384,   "Desc":"Instruction Register (OUT)"},
+        {"Key":"CI", "Map":"00000000_10000000_00000000","Value":32768,   "Desc":"C Register (LOAD)"},
+        {"Key":"CO", "Map":"00000001_00000000_00000000","Value":65536,   "Desc":"C Register (OUT)"},
+        {"Key":"BI", "Map":"00000010_00000000_00000000","Value":131072,  "Desc":"B Register (LOAD)"},
+        {"Key":"BO", "Map":"00000100_00000000_00000000","Value":262144,  "Desc":"B Register (OUT)"},
+        {"Key":"AI", "Map":"00001000_00000000_00000000","Value":524288,  "Desc":"A Register (LOAD)"},
+        {"Key":"AO", "Map":"00010000_00000000_00000000","Value":1048576, "Desc":"A Register (OUT)"},
+        {"Key":"SU", "Map":"00100000_00000000_00000000","Value":2097152, "Desc":"Substract operation"},
+        {"Key":"EO", "Map":"01000000_00000000_00000000","Value":4194304, "Desc":"ALU (OUT)"},
+        {"Key":"HLT","Map":"10000000_00000000_00000000","Value":8388608, "Desc":"CPU Stop. Clock Halted"}
+        
+  ],
+  "InstructionSet": [
+    {
+      "Key": "NOP",
+      "Opcode": "0x00",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [],
+      "Description":"NO Operation.",
+      "MicroInstructions": [["PO","MI"],["PE","RO", "II"],["SQR"]]
+    },
+    {
+      "Key": "LDA",
+      "Opcode": "0x01",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Load into A from address.",
+      "MicroInstructions": [["PO","MI"] , ["PE","RO","II"] , ["IO","MI"], ["RO","AI"], ["SQR"]]
+    },
+    {
+      "Key": "ADD",
+      "Opcode": "0x02",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Load into B from address and load sum result to A into A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","MI"], ["RO","BI"], ["EO","AI","FI"], ["SQR"]]
+    },
+    {
+      "Key": "SUB",
+      "Opcode": "0x03",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Load into B from address and load substract result to A into A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","MI"], ["RO","BI"], ["EO","AI","SU","FI"], ["SQR"]]
+    },
+    {
+      "Key": "STA",
+      "Opcode": "0x04",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Store A into address.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","MI"], ["AO","RI"], ["SQR"]]
+    },
+    {
+      "Key": "LDI",
+      "Opcode": "0x05",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"value","Length": 4}],
+      "Description":"Load literal into A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","AI"], ["SQR"]]
+    },
+    {
+      "Key": "JMP",
+      "Opcode": "0x06",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Unconditional Jump.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","PI"], ["SQR"]]
+    },
+    {
+      "Key": "JC",
+      "Opcode": "0x07",
+      "Enabled": true,
+      "FlagsDependency":true,
+      "FlagsMap" : "1***",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Jump on carry out.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","PI"], ["SQR"]],
+      "MicroInstructionsOff": [["PO","MI"], ["PE","RO","II"], ["SQR"]]
+    },
+    {
+      "Key": "JZ",
+      "Opcode": "0x08",
+      "Enabled": true,
+      "FlagsDependency":true,
+      "FlagsMap" : "**1*",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Jump on Zero.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","PI"], ["SQR"]],
+      "MicroInstructionsOff": [["PO","MI"], ["PE","RO","II"], ["SQR"]]
+    },
+    {
+      "Key": "JNZ",
+      "Opcode": "0x09",
+      "Enabled": true,
+      "FlagsDependency":true,
+      "FlagsMap" : "**0*",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Jump on NO Zero.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","PI"], ["SQR"]],
+      "MicroInstructionsOff": [["PO","MI"], ["PE","RO","II"], ["SQR"]]
+    },
+    {
+      "Key": "MBA",
+      "Opcode": "0x0a",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [],
+      "Description":"Copy B into A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["BO","AI"], ["SQR"]]
+    },
+    {
+      "Key": "INC",
+      "Opcode": "0x0b",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"value","Length": 4}],
+      "Description":"Increment A with literal.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","BI"], ["EO","AI","FI"], ["SQR"]]
+    },
+    {
+      "Key": "DEC",
+      "Opcode": "0x0c",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"value","Length": 4}],
+      "Description":"Decrement A with literal.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["IO","BI"], ["EO","AI","SU","FI"], ["SQR"]]
+    },
+    {
+      "Key": "LDP",
+      "Opcode": "0x0d",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [{"Type":"addr","Length": 4}],
+      "Description":"Load INPUT into memory address using A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["SI","AI"], ["IO","MI"], ["AO","RI"], ["SQR"]]
+    },
+    {
+      "Key": "OUT",
+      "Opcode": "0x0e",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [],
+      "Description":"Output content of A.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["AO","OI"],  ["SQR"]]
+    },
+    {
+      "Key": "HLT",
+      "Opcode": "0x0f",
+      "Enabled": true,
+      "FlagsDependency":false,
+      "FlagsMap" : "",
+      "Args": [],
+      "Description":"Halt instruction.",
+      "MicroInstructions": [["PO","MI"], ["PE","RO","II"], ["HLT"]]
+    }
+  ]
+}
