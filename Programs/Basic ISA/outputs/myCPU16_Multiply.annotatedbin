@@ -1,0 +1,15 @@
+ outp | addr | data (base 2)
+
+  0:0 |    0 |          ; start:
+  0:0 |    0 |          ; loop:
+  0:0 |    0 | 00011101 ; lda RESULT_ADDR
+  1:0 |    1 | 00101110 ; add MULTID_ADDR
+  2:0 |    2 | 01001101 ; sta RESULT_ADDR
+  3:0 |    3 | 00011111 ; lda MULTIP_ADDR
+  4:0 |    4 | 11000001 ; dec 1
+  5:0 |    5 | 01001111 ; sta MULTIP_ADDR
+  6:0 |    6 | 10010000 ; jnz loop
+  7:0 |    7 |          ; end:
+  7:0 |    7 | 00011101 ; lda RESULT_ADDR
+  8:0 |    8 | 11100000 ; out
+  9:0 |    9 | 11110000 ; hlt

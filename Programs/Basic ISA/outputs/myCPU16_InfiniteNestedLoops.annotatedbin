@@ -1,0 +1,18 @@
+ outp | addr | data (base 2)
+
+  0:0 |    0 |          ; start:
+  0:0 |    0 | 11011111 ; ldp LOOP_SIZE_ADDR
+  1:0 |    1 |          ; init:
+  1:0 |    1 | 00011111 ; lda LOOP_SIZE_ADDR
+  2:0 |    2 | 01001110 ; sta TMP_ADDR
+  3:0 |    3 |          ; loop1:
+  3:0 |    3 | 00011110 ; lda TMP_ADDR
+  4:0 |    4 | 11100000 ; out
+  5:0 |    5 | 11000001 ; dec 1
+  6:0 |    6 | 10000001 ; jz init
+  7:0 |    7 | 01001110 ; sta TMP_ADDR
+  8:0 |    8 | 00011111 ; lda LOOP_SIZE_ADDR
+  9:0 |    9 |          ; loop2:
+  9:0 |    9 | 11000001 ; dec 1
+  a:0 |    a | 10000011 ; jz loop1
+  b:0 |    b | 01101001 ; jmp loop2

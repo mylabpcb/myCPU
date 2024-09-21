@@ -1,0 +1,16 @@
+ outp | addr | data (base 2)
+
+  0:0 |    0 |          ; start:
+  0:0 |    0 | 11011110 ; ldp COUNTER_ADDR
+  1:0 |    1 |          ; loop:
+  1:0 |    1 | 00011101 ; lda RESULT_ADDR
+  2:0 |    2 | 10110001 ; inc 1
+  3:0 |    3 | 01001101 ; sta RESULT_ADDR
+  4:0 |    4 | 00011110 ; lda COUNTER_ADDR
+  5:0 |    5 | 00111111 ; sub STEP_VALUE_ADDR
+  6:0 |    6 | 01001110 ; sta COUNTER_ADDR
+  7:0 |    7 | 10010001 ; jnz loop
+  8:0 |    8 |          ; end:
+  8:0 |    8 | 00011101 ; lda RESULT_ADDR
+  9:0 |    9 | 11100000 ; out
+  a:0 |    a | 11110000 ; hlt

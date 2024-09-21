@@ -1,14 +1,19 @@
-#include "myCPU16_rules.asm"
+#include "rules/myCPU16_rules.asm"
 #once
 
-# Set initial value on 0xfe to 1
+;constants
+TMP_RESULT_ADDR = 0x0F
 
-_init:
-    lda 14
-    sta 15
-    add 15
-    jc _init
+start:
+
+reset:
+    ldi 1
     out
-    sta 15
+    sta TMP_RESULT_ADDR
+loop:
+    add TMP_RESULT_ADDR
+    jc reset
+    out
+    sta TMP_RESULT_ADDR
     mba
-    jmp 2
+    jmp loop

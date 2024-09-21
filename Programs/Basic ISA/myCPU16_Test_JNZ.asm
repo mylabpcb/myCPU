@@ -1,24 +1,24 @@
 #include "rules/myCPU16_rules.asm"
 #once
 
-; set initial multiplier in 0x0F for example 8
-; set initial multiplicand in 0x0E to 9
+; set initial count value in 0x0F to 1
+; set initial value in 0x0E to 255
 ; set initial result value 0 in 0x0D
 
 ; constants
 RESULT_ADDR = 0x0D
-MULTID_ADDR = 0x0E
-MULTIP_ADDR = 0x0F
+COUNTER_ADDR = 0x0E
+STEP_VALUE_ADDR = 0x0F
 
 start:
 
 loop:
     lda RESULT_ADDR
-    add MULTID_ADDR
+    inc 1
     sta RESULT_ADDR
-    lda MULTIP_ADDR
-    dec 1
-    sta MULTIP_ADDR
+    lda COUNTER_ADDR
+    sub STEP_VALUE_ADDR
+    sta COUNTER_ADDR
     jnz loop
 end:
     lda RESULT_ADDR

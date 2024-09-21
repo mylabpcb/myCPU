@@ -1,16 +1,27 @@
-#include "myCPU16_rules.asm"
+#include "rules/myCPU16_rules.asm"
 #once
 
-_init:
-    lda 13
+; The dividend must be divisible by divisor exactly
+; set initial divisor value in 0x0F for example 3
+; set initial dividend value  in 0x0E for example 81
+; set initial value for quotient result 0 in 0x0D
+
+; constants
+RESULT_ADDR = 0x0D
+DIVIDEND_ADDR = 0x0E
+DIVISOR_ADDR = 0x0F
+
+start:
+
+loop:
+    lda RESULT_ADDR
     inc 1
-    sta 13
-    lda 14
-    sub 15
-    sta 14
-    jz end
-    jmp _init
+    sta RESULT_ADDR
+    lda DIVIDEND_ADDR
+    sub DIVISOR_ADDR
+    sta DIVIDEND_ADDR
+    jnz loop
 end:
-    lda 13
+    lda RESULT_ADDR
     out
     hlt
