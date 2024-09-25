@@ -13,18 +13,10 @@ hero_darken: false
 
 [Technical Documentation](/pages/en/mycpu/downloads/technical_docs){: target="_blank"}
 
-[BOM](/pages/en/mycpu/downloads/bom){: target="_blank"}
-
 [Diagrams](/pages/en/mycpu/downloads/diagrams){: target="_blank"}
 
 [Code](/pages/en/mycpu/downloads/code){: target="_blank"}
 
-[Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
-
 [Component Libraries](/pages/en/mycpu/downloads/libraries){: target="_blank"}
-
-[Useful Templates](/pages/en/mycpu/downloads/templates){: target="_blank"}
-
-[CAD files](/pages/en/mycpu/downloads/cad_files){: target="_blank"}
 
 [Simulator](/pages/en/mycpu/downloads/simulator){: target="_blank"}

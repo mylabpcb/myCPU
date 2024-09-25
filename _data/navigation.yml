@@ -87,14 +87,14 @@
     #  link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
-    - name: Sample Programs
-      link: /pages/en/mycpu/downloads/programs
+    #- name: Sample Programs
+    #  link: /pages/en/mycpu/downloads/programs
     - name: Component Libraries
       link: /pages/en/mycpu/downloads/libraries
     #- name: Useful templates
     #  link: /pages/en/mycpu/downloads/templates
-    - name: CAD files
-      link: /pages/en/mycpu/downloads/cad_files
+    #- name: CAD files
+    #  link: /pages/en/mycpu/downloads/cad_files
     - name: Simulator
       link: /pages/en/mycpu/downloads/simulator
 - name: Blog
