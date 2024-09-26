@@ -16,6 +16,15 @@ hero_darken: false
 > If you are insterested in get the myCPU Kit, please go to [The Kit Feedback form](/pages/en/mycpu/feedback_kit) to let me know your interest and give me your email address for future announcements.
 {: style="text-align: justify"}
 
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAAr8KBU-e678bWRGcThdJ7vgkoHQ9zO6Z3FHj7Sv_wCw-F4BVr_q_-uR0aexK7oGtSfOij66mLGo0RZjU&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+<div id="paypal-container-NKRRJJVYWL77J"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "NKRRJJVYWL77J",
+  }).render("#paypal-container-NKRRJJVYWL77J")
+</script>
+
 {% comment %}
 Because I’m an individual and I have not an online store, the only way I have to afford the manufacturing process is through a crowdfunding campaign, but before that I need to know how many people could be interested in get the myCPU One kit. You can find below detailed information about the kit.
 {: style="text-align: justify"}
