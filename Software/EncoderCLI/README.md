@@ -42,7 +42,7 @@ They have next order for the myCPU16:
 
 
 ### Flagsmap
-The FlagsMap order corresponding to the binary string in the definition file, for the myCPU16, is: **FC, FN, FZ, FV**. The syntax of flagsMap is a value bit surrounded by mask symbol "*".
+The FlagsMap order corresponding to the binary string in the definition file, for the myCPU16, is: **FC, FN, FZ, FV**. The syntax of flagsMap is a string with a value bit surrounded by mask symbol "*".
 
 So, for example, a FlagsMap of **"\*\*1\*"** corresponding to an just enabled **FZ** flags combination.
 
