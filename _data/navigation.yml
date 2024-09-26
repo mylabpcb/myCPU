@@ -99,6 +99,8 @@
     #  link: /pages/en/mycpu/downloads/templates
     #- name: CAD files
     #  link: /pages/en/mycpu/downloads/cad_files
+    - name: ISA files
+      link: /pages/en/mycpu/downloads/isa
     - name: Simulator
       link: /pages/en/mycpu/downloads/simulator
 - name: Blog

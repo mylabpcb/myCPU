@@ -25,4 +25,4 @@ hero_darken: false
 
 [ISA files](/pages/en/mycpu/downloads/isa){: target="_blank"}
 
-[Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
+[Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}

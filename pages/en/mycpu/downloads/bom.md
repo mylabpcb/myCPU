@@ -1,6 +1,6 @@
 ---
-title: "myCPU Downloads: Bill of Materials"
-subtitle: A full Bill of Materials in Excel
+title: "myCPU Downloads: myCPU BOM list"
+subtitle: A full structured Bill of Materials in pdf
 layout: page
 show_sidebar: false
 hide_footer: true
