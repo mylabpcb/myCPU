@@ -20,3 +20,7 @@ hero_darken: false
 [Component Libraries](/pages/en/mycpu/downloads/libraries){: target="_blank"}
 
 [Simulator](/pages/en/mycpu/downloads/simulator){: target="_blank"}
+
+[ISA files](/pages/en/mycpu/downloads/isa){: target="_blank"}
+
+[Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
