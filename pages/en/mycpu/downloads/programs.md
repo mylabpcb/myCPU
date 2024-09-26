@@ -8,3 +8,5 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
+
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/bdcd2878bd70ab25a654d19c5ac2411b106ae676/Programs/Basic_ISA" target="_blank">Download myCPU Programs from Github</a>

@@ -8,6 +8,5 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-{% comment %}
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/libraries/mycpu_components_v2.3.zip">Download myCPU Altium Integrated Library v2.3</a>
-{% endcomment %}
+
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/bdcd2878bd70ab25a654d19c5ac2411b106ae676/Altium" target="_blank">Download myCPU Altium library from Github</a>
