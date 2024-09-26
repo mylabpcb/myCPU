@@ -1,6 +1,6 @@
 ---
 title: "myCPU: Downloads"
-subtitle: An full set of downloadable documentation
+subtitle: An full set of downloadable myCPU resources
 layout: page
 show_sidebar: false
 hide_footer: true
