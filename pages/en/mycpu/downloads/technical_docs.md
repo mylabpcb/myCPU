@@ -11,7 +11,7 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 
-<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/921ec84be3be704bbca8da60d80efa61cbc6c33a/Docs" target="_blank">Download Technical documentation from Github</a>
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/921ec84be3be704bbca8da60d80efa61cbc6c33a/Docs" target="_blank">Download myCPU Technical documentation from Github</a>
 
 {% comment %}
 On this page you find the downloads for all related technical documentation to the myCPU project.

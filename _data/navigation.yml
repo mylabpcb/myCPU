@@ -79,6 +79,8 @@
   dropdown:
     - name: Technical Documentation
       link: /pages/en/mycpu/downloads/technical_docs
+    - name: Book
+      link: /pages/en/mycpu/downloads/book
     - name: Diagrams
       link: /pages/en/mycpu/downloads/diagrams
     #- name: Bill of Materials
@@ -87,10 +89,12 @@
     #  link: /pages/en/mycpu/downloads/datasheets
     - name: Code
       link: /pages/en/mycpu/downloads/code
-    #- name: Sample Programs
-    #  link: /pages/en/mycpu/downloads/programs
-    - name: Component Libraries
-      link: /pages/en/mycpu/downloads/libraries
+    - name: Software
+      link: /pages/en/mycpu/downloads/software
+    - name: Sample Programs
+      link: /pages/en/mycpu/downloads/programs
+    #- name: Component Libraries
+    #  link: /pages/en/mycpu/downloads/libraries
     #- name: Useful templates
     #  link: /pages/en/mycpu/downloads/templates
     #- name: CAD files
