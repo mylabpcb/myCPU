@@ -1,6 +1,6 @@
 ---
 title: "myCPU Downloads: The Code"
-subtitle: Encoders and Tools for the myCPU
+subtitle: Code resources and tools for the myCPU
 layout: page
 gallery: #code_gallery
 galleryType: #download
@@ -10,6 +10,7 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-> The content is under development, the final version will be as soon as possible.
+
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/921ec84be3be704bbca8da60d80efa61cbc6c33a/Code" target="_blank">Download Code resources from Github</a>
 
 
