@@ -8,7 +8,6 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
-{% comment %}
 My name is **Rafa Hernández** and I'm a senior .NET software developer and electronics hobbyst among other interests.
 {: style="text-align: justify"}
 <figure style="text-align:left">
@@ -16,13 +15,13 @@ My name is **Rafa Hernández** and I'm a senior .NET software developer and elec
     <figcaption>Yes, this guy is me!</figcaption>
 </figure>
 
-**myLabPcb** is my own and personal initiative to share electronic designs.  At this moment, I’ve finished the first project, the **myCPU** design, which is a redesign on PCBs of the Ben Eater’s 8- bit breadboards computer. After that I’m working in the design of the myCPU Plus with a new set of modules having support for 16 bits, more memory and a bigger instruction set.
+**myLabPcb** is my own and personal initiative to share electronic designs.  At this moment, I’ve finished my first project, the **myCPU** design, which is a redesign on PCBs of the Ben Eater’s 8- bit breadboards computer. After that I’m working in the design of the myCPU 2K with a new set of modules having more memory and a bigger instruction set.
 {: style="text-align: justify"}
 
 Also I’m planning the design of myEnigma, a digital replica of the Enigma Machine without programming, and supporting to exchangeable digital rotors.
 {: style="text-align: justify"}
 
-The purpose of this initiative is not only share electronics designs but share designs very focused on learning. Enjoy and learn is my rule, for that reason I’ll keep much of my attention in the modularity, open architecture and possibilities of customization so everyone can try to design their own modules and get a very personal build of each project.
+The purpose of this initiative is not only share electronics designs but share designs very focused on learning and experimenting. Enjoy and learn is my rule, for that reason I’ll keep much of my attention in the modularity, open architecture and possibilities of customization so everyone can try to design their own modules and get a very personal build of each project.
 {: style="text-align: justify"}
 
 The projects you can find in this site are directed to engineering students, teachers, electronics hobbyists, smart kids with a bit of help, and all people who want to enjoy building a electronic project, and playing with a device built by yourself.
@@ -34,6 +33,5 @@ I love digital electronics and microcomputers, more interested in the early days
 
 ![Logo Uned]({{ site.baseurl }}/img/logo_uned.gif)
 
-I’m a Computer Engineering degree student at **UNED**, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I will try.
+At this moment, I’m a Computer Engineering degree student at **UNED**, which is the public open university here in Spain. Sadly, I think I’m not a good student. -:) but I keep trying.
 {: style="text-align: justify"}
-{% endcomment %}
