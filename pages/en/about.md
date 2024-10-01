@@ -15,6 +15,8 @@ My name is **Rafa Hernández** and I'm a senior .NET software developer and elec
     <figcaption>Yes, this guy is me!</figcaption>
 </figure>
 
+You can send me comments or questions to **<a href="mailto:mylabpcb@gmail.com">mylabpcb@gmail.com</a>** but I can't guarantee a reply to all people. Sorry. 
+
 **myLabPcb** is my own and personal initiative to share electronic designs.  At this moment, I’ve finished my first project, the **myCPU** design, which is a redesign on PCBs of the Ben Eater’s 8- bit breadboards computer. After that I’m working in the design of the myCPU 2K with a new set of modules having more memory and a bigger instruction set.
 {: style="text-align: justify"}
 
