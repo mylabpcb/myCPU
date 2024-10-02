@@ -12,6 +12,7 @@ Welcome to the introductory page of the myCPU project.
 
 <a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/book/mycpu_book_chapter2.pdf" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 <a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU" target="_blank">Public repository of the myCPU Project</a>
+
 The myCPU is a fully modular **8-bit CPU**. It was designed using only discrete logic components, and implemented with the most common integrated circuits from the 74 family. The myCPU project uses the **Microprograming Technique** to process instructions, relying on **Microinstructions** the instruction execution flow, and supporting the debugging at a microinstruction level. The myCPU was designed on printed circuit boards (PCBs), and it can built using TTL or CMOS technologies. 
 {: style="text-align: justify"}
 
