@@ -17,7 +17,7 @@ The myCPU is a fully modular **8-bit CPU**. It was designed using only discrete 
 {: style="text-align: justify"}
 
 <div align="center">
-<iframe  width="560" height="315" src="https://www.youtube.com/embed/rlo3beytMJc?si=Z7uMr66LAcSDaRTZ&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<iframe  width="560" height="315" src="https://www.youtube.com/embed/VZcCQJKlg2g?si=8gs6B3KqenbbFDLl&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 The feature of debugging at microinstruction level allows to observe the execution of individual microinstructions, stepping through each one and view the state of all logic components statically. This provides a detailed view of the instruction execution flow in real time.
 {: style="text-align: justify"}
