@@ -20,8 +20,8 @@
       link: /pages/en/mycpu/simulator
     - name: The myCPU Book
       link: /pages/en/mycpu/book
-    - name: #Open Source Licence
-      link: #/pages/en/mycpu/licence
+    - name: Open Source Licence
+      link: /pages/en/mycpu/licence
 - name: Modules
   dropdown:
     - name: Introduction
