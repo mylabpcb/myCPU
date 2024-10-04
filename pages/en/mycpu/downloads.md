@@ -17,12 +17,23 @@ hero_darken: false
 
 [Diagrams](/pages/en/mycpu/downloads/diagrams){: target="_blank"}
 
+[BOM](/pages/en/mycpu/downloads/bom){: target="_blank"}
+
+[Datasheets](/pages/en/mycpu/downloads/datasheets){: target="_blank"}
+
 [Code](/pages/en/mycpu/downloads/code){: target="_blank"}
 
 [Software](/pages/en/mycpu/downloads/software){: target="_blank"}
 
-[Simulator](/pages/en/mycpu/downloads/simulator){: target="_blank"}
+[Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
+
+[Components Libraries](/pages/en/mycpu/downloads/components){: target="_blank"}
+
+[Usefull Templates](/pages/en/mycpu/downloads/templates){: target="_blank"}
+
+[CAD Files](/pages/en/mycpu/downloads/cad_files){: target="_blank"}
 
 [ISA files](/pages/en/mycpu/downloads/isa){: target="_blank"}
 
-[Sample Programs](/pages/en/mycpu/downloads/programs){: target="_blank"}
+[Simulator](/pages/en/mycpu/downloads/simulator){: target="_blank"}
+

@@ -15,4 +15,4 @@ This pdf is extracted of the myCPU Book.
 {: style="text-align: justify"}
 
 
-<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/master/Bom" target="_blank">Download myCPU full BOM (Bill of Materials)</a> 
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/master/Bom" target="_blank">Download myCPU full BOM list from Github</a> 
