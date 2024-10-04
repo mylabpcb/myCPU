@@ -9,5 +9,5 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 {% comment %}
-<a class="button is-primary is-light" href="{{ site.baseurl }}/downloads/cad/mycpu_cad_files.zip">Download ZIP with all CAD files</a
+<a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/master/Cad">Download ZIP with all CAD files</a
 {% endcomment %}
