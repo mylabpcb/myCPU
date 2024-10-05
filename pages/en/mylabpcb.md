@@ -1,6 +1,6 @@
 ---
 title: The myLabPCB Initiative
-subtitle: Home of the myCPU and myEnigma Projects
+subtitle: Home of the myCPU, myComputer and myEnigma Projects
 layout: page
 show_sidebar: false
 hide_footer: true
