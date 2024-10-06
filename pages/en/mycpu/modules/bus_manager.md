@@ -14,9 +14,11 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/bus_manager/busman_assembled_min.png" alt="BUS manager module assembled view" title="Assembled view of the BUS manager module" width="400px">
     <figcaption>Assembled view of the BUS manager module</figcaption>
 </figure>
+{% endcomment %}
 
-[BUS Manager module documentation](/downloads/technical/myCPU_BUS_Manager_module_full.pdf){:target="_blank"}
+[BUS Manager module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_BUS_Manager_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}
 

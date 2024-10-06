@@ -15,11 +15,10 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/alu/alu_assembled_min.png" alt="ALU module assembled view" title="Assembled view of the ALU module" width="400px">
     <figcaption>Assembled view of the ALU module</figcaption>
 </figure>
-[ALU module documentation](/downloads/technical/myCPU_ALU_module_full.pdf){:target="_blank"}
+{% endcomment %}
+[ALU module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_ALU_module_full.pdf){:target="_blank"}
 
-Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
-
-
+{% comment %}
 #### Description
 The myCPU ALU is an 8 bit full adder implementation based on the **74LS283 (4-bit full adder)**, supporting the subtract operation by using the technique of addition of the **2’s complement**.
 {: style="text-align: justify"}

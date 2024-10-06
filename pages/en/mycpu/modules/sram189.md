@@ -12,11 +12,13 @@ hero_darken: false
 
 {% comment %}
 <figure class="center">
-    <img src="{{ site.baseurl }}/img/mycpu/modules/ram219/ram219_assembled_min.png" alt="SRAM module assembled view" title="Assembled view of the SRAM module" width="400px">
+    <img src="{{ site.baseurl }}/img/mycpu/modules/ram189/ram189_assembled_min.png" alt="SRAM module assembled view" title="Assembled view of the SRAM module" width="400px">
     <figcaption>Assembled view of the SRAM module</figcaption>
 </figure>
+{% endcomment %}
 
-[SRAM (74LS189) module documentation](/downloads/technical/myCPU_RAM189_module_full.pdf){:target="_blank"}
+[SRAM (74xx189) module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_RAM189_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}

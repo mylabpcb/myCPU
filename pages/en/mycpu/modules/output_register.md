@@ -15,9 +15,11 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/outreg_8b/outreg_8b_assembled_min.png" alt="Output Register module assembled view" title="Assembled view of the Output Register module" width="400px">
     <figcaption>Assembled view of the Output Register module</figcaption>
 </figure>
+{% endcomment %}
 
-[Output Register module documentation](/downloads/technical/myCPU_Output_Register_8b_module_full.pdf){:target="_blank"}
+[Output Register module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_Output_Register_8b_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}
 

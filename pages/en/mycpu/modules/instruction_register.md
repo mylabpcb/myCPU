@@ -15,9 +15,11 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/ireg/ireg_4b_assembled_min.png" alt="Instruction Register module assembled view" title="Assembled view of the Instruction Register module" width="400px">
     <figcaption>Assembled view of the Instruction Register module</figcaption>
 </figure>
+{% endcomment %}
 
-[Instruction Register module documentation](/downloads/technical/myCPU_InstructionRegister_4b_R_module_full.pdf){:target="_blank"}
+[Instruction Register module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_InstructionRegister_4b_R_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}
 

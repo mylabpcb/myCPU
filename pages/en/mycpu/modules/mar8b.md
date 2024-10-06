@@ -9,7 +9,8 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 > The content is under development, the final version will be as soon as possible.
-
+> 
+{% comment %}
 <figure class="center">
     <img src="{{ site.baseurl }}/img/mycpu/modules/mar4b/mar_4b_assembled.png" alt="MAR module assembled view" title="Assembled view of the MAR module" width="500px">
     <figcaption>Assembled view of the MAR module</figcaption>
@@ -27,3 +28,4 @@ Also you can find all documentation files in the downloads page: [myCPU document
     <img src="{{ site.baseurl }}/img/mycpu/modules/mar4b/mar_4b_clear_back.png" alt="PCB back view" title="Back view of the printed board" width="500px">
     <figcaption>Back view of the printed board</figcaption>
 </figure>
+{% endcomment %}

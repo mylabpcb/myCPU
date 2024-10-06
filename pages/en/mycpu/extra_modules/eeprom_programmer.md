@@ -15,6 +15,5 @@ hero_darken: false
     <figcaption>Assembled view of the EEProm Programmer module</figcaption>
 </figure>
 
-[EEPRom Programmer module documentation](/downloads/technical/myCPU_EEProm%20Programmer_AT28C64_module_full.pdf){:target="_blank"}
+[EEPRom Programmer module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_EEProm%20Programmer_AT28C64_module_full.pdf){:target="_blank"}
 
-Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)

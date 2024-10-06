@@ -20,5 +20,5 @@ hero_darken: false
     <figcaption>Assembled view of the Layout Terminator</figcaption>
 </figure>
 
-[Layout Connector documentation](/downloads/technical/myCPU_BUS_LayoutConnector_full.pdf){:target="_blank"}
+[Layout Connector documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_BUS_LayoutConnector_full.pdf){:target="_blank"}
 

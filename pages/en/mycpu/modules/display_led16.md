@@ -15,8 +15,10 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/display/displayLED_assembled.png" alt="LED Display module assembled view" title="Assembled view of the LED Display module" width="500px">
     <figcaption>Assembled view of the LED Display module</figcaption>
 </figure>
+{% endcomment %}
 
-[LED Display 8 bits module documentation](/downloads/technical/myCPU_DisplayLED_module_full.pdf){:target="_blank"}
+[LED Display 8 bits module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_DisplayLED_16b_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}

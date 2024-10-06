@@ -15,8 +15,10 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/mar4b/mar_4b_assembled_min.png" alt="MAR module assembled view" title="Assembled view of the MAR module" width="400px">
     <figcaption>Assembled view of the MAR module</figcaption>
 </figure>
+{% endcomment %}
 
-[MAR 4bits module documentation](/downloads/technical/myCPU_MAR_4b_module_full.pdf){:target="_blank"}
+[MAR 4bits module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_MAR_4b_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}

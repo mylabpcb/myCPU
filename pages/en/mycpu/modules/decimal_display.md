@@ -15,9 +15,11 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/display/dec_hex_display_at28c64_assembled_min.png" alt="Decimal Display module assembled view" title="Assembled view of the Decimal Display module" width="300px">
     <figcaption>Assembled view of the Decimal Display module</figcaption>
 </figure>
+{% endcomment %}
 
-[Decimal Display module documentation](/downloads/technical/myCPU_Display4Digits_8b_module_full.pdf){:target="_blank"}
+[Decimal Display module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_Display4Digits_8b_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}
 

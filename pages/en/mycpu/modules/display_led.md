@@ -15,7 +15,7 @@ hero_darken: false
     <figcaption>Assembled view of the LED Display module</figcaption>
 </figure>
 
-[LED Display 8 bits module documentation](/downloads/technical/myCPU_DisplayLED_module_full.pdf){:target="_blank"}
+[LED Display 8 bits module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_DisplayLED_module_full.pdf){:target="_blank"}
 
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 

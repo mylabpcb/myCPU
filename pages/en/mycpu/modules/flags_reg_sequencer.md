@@ -15,8 +15,10 @@ hero_darken: false
     <img src="{{ site.baseurl }}/img/mycpu/modules/flag_seq/flag_seq_assembled_min.png" alt="Sequencer and Flags Register module assembled view" title="Assembled view of the Sequencer and Flags Register module" width="400px">
     <figcaption>Assembled view of the Sequencer and Flags Register module</figcaption>
 </figure>
+{% endcomment %}
 
-[Flags Register + Sequencer module documentation](/downloads/technical/myCPU_FlagsRegister_Seq_module_full.pdf){:target="_blank"}
+[Flags Register + Sequencer module documentation](https://github.com/mylabpcb/myCPU/blob/master/Docs/myCPU_FlagsRegister_Seq_module_full.pdf){:target="_blank"}
 
+{% comment %}
 Also you can find all documentation files in the downloads page: [myCPU documentation](/pages/en/mycpu/downloads/technical_docs)
 {% endcomment %}
