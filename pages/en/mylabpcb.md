@@ -26,3 +26,5 @@ If you have reviewed the myCPU project and could check the effort I put on that 
 <img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1" />
 </form>
 
+**Bitcoin**: 3AMAFyenDedJPYzvW1JV9jtMmJLRatUXxY
+**Ethereum**: 0x7Cf5Ee82de048eD9bB7f8b36e3eE9d334BB9947e
