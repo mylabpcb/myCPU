@@ -17,7 +17,7 @@ The main goal of myLabPCB is to design digital electronics projects accesible to
 This is an individual initiative from **[Rafa Hernández](/pages/en/about)**{:target="_blank"} so I need your support to continue working in the projects under this initiative like myCPU and future projects: myComputer and myEnigma.
 {: style="text-align: justify"}
 
-If you have can review the myCPU project and you like it, you'd may consider make a small donation to the myLabPCB initiative.
+If you have reviewed the myCPU project and could check the effort I put on that project, you'd may consider make a small donation to my myLabPCB initiative.
 {: style="text-align: justify"}
 
 <form action="https://www.paypal.com/donate" method="post" target="_top">
