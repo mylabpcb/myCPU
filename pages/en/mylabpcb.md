@@ -20,6 +20,8 @@ This is an individual initiative from **[Rafa Hernández](/pages/en/about)**{:ta
 If you have reviewed the myCPU project and could check the effort I put on that project, you'd may consider make a small donation to my myLabPCB initiative.
 {: style="text-align: justify"}
 
+**Paypal**:
+
 <form action="https://www.paypal.com/donate" method="post" target="_top">
 <input type="hidden" name="hosted_button_id" value="43WLBJDGTSXEE" />
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
