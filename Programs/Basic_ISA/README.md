@@ -1,6 +1,6 @@
 ### Customasm programs working with the myCPU Basic ISA
 
-1 For use with programmer to write eeproms
+1 For use with logisim to load contents into simulator memory
 ```
 customasm -f binary
 
