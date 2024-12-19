@@ -10,7 +10,7 @@ customasm -f binary
 customasm -f logisim8
 
 ```
-3 To get machine code with address lines
+3 To get machine code with address lines (see output folder)
 ```
 customasm -f annotatedbin
 
