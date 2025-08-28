@@ -30,6 +30,7 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
   - kramdown-parser-gfm
 
 exclude: 
@@ -75,9 +76,3 @@ highlighter: rouge
 
 footer_menu: example_footer_menu
 
-collections:
-  products: 
-    output: true
-    layout: product
-    image: 
-    show_sidebar: false
