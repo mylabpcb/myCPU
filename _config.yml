@@ -53,16 +53,14 @@ google_analytics: G-BFTJ7WDJ3N
 
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       show_sidebar: false
       hide_footer: true
       hide_hero: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
