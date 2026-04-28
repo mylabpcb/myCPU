@@ -9,6 +9,8 @@ hero_height: hero-minHeigth
 hero_darken: false
 ---
 
+> Working in the myCPU16 R2, the version of 2 layers PCB with GND planes and interesting electrical improvements. Will be available by the end of 2026. If you want to receive a notice when the myCPU R2 project wake up, follow de [myLabPCB X account](https://x.com/mylabpcb){:target="_blank"}, I will notify in that way.
+
 # Welcome to the myCPU Project
 The myCPU is a fully modular **8-bit CPU**. It was designed using only discrete logic components, and implemented with the most common integrated circuits from the 74 family. The myCPU project uses the **Microprograming Technique** to process instructions, relying on **Microinstructions** the instruction execution flow, and supporting the debugging at a microinstruction level. The myCPU was designed on printed circuit boards (PCBs), and it can built using TTL or CMOS technologies. 
 {: style="text-align: justify"}
