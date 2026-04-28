@@ -8,6 +8,8 @@ hide_hero: false
 hero_height: hero-minHeigth
 hero_darken: false
 ---
+> Working in the myCPU16 R2, the version of 2 layers PCB with GND planes and interesting electrical improvements. Will be available by the end of 2026. If you want to receive a notice when the myCPU R2 project wake up, follow de [myLabPCB X account](https://x.com/mylabpcb){:target="_blank"}, I will notify in that way.
+
 Welcome to the introductory page of the myCPU project.
 <a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU/tree/master/Book" target="_blank">Free myCPU Introduction chapter from the myCPU Book</a>
 <a class="button is-primary is-light" href="https://github.com/mylabpcb/myCPU" target="_blank">Public repository of the myCPU Project</a>
