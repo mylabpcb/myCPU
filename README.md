@@ -2,8 +2,8 @@
 
 ## myCPU Project
 
-Welcome to the myCPU Project!
+Welcome to the myCPU16 Project!
 
-All information and related content can be found at [myCPU Site](http://www.mycpuone.com)
+All information and related content can be found at [myCPU Site](http://mycpu.mylabpcb.com)
 
 
