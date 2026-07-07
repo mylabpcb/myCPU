@@ -105,5 +105,5 @@
       link: /pages/en/mycpu/downloads/simulator
 - name: Blog
   link: /blog/en/
-- name: About
-  link: https://home.mylabpcb.com/pages/en/about
+# - name: About
+#   link: https://home.mylabpcb.com/pages/en/about
