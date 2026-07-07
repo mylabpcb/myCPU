@@ -13,6 +13,10 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_posts|blog|LICENSE|README|package|node_modules|favicon)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
+
+   # ADD THIS LINE to force the older sass converter to fix issue with sass-embedded
+  spec.add_runtime_dependency "jekyll-sass-converter", "~> 2.0"
+  
   spec.add_runtime_dependency "jekyll-feed"
   spec.add_runtime_dependency "jekyll-sitemap"
   spec.add_runtime_dependency "jekyll-paginate"
